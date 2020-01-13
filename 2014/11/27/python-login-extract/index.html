@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>python+模拟登录+提取内容 | 醉乐轩</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="醉乐轩,个人博客" />
+  
+
+  <meta name="description" content="引言今天，给大家推荐一门有趣的语言——python，相信大家一定不陌生。那么可以用来做什么呢，本文主要用于模拟登录并提取一些需要的内容，当然，再仔细研究的话，还可以写一些签到的小工具。 注：本文所用python版本为3.4.2。 所需工具：python3、requests库、Beautifulsoup库。 首先，先从模拟登录的原理开始，主要讲post。 当登录一个网站的时候，相当于你带着一堆数据去">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python+模拟登录+提取内容">
+<meta property="og:url" content="http://behappy.cc/2014/11/27/python-login-extract/index.html">
+<meta property="og:site_name" content="醉乐轩">
+<meta property="og:description" content="引言今天，给大家推荐一门有趣的语言——python，相信大家一定不陌生。那么可以用来做什么呢，本文主要用于模拟登录并提取一些需要的内容，当然，再仔细研究的话，还可以写一些签到的小工具。 注：本文所用python版本为3.4.2。 所需工具：python3、requests库、Beautifulsoup库。 首先，先从模拟登录的原理开始，主要讲post。 当登录一个网站的时候，相当于你带着一堆数据去">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://behappy.cc/images/daka1.jpg">
+<meta property="og:image" content="http://behappy.cc/images/daka2.jpg">
+<meta property="og:updated_time" content="2017-07-22T00:46:40.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python+模拟登录+提取内容">
+<meta name="twitter:description" content="引言今天，给大家推荐一门有趣的语言——python，相信大家一定不陌生。那么可以用来做什么呢，本文主要用于模拟登录并提取一些需要的内容，当然，再仔细研究的话，还可以写一些签到的小工具。 注：本文所用python版本为3.4.2。 所需工具：python3、requests库、Beautifulsoup库。 首先，先从模拟登录的原理开始，主要讲post。 当登录一个网站的时候，相当于你带着一堆数据去">
+<meta name="twitter:image" content="http://behappy.cc/images/daka1.jpg">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cben" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?79b7a78950abdeefc6a1eb7588ecf28f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">地图</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">地图</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#引言"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-requests"><span class="toc-text">1.requests</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-BeautifulSoup"><span class="toc-text">2.BeautifulSoup</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-python-login-extract" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">python+模拟登录+提取内容</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2014.11.27</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Heroad</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/技术分享/">技术分享</a>
+  </span>
+
+
+
+      
+
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>今天，给大家推荐一门有趣的语言——python，相信大家一定不陌生。那么可以用来做什么呢，本文主要用于模拟登录并提取一些需要的内容，当然，再仔细研究的话，还可以写一些签到的小工具。 <strong>注：本文所用python版本为3.4.2</strong>。 所需工具：<strong>python3</strong>、<strong>requests库</strong>、<strong>Beautifulsoup库</strong>。 首先，先从模拟登录的原理开始，主要讲post。 当登录一个网站的时候，相当于你带着一堆数据去访问一个网址，就像带着一堆见面礼去拜访某人家里。这里的见面礼就是一些headers，data和一些必要的数据，有些主人呢，不需要带什么见面礼就会给你开门招待你，就是无需登录的网站。有些主人呢，需要看中你的见面礼才会给你提供饭菜啊什么的，就是需要输入一些身份验证的数据才行，如登录。 当我们用浏览器登录时，我们只需要输入网址，输入账号密码就行了，浏览器会自动帮我们提交的，当然我们可以用python这门语言来实现伪装成浏览器提交数据。 <strong>大致过程如下：发送数据给网站，网站接收到，成功匹配，回应数据给请求者，提取内容。</strong> 那么我们到底要发送哪些数据给服务器呢？答案是按实际情况来找。就像上面所提的，或许你什么都不用带就可以访问，或许你要带一大堆东西才能访问。后面，我们会找个简单的示例，现在先来简单介绍一下requests库和beautifulsoup库。</p>
+<h2 id="1-requests"><a href="#1-requests" class="headerlink" title="1.requests"></a>1.<strong>requests</strong></h2><p>简而言之，这个库就是用来替我们发送接收数据的，非常强大的库。以前的模拟登录用的是<strong>urllib2（py2.x版本）</strong>，<strong>urllib.request（py3.x版本）</strong>，有点复杂，有兴趣的朋友可以研究一下。完全使用方法可以找官方中文文档，此处仅介绍post使用方法：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">s = requests.session()                                      <span class="comment">#创建会话，类似cookiejar</span></span><br><span class="line">data = &#123;<span class="string">'username'</span>:<span class="string">'username'</span>,<span class="string">'password'</span>:<span class="string">'password'</span>&#125;        <span class="comment">#要Post的数据，字典形式</span></span><br><span class="line">s.post(<span class="string">'http://www.zuilexuan.com/login'</span>,data=data)          <span class="comment">#post数据到指定网址，自动转换为表单形式</span></span><br><span class="line">r = s.get(http://www.zuilexuan.com/about_us.html)           <span class="comment">#得到这个网页的内容</span></span><br><span class="line">print(r.text)                                               <span class="comment">#打印</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="2-BeautifulSoup"><a href="#2-BeautifulSoup" class="headerlink" title="2.BeautifulSoup"></a>2.<strong>BeautifulSoup</strong></h2><p>好了，接下来是Beautifulsoup这个库，是一个处理文档的很强大的库，如果到处都用正则的话，显然很累，所以这个库算是帮大忙啦！完全使用方法也请自行找官方中文文档，此处仅介绍提取标签内容：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">html_doc = <span class="string">'''&lt;h1&gt;哈哈&lt;/h1&gt;&lt;td&gt;啦啦&lt;/td&gt;'''</span></span><br><span class="line">soup = BeautifulSoup(html_doc)     <span class="comment">#使用BeautifulSoup库来解析这段内容，官方文档上是爱丽丝的仙境</span></span><br><span class="line">print(soup.find_all(<span class="string">'td'</span>))                    <span class="comment">#打印标签为td的所有内容，如果只想打印内容，需要使用content</span></span><br></pre></td></tr></table></figure></p>
+<p>那么接下来要完成模拟登录一个页面就很简单了，<strong>requests</strong>登录，<strong>BeautifulSoup</strong>提取。那么现在问题来了，（卖萌技术哪家强），我们需要发送哪些数据呢？在哪里能看到呢？本文以chrome浏览器为示例，F12调处开发者工具，在登录之前打开，下面以我学校查询打卡为实例。</p>
+<p><img src="/images/daka1.jpg" alt="daka1"></p>
+<p>f12打开开发者工具，调到Network,<strong>保证①处红灯亮</strong>，<strong>②处是禁止缓存</strong>，接着输入用户名和密码，就会有许多东西跳出来啦，<strong>③处是找post</strong>，这里面才会有我们需要发送的数据。打开来看看呢</p>
+<p><img src="/images/daka2.jpg" alt="daka2"></p>
+<p>红框框里面就是我们需要发送的数据了，三个，算是比较简单了。有username,password,chkuser,密码也是明文的，所以只要post这几个数据给这个网址就行啦。以下是源码：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests <span class="comment">#引入requests库 </span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup             <span class="comment">#引入BeautifulSoup库 </span></span><br><span class="line">loginurl = <span class="string">'http://XXX/index.asp'</span>          <span class="comment">#要登录的那个地址 </span></span><br><span class="line">geturl = [<span class="string">'http://XXX/kwkq/xskwcx.asp?action=zccx'</span>,         <span class="comment">#查询早上打卡地址 </span></span><br><span class="line">          <span class="string">'http://XXX/kwkq/xskwcx.asp?action=jlbcx'</span>,]              <span class="comment">#查询下午打卡地址 </span></span><br><span class="line">username = <span class="string">'XXXXX'</span>               <span class="comment">#你的用户名 </span></span><br><span class="line">password = <span class="string">'XX'</span>               <span class="comment">#你的密码 </span></span><br><span class="line">logindata = &#123;<span class="string">'username'</span>:username,<span class="string">'password'</span>:password,<span class="string">'chkuser'</span>:<span class="string">'true'</span>,&#125;        <span class="comment">#发送的数据 </span></span><br><span class="line">s = requests.session()                      <span class="comment">#创建会话 </span></span><br><span class="line">s.post(url=loginurl,data=logindata)               <span class="comment">#发送数据 </span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> geturl: r = s.get(item)                      <span class="comment">#获取网页内容 </span></span><br><span class="line">    soup = BeautifulSoup(r.content.decode(<span class="string">'gbk'</span>))       <span class="comment">#BeautifulSoup处理，gbk是因为编码问题    </span></span><br><span class="line"></span><br><span class="line">print(soup.find_all(colspan=<span class="string">"4"</span>))              <span class="comment">#打印出属性里有colspan='4'的内容 </span></span><br><span class="line">......</span><br><span class="line">[&lt;td colspan=<span class="string">"4"</span>&gt;出勤累计： <span class="number">30</span> 次  本学期早操应出<span class="number">30</span>次 </span><br><span class="line">&lt;/td&gt;]</span><br><span class="line">[&lt;td colspan=<span class="string">"4"</span>&gt;出勤累计： <span class="number">10</span> 次  本学期俱乐部应出<span class="number">10</span>次 </span><br><span class="line">&lt;/td&gt;]</span><br></pre></td></tr></table></figure>
+<p>当然也可以<strong>print(soup.find_all(‘td’))</strong>，不过打印的内容就比较多啦！</p>
+<p>至于做百度自动登录，人人自动登录。post的数据密码都经过加密的，rsa算法和md5吧，需要更深层次的研究，以后做出来了再给大家分享吧。</p>
+<p>以上。</p>
+<p>2014/11/27</p>
+<p>&nbsp;</p>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">赏杯咖啡吧</span>
+      <div class="donation-body">
+        <div class="tip text-center">如果你并不富裕，请不要捐赠！</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+
+
+
+
+   
+      <div class="git"></div>
+   
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

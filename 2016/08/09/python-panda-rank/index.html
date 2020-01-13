@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>pandaTV竹子Top20教程 | 醉乐轩</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="醉乐轩,个人博客" />
+  
+
+  <meta name="description" content="这次我会带来一个pandaTV竹子Top20的教程，从零开始。 1. 背景交代1.1 工具和环境：  python库：requests、pymongo等 开发环境：python3.5、windows10 数据库：mongodb 数据可视化工具echarts.js 抓包分析工具fiddler 一个虚拟主机或者github pages   1.2 教程整体思路：  首先我们要抓取数据（主播id和竹子数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pandaTV竹子Top20教程">
+<meta property="og:url" content="http://behappy.cc/2016/08/09/python-panda-rank/index.html">
+<meta property="og:site_name" content="醉乐轩">
+<meta property="og:description" content="这次我会带来一个pandaTV竹子Top20的教程，从零开始。 1. 背景交代1.1 工具和环境：  python库：requests、pymongo等 开发环境：python3.5、windows10 数据库：mongodb 数据可视化工具echarts.js 抓包分析工具fiddler 一个虚拟主机或者github pages   1.2 教程整体思路：  首先我们要抓取数据（主播id和竹子数">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://behappy.cc/images/panda-F12.jpg">
+<meta property="og:image" content="http://behappy.cc/images/mongodb_structure.jpg">
+<meta property="og:updated_time" content="2017-07-22T05:17:49.207Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pandaTV竹子Top20教程">
+<meta name="twitter:description" content="这次我会带来一个pandaTV竹子Top20的教程，从零开始。 1. 背景交代1.1 工具和环境：  python库：requests、pymongo等 开发环境：python3.5、windows10 数据库：mongodb 数据可视化工具echarts.js 抓包分析工具fiddler 一个虚拟主机或者github pages   1.2 教程整体思路：  首先我们要抓取数据（主播id和竹子数">
+<meta name="twitter:image" content="http://behappy.cc/images/panda-F12.jpg">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cben" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?79b7a78950abdeefc6a1eb7588ecf28f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">地图</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">地图</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-背景交代"><span class="toc-text">1. 背景交代</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-工具和环境："><span class="toc-text">1.1 工具和环境：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-教程整体思路："><span class="toc-text">1.2 教程整体思路：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-教程正文"><span class="toc-text">2. 教程正文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-抓包分析"><span class="toc-text">2.1 抓包分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-网页抓包"><span class="toc-text">2.1.1 网页抓包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-fiddler抓包"><span class="toc-text">2.1.2 fiddler抓包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-写爬虫"><span class="toc-text">2.2 写爬虫</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-房间号列表"><span class="toc-text">2.2.1 房间号列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-获取主播id和竹子数"><span class="toc-text">2.2.2 获取主播id和竹子数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-存储到数据库Mongodb"><span class="toc-text">2.3 存储到数据库Mongodb</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-提取分析数据"><span class="toc-text">2.4 提取分析数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-数据可视化"><span class="toc-text">2.5 数据可视化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-echarts-js"><span class="toc-text">2.5.1 echarts.js</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-移动端简单支持"><span class="toc-text">2.5.2 移动端简单支持</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-部署到网站"><span class="toc-text">2.6 部署到网站</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-总结"><span class="toc-text">3. 总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-python-panda-rank" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">pandaTV竹子Top20教程</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.08.09</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Heroad</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/技术分享/">技术分享</a>
+  </span>
+
+
+
+      
+
+      
+
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>这次我会带来一个pandaTV竹子Top20的教程，从零开始。</p>
+<h1 id="1-背景交代"><a href="#1-背景交代" class="headerlink" title="1. 背景交代"></a>1. 背景交代</h1><h2 id="1-1-工具和环境："><a href="#1-1-工具和环境：" class="headerlink" title="1.1 工具和环境："></a>1.1 工具和环境：</h2><blockquote>
+<ol>
+<li>python库：requests、pymongo等</li>
+<li>开发环境：python3.5、windows10</li>
+<li>数据库：mongodb</li>
+<li>数据可视化工具echarts.js</li>
+<li>抓包分析工具fiddler</li>
+<li>一个虚拟主机或者github pages</li>
+</ol>
+</blockquote>
+<h2 id="1-2-教程整体思路："><a href="#1-2-教程整体思路：" class="headerlink" title="1.2 教程整体思路："></a>1.2 教程整体思路：</h2><blockquote>
+<ol>
+<li>首先我们要抓取数据（主播id和竹子数），那么我们就要抓包分析。</li>
+<li>当我们知道从哪里可以获取数据后，就要写爬虫。写爬虫的时候要考虑以下问题，比如并发，增量等。</li>
+<li>当我们抓取到所需数据时，我们需要保存数据，我们使用了数据库（其实是杀鸡用牛刀了）。</li>
+<li>现在我们要根据需求来提取分析数据了，然后返回我们需要的数据。</li>
+<li>得到所需数据后，我们要展示这些数据，要使用一些数据可视化工具。</li>
+<li>写好展示页面后，我们要将它部署到网站上去，会讲到一些方法。</li>
+</ol>
+</blockquote>
+<h1 id="2-教程正文"><a href="#2-教程正文" class="headerlink" title="2. 教程正文"></a>2. 教程正文</h1><h2 id="2-1-抓包分析"><a href="#2-1-抓包分析" class="headerlink" title="2.1 抓包分析"></a>2.1 抓包分析</h2><p>我们先分析一下需求，我们希望得到的数据：</p>
+<blockquote>
+<ol>
+<li>因为pandaTV房间号是不固定的，我们要先获取热门直播里面的前20个主播的房间号。</li>
+<li>得到房间号以后，我们要得到每个房间号里的主播id和竹子数量。</li>
+</ol>
+</blockquote>
+<p>如果不想抓包分析，那可以直接使用selenium，但是selenium是万不得已才会用的，我第一次写的版本就是selenium版的，运行速度很慢。因为它的原理就是模拟人控制浏览器，要一个一个点开网页。  </p>
+<h3 id="2-1-1-网页抓包"><a href="#2-1-1-网页抓包" class="headerlink" title="2.1.1 网页抓包"></a>2.1.1 网页抓包</h3><p>那么我们接下来开始抓包分析，pandaTV使用了ajax，我们使用开发者工具来抓包分析一下。放上<a href="https://developer.chrome.com/devtools" target="_blank" rel="noopener">chrome开发者工具教程</a></p>
+<p>我们打开F12，点到Network标签，把preserve log钩打上，下面的选择XHR，开始抓包分析。我们先输入网址 <a href="http://www.panda.tv，然后点全部，然后随便选个房间进去，此处以我的房间为例。" target="_blank" rel="noopener">www.panda.tv，然后点全部，然后随便选个房间进去，此处以我的房间为例。</a></p>
+<p><img src="/images/panda-F12.jpg" alt="pandaTV抓包"><br>这里我直接给出需要的地址，即第4步的地址，其他的地址暂时不需要。那么网址格式大概<br><code><br>    “<a href="http://www.panda.tv/api_room_v2?roomid=&quot;" target="_blank" rel="noopener">http://www.panda.tv/api_room_v2?roomid=&quot;</a> + 房间号<br>    比如 <a href="http://www.panda.tv/api_room_v2?roomid=473005" target="_blank" rel="noopener">http://www.panda.tv/api_room_v2?roomid=473005</a><br></code><br>我们直接访问这个网址，得到json格式的数据，里面有我们需要的主播id和竹子数。</p>
+<h3 id="2-1-2-fiddler抓包"><a href="#2-1-2-fiddler抓包" class="headerlink" title="2.1.2 fiddler抓包"></a>2.1.2 fiddler抓包</h3><p>那我们得到了输入房间号返回数据的地址，接下来我们要获取热门直播的地址，那网页版是无法获取的，我们需要抓取Android客户端的api，这里用到的工具是fiddler，给出<a href="http://www.trinea.cn/android/android-network-sniffer/" target="_blank" rel="noopener">fiddler教程</a></p>
+<p>为了节省时间，我直接给出我们需要的地址。pageno是页数，pagenum是每页多少人，同样得到json格式数据。<br><code><br>    <a href="http://api.m.panda.tv/ajax_live_lists?pageno=1&amp;pagenum=20&amp;status=2&amp;order=person_num" target="_blank" rel="noopener">http://api.m.panda.tv/ajax_live_lists?pageno=1&amp;pagenum=20&amp;status=2&amp;order=person_num</a><br></code></p>
+<p>还有一个Github上的非官方API，也挺不错的。<a href="https://github.com/MatteO-Matic/pandatvAPI" target="_blank" rel="noopener">pandatvAPI</a></p>
+<h2 id="2-2-写爬虫"><a href="#2-2-写爬虫" class="headerlink" title="2.2 写爬虫"></a>2.2 写爬虫</h2><h3 id="2-2-1-房间号列表"><a href="#2-2-1-房间号列表" class="headerlink" title="2.2.1 房间号列表"></a>2.2.1 房间号列表</h3><p>我们根据Android客户端抓取到的url获取房间号列表<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment">#得到推荐前20的房间号</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getTop20List</span><span class="params">()</span>:</span></span><br><span class="line">	top20List = []</span><br><span class="line">	url = <span class="string">"http://api.m.panda.tv/ajax_live_lists?pageno=1&amp;pagenum=20&amp;status=2&amp;order=person_num"</span></span><br><span class="line">	info  = ((requests.get(url)).json())[<span class="string">"data"</span>][<span class="string">"items"</span>]</span><br><span class="line">	[top20List.append(data_id[<span class="string">"id"</span>]) <span class="keyword">for</span> data_id <span class="keyword">in</span> info]</span><br><span class="line">	<span class="keyword">return</span> top20List</span><br></pre></td></tr></table></figure></p>
+<p>那么我们再分析一下，因为这是当前的热门直播前20，主播的作息时间是不固定的，所以我们涵盖不了所有的主播。那么我们要实现增量抓取，即每次爬取的房间号要保存下来，这样反复几次，可以涵盖几乎所有的热门主播。这里我们使用pickle，这是一个很方便的库，方便的保存读取房间号列表，然后实现增量。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle, os.path</span><br><span class="line"></span><br><span class="line"><span class="comment">#记录爬取的房间号</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recordRoomList</span><span class="params">(roomNumberList)</span>:</span></span><br><span class="line">	<span class="keyword">with</span> open(<span class="string">'roomList.pickle'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">		pickle.dump(roomNumberList, f)</span><br><span class="line"></span><br><span class="line"><span class="comment">#读取文件中的房间号</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">readRoomList</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">with</span> open(<span class="string">'roomList.pickle'</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">  		roomNumberList = pickle.load(f)</span><br><span class="line">	<span class="keyword">return</span> roomNumberList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#增量判断</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">incrementRoom</span><span class="params">(roomNumberList)</span>:</span></span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">not</span> os.path.isfile(<span class="string">"roomList.pickle"</span>)):</span><br><span class="line">		recordRoomList(roomNumberList)</span><br><span class="line">		<span class="keyword">return</span> roomNumberList</span><br><span class="line">	existRoomList = readRoomList()</span><br><span class="line">	<span class="keyword">for</span> item <span class="keyword">in</span> roomNumberList:</span><br><span class="line">		<span class="keyword">if</span>(item <span class="keyword">in</span> existRoomList):</span><br><span class="line">			<span class="keyword">continue</span></span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			existRoomList.append(item)</span><br><span class="line">	recordRoomList(existRoomList)</span><br><span class="line">	<span class="keyword">return</span> existRoomList</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-2-2-获取主播id和竹子数"><a href="#2-2-2-获取主播id和竹子数" class="headerlink" title="2.2.2 获取主播id和竹子数"></a>2.2.2 获取主播id和竹子数</h3><p>现在我们得到了房间号列表，根据我们抓包分析得到的地址，一个一个地请求。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="comment">#得到该房间的主播id和竹子</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getBambooAndName</span><span class="params">(roomNumberList)</span>:</span></span><br><span class="line">	roomInfoList = []</span><br><span class="line">	prefix = <span class="string">"http://www.panda.tv/api_room_v2?roomid="</span></span><br><span class="line">	<span class="keyword">for</span> u <span class="keyword">in</span> roomNumberList:</span><br><span class="line">		singleRoom = []</span><br><span class="line">		singleRoom.append(u)</span><br><span class="line">		info = (requests.get(prefix + str(u))).json()</span><br><span class="line">		<span class="keyword">if</span>(info):</span><br><span class="line">			print(info[<span class="string">'data'</span>][<span class="string">'hostinfo'</span>][<span class="string">'name'</span>])</span><br><span class="line">			singleRoom.append(info[<span class="string">'data'</span>][<span class="string">'hostinfo'</span>][<span class="string">'name'</span>])</span><br><span class="line">			singleRoom.append(round(int(info[<span class="string">'data'</span>][<span class="string">'hostinfo'</span>][<span class="string">'bamboos'</span>])/<span class="number">1e6</span>, <span class="number">2</span>))</span><br><span class="line">		<span class="keyword">else</span>:</span><br><span class="line">			singleRoom.append([<span class="string">"none"</span>, <span class="string">"none"</span>])</span><br><span class="line">			print(<span class="string">"not get"</span>)</span><br><span class="line">		roomInfoList.append(singleRoom)				</span><br><span class="line">	<span class="keyword">return</span> roomInfoList</span><br></pre></td></tr></table></figure></p>
+<p>请注意，此处我并没有简单地用两个list，而是使用了list in list的形式。why？这是因为为了后面的数据库而设计的。我这里的形式是[[room1],[room2],…]</p>
+<h2 id="2-3-存储到数据库Mongodb"><a href="#2-3-存储到数据库Mongodb" class="headerlink" title="2.3 存储到数据库Mongodb"></a>2.3 存储到数据库Mongodb</h2><p>首先需要安装mongodb数据库，然后我们语言是python，所以使用pymongo库。<br><a href="http://api.mongodb.com/python/current/tutorial.html" target="_blank" rel="noopener">pymongo教程</a></p>
+<p>我们要以字典形式存储进数据库，而且要先设计好数据库，我的设计如下。<br><img src="/images/mongodb_structure.jpg" alt="mongodb框架设计"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取字典形式</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getDict</span><span class="params">(roomInfoList)</span>:</span></span><br><span class="line">	roomInfoDict = &#123;&#125;</span><br><span class="line">	<span class="keyword">for</span> item <span class="keyword">in</span> roomInfoList:</span><br><span class="line">		singleRoom = &#123;<span class="string">"name"</span>: item[<span class="number">1</span>], <span class="string">"bamboos"</span>: item[<span class="number">2</span>], <span class="string">"date"</span>: datetime.utcnow()&#125;</span><br><span class="line">		roomInfoDict[<span class="string">"room"</span> + str(item[<span class="number">0</span>])] = singleRoom</span><br><span class="line">	<span class="keyword">return</span> roomInfoDict</span><br><span class="line"></span><br><span class="line"><span class="comment">#存储到mongodb</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">saveToMongo</span><span class="params">(roomInfoDict)</span>:</span></span><br><span class="line">	client = MongoClient()</span><br><span class="line">	db = client.pandaTV</span><br><span class="line">	<span class="keyword">for</span> k,v <span class="keyword">in</span> roomInfoDict.items():</span><br><span class="line">		collection = db[k]</span><br><span class="line">		collection.insert(v)</span><br><span class="line">	client.close()</span><br></pre></td></tr></table></figure>
+<p>最终存储进mongodb的数据是这样的，我们给每个post都加了一个：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt; show collections</span><br><span class="line">room10003</span><br><span class="line">room10009</span><br><span class="line">room100130</span><br><span class="line">room10015</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">&gt; db.room7000.find()</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"57a2f91deccca320542a9e64"</span>), <span class="string">"bamboos"</span> : 21.4, <span class="string">"date"</span> : ISODate(<span class="string">"2016-08-04T08:13:16.973Z"</span>), <span class="string">"name"</span> : <span class="string">"LPL熊猫TV官方直播"</span> &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"57a2ff93eccca31b38213ac1"</span>), <span class="string">"name"</span> : <span class="string">"LPL熊猫TV官方直播"</span>, <span class="string">"date"</span> : ISODate(<span class="string">"2016-08-04T08:40:51.872Z"</span>), <span class="string">"bamboos"</span> : 21.4 &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"57a45105eccca305c45cb33a"</span>), <span class="string">"bamboos"</span> : 21.64, <span class="string">"name"</span> : <span class="string">"LPL熊猫TV官方直播"</span>, <span class="string">"date"</span> : ISODate(<span class="string">"2016-08-05T08:40:37.707Z"</span>) &#125;</span><br><span class="line">&#123; <span class="string">"_id"</span> : ObjectId(<span class="string">"57a5c283eccca30f6c94b0a0"</span>), <span class="string">"bamboos"</span> : 22.04, <span class="string">"name"</span> : <span class="string">"LPL熊猫TV官方直播"</span>, <span class="string">"date"</span> : ISODate(<span class="string">"2016-08-06T10:57:07.491Z"</span>) &#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>这里要注意有个坑，需要先安装mongodb数据库，在运行爬虫之前，需要先开启数据库。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongod</span><br></pre></td></tr></table></figure></p>
+<h2 id="2-4-提取分析数据"><a href="#2-4-提取分析数据" class="headerlink" title="2.4 提取分析数据"></a>2.4 提取分析数据</h2><p>关于这部分比较简单，大致就是读取数据库，按照时间戳来排序，得到最新的数据，然后返回Top20的一个Dict。特别需要注意的是，因为python的dict类型是无序的，所以即使你是排好序逐一添加，最后的Dict也是无序的。那么又因为我的Dict结构要方便数据可视化工具echarts.js读取，所以我设计成这样：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Dict = &#123;</span><br><span class="line">	<span class="string">"name"</span>: [<span class="string">'xx'</span>, <span class="string">'xx'</span>, ...]</span><br><span class="line">	<span class="string">"bamboos"</span>: [xx, xx, ...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我直接把有序的列表作为values，这样就可以不关注Dict的坑了。还有就是要两个列表组合排序的问题，我使用了zip和sorted。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pymongo <span class="keyword">import</span> MongoClient</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">writeJsonFile</span><span class="params">(data,filename)</span>:</span></span><br><span class="line">	<span class="keyword">with</span> open(filename+<span class="string">".json"</span>, <span class="string">'w'</span>) <span class="keyword">as</span> f:</span><br><span class="line">  		json.dump(data, f)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get20Rank</span><span class="params">(db)</span>:</span></span><br><span class="line">	bamboosList = []</span><br><span class="line">	nameList = []</span><br><span class="line">	rankDict = &#123;&#125;</span><br><span class="line">	mycollections = db.collection_names()</span><br><span class="line">	<span class="keyword">for</span> item <span class="keyword">in</span> mycollections:</span><br><span class="line">		latest = db[item].find().sort(<span class="string">'date'</span>,<span class="number">-1</span>)[<span class="number">0</span>]</span><br><span class="line">		bamboosList.append(latest[<span class="string">"bamboos"</span>])</span><br><span class="line">		nameList.append(latest[<span class="string">"name"</span>])</span><br><span class="line">	bamboosList, nameList = zip(*sorted(zip(bamboosList, nameList), reverse=<span class="keyword">True</span>))</span><br><span class="line">	rankDict[<span class="string">"name"</span>] = nameList[<span class="number">0</span>:<span class="number">19</span>]</span><br><span class="line">	rankDict[<span class="string">"bamboos"</span>] = bamboosList[<span class="number">0</span>:<span class="number">19</span>]</span><br><span class="line">	writeJsonFile(rankDict, <span class="string">"bamboos_rank"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>这样我们得到了包含数据的json文件。</p>
+<h2 id="2-5-数据可视化"><a href="#2-5-数据可视化" class="headerlink" title="2.5 数据可视化"></a>2.5 数据可视化</h2><h3 id="2-5-1-echarts-js"><a href="#2-5-1-echarts-js" class="headerlink" title="2.5.1 echarts.js"></a>2.5.1 echarts.js</h3><p>关于数据可视化的选择有很多，web方面有highchart、echarts、d3之类。因为看中文爽，还是用了echarts。<br><a href="http://echarts.baidu.com/" target="_blank" rel="noopener">echarts官网</a><br>我们需要异步加载数据，<a href="http://echarts.baidu.com/tutorial.html#%E5%BC%82%E6%AD%A5%E6%95%B0%E6%8D%AE%E5%8A%A0%E8%BD%BD%E5%92%8C%E6%9B%B4%E6%96%B0" target="_blank" rel="noopener">异步加载实例</a></p>
+<p>这边还有个坑，就是因为x轴的数据太密集，会导致显示不全，解决办法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">xAxis: [</span><br><span class="line">    axisLabel: &#123;</span><br><span class="line">   	    interval: <span class="number">0</span>,</span><br><span class="line">   	    rotate: <span class="number">340</span></span><br><span class="line">    &#125;,	</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h3 id="2-5-2-移动端简单支持"><a href="#2-5-2-移动端简单支持" class="headerlink" title="2.5.2 移动端简单支持"></a>2.5.2 移动端简单支持</h3><p>我使用了viewport来稍微支持了下移动端，即判断innerWidth的大小（显示屏）来设置参数。当屏幕宽度大于500px时，横向排版；小于500px时，纵向排版。</p>
+<h2 id="2-6-部署到网站"><a href="#2-6-部署到网站" class="headerlink" title="2.6 部署到网站"></a>2.6 部署到网站</h2><p>我们在调试echarts的时候，会遇到一个坑，即不能跨域，因为我们是读取本地json文件的。我安装了一个xampp来调试，比较方便。</p>
+<p>因为我有一个配置好的虚拟主机，所以直接将json文件和html页面放上去就可以看到了。如果只是一个单纯的服务器，需要自己搭建服务器。或者放到github pages上也可以。</p>
+<h1 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h1><p>放上Github地址： <a href="https://github.com/HeroadZ/panda-bamboos-rank" target="_blank" rel="noopener">panda-bamboos-rank</a><br>展示地址： <a href="http://behappy.cc/extension/panda/rank.html">http://behappy.cc/extension/panda/rank.html</a></p>
+<p>以上。</p>
+<p>2016/8/9</p>
+<p>&nbsp;</p>
+
+    
+  </div>
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">赏杯咖啡吧</span>
+      <div class="donation-body">
+        <div class="tip text-center">如果你并不富裕，请不要捐赠！</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+
+
+
+
+   
+      <div class="git"></div>
+   
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+
+    
+	
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
