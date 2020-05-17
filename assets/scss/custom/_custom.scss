@@ -1,0 +1,166 @@
+.list-title, .term-title, .list-year, .list-month {
+    font-family: 'glyph-correction', 'Cinzel Decorative', 'Noto Serif SC', serif;
+}
+
+.brand {
+    font-family: 'Lato', sans-serif;
+    line-height: 1;
+}
+
+.nav {
+    font-size: 1em;
+    margin-top: 0.4em;
+}
+
+.home .poetry {
+    padding: 10em 1em;
+}
+
+.life {
+    color: #f37055;
+}
+.tech {
+    color: #a166ab;
+}
+.about {
+    color: #07b39b;
+}
+
+.menu-item .icon {
+    display: none;
+}
+
+@media (max-width: $maxWidth) {
+    .nav {
+        margin: 2em 0;
+    }
+    .menu-item .icon {
+        display: inline-block;
+    }
+    .menu-item-name {
+        font-size: 80%;
+    }
+}
+
+.nav-toggle {
+    transform: translateY(0.4em);
+}
+
+.footer {
+    letter-spacing: -0.1em;
+}
+
+// https://github.com/TypeNetwork/Amstelvar
+
+// Magic adjustment for en
+@if ($lineHeight != 2) {
+    @font-face {
+        font-family: 'Amstelvar';
+        font-display: swap;
+        src: url('../../fonts/Amstelvar-Roman-VF.woff2') format('woff2-variations'),
+             url('../../fonts/Amstelvar-Roman-VF.woff2') format('woff2');
+        font-weight: 100 900;
+        font-stretch: 50% 125%;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Amstelvar';
+        font-display: swap;
+        src: url('../../fonts/Amstelvar-Italic-VF.woff2') format('woff2-variations'),
+             url('../../fonts/Amstelvar-Italic-VF.woff2') format("woff2");
+        font-weight: 100 900;
+        font-stretch: 50% 125%;
+        font-style: italic;
+    }
+} @else {
+    @font-face {
+        font-family: 'Amstelvar';
+        font-display: swap;
+        src: url('../fonts/Amstelvar-Roman-VF.woff2') format('woff2-variations'),
+             url('../fonts/Amstelvar-Roman-VF.woff2') format('woff2');
+        font-weight: 100 900;
+        font-stretch: 50% 125%;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Amstelvar';
+        font-display: swap;
+        src: url('../fonts/Amstelvar-Italic-VF.woff2') format('woff2-variations'),
+             url('../fonts/Amstelvar-Italic-VF.woff2') format("woff2");
+        font-weight: 100 900;
+        font-stretch: 50% 125%;
+        font-style: italic;
+    }
+}
+
+:root {
+    --text-wdth: 90;
+    --text-opsz: 40;
+    --text-YTLC: 460;
+}
+
+body {
+    font-variation-settings:
+        'wdth' var(--text-wdth),
+        'opsz' var(--text-opsz),
+        'YTLC' var(--text-YTLC);
+}
+
+.post-title {
+    font-family: 'glyph-correction', 'Amstelvar', 'Noto Serif SC', serif;
+    font-variation-settings:
+        'wght' 550,
+        'opsz' 60,
+        'YOPQ' 90;
+}
+
+.list-item-time {
+    font-feature-settings: 'tnum';
+}
+
+
+blockquote.quote {
+    position: relative;
+    margin: 2em auto;
+    padding-left: 3em;
+    color: inherit;
+    border: none;
+    &::before {
+        position: absolute;
+        left: 0;
+        content: '“';
+        font-size: 3em;
+        font-weight: bold;
+        line-height: 1;
+    }
+    &.poetry {
+        display: table;
+        padding: 0;
+        &::before {
+            left: -1em;
+        }
+        p:last-child {
+            margin: 0;
+        }
+    }
+    &.en {
+        p {
+            line-height: 1.618;
+            text-align: left;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+        }
+    }
+}
+
+@media (max-width: $maxWidth) {
+    blockquote.quote {
+        &.poetry {
+            padding-left: 3em;
+            &::before {
+                left: 0;
+            }
+        }
+    }
+}

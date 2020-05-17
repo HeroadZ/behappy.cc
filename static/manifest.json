@@ -1,0 +1,14 @@
+{
+    "name": "\u9189\u4e50\u8f69",
+    "short_name": "\u9189\u4e50\u8f69",
+    "icons": [
+        {
+            "src": "./icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone"
+}
