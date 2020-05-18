@@ -321,8 +321,8 @@ uglyURLs = false
     "人之于一世，惟须臾几十载尔。",
     "恨失醉卧沙场之际遇，叹少指点江山之才气。",
     "自知无百夫长之运，而亦乐为独善其身之书生。",
-    "但愿于此浮躁之世，留些许微进之迹。",
-    "守一谦与奇之心",
+    "但愿于此浮躁之世，留些许微进之迹，",
+    "守一谦与奇之心。",
     "望君以梦为马，醉乐其中。"
     ]
     # 底部链接的内间距，单位：em
@@ -779,7 +779,7 @@ uglyURLs = false
     displayTOCTitle = true
 
     # 是否显示数字（全局设置）
-    displayTOCNum = true
+    displayTOCNum = false
     # 说明：文章的 Front Matter 中的 `tocNum`
     #      的优先级高于此处
 
