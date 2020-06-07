@@ -1,45 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN">
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.62.2" /><meta name="theme-color" content="#fff" />
-        <script>
-            const userPrefers = localStorage.getItem('theme');
-            const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            const lightModeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
-            if (userPrefers === 'dark') {
-                changeModeMeta('dark');
-            } else if (userPrefers === 'light') {
-                changeModeMeta('light');
-            } else if (darkModeMediaQuery.matches) {
-                changeModeMeta('dark');
-            } else if (lightModeMediaQuery.matches) {
-                changeModeMeta('light');
-            }
-            function changeModeMeta(theme) {
-                document.documentElement.setAttribute('data-theme', theme);
-                if (theme === 'dark') {
-                    changeThemeColor('#16171d');
-                } else {
-                    changeThemeColor('#fff');
-                }
-            }
-            function changeThemeColor(themeColor) {
-                document.querySelector('meta[name="theme-color"]').setAttribute('content', themeColor);
-            }
-        </script>
-
-    
-        
-        
-        <script>
-            if (window.location.host == "example.com" && window.location.protocol != "https:") {
-                window.location.protocol = "https";
-            }
-        </script>
-
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -50,7 +14,11 @@
 
     <title>毕业设计——基于Ruff的简单物联网 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.971dde599532fd17550e97ca4a0e54e34f9f6749999fa9ae08a4cbdd9dc2b18c.css" integrity="sha256-lx3eWZUy/RdVDpfKSg5U40&#43;fZ0mZn6muCKTL3Z3CsYw=" />
+    <link rel="stylesheet" href="/css/meme.min.b2e8eb6d389714c7aafac86765cbf2f0911ab967d445484a13e58acfb1924f28.css" integrity="sha256-sujrbTiXFMeq&#43;shnZcvy8JEauWfURUhKE&#43;WKz7GSTyg=" />
+
+    
+    <script src="/js/meme.min.dd8399c0f5827f976163dc64130fc20d354f2ec5e52d92ae1fbbffb82a513929.js" integrity="sha256-3YOZwPWCf5dhY9xkEw/CDTVPLsXlLZKuH7v/uCpROSk="></script>
+
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -79,15 +47,14 @@
 
     
     <link rel="canonical" href="https://example.com/2017/07/22/ruff-graduation-project/" />
-
-
+    
 
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebPage",
         "datePublished": "2017-07-22T09:07:48+00:00",
-        "dateModified": "2020-05-17T20:07:54+09:00",
+        "dateModified": "2020-06-07T10:44:49+09:00",
         "url": "https://example.com/2017/07/22/ruff-graduation-project/",
         "name": "毕业设计——基于Ruff的简单物联网",
         "description": "1. 背景 1.1 为什么用Ruff 这次介绍我的毕业设计，这是个非常简单的东西。所有的源码在**……\r\n    \r\n    ",
@@ -111,16 +78,12 @@
 
     
 
-
-
 <meta name="twitter:card" content="summary" />
 
 <meta name="twitter:site" content="@Merlini_zc" />
 <meta name="twitter:creator" content="@Merlini_zc" />
 
     
-
-
 
 
 
@@ -160,7 +123,7 @@
     <header class="header" data-scroll-header>
         
             <div class="header-wrapper">
-                <div class="header-inner">
+                <div class="header-inner single">
                     
     <div class="site-brand">
         
@@ -198,17 +161,12 @@
         
             
                 
-                    <li class="menu-item">
-                        
-    
-        
-            
-        
-        <div id="theme-switcher">🌞</div>
-    
-
-
-                    </li>
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
                 
             
         
@@ -235,6 +193,8 @@
     <main class="main single" id="main">
     <div class="main-inner">
 
+        
+
         <article class="content post" data-align="justify" data-type="tech">
 
             <h1 class="post-title">毕业设计——基于Ruff的简单物联网</h1>
@@ -247,8 +207,7 @@
 
             
 
-            
-                <nav class="contents">
+            <nav class="contents">
   <h2 id="contents" class="contents-title">目录</h2><ol class="toc">
     <li><a id="contents:11-为什么用ruff" href="#11-为什么用ruff">1.1 为什么用Ruff</a></li>
     <li><a id="contents:12-ruff的开发方式" href="#12-ruff的开发方式">1.2 Ruff的开发方式</a></li>
@@ -265,7 +224,8 @@
     <li><a id="contents:32-夜间睡眠模式" href="#32-夜间睡眠模式">3.2 夜间睡眠模式</a></li>
     <li><a id="contents:33-监控模式" href="#33-监控模式">3.3 监控模式</a></li>
   </ol>
-</nav><div class="post-body"><h1 id="1-背景"><a href="#1-背景" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-背景" class="headings">1. 背景</a></h1>
+</nav><div class="post-body">
+              <h1 id="1-背景"><a href="#1-背景" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-背景" class="headings">1. 背景</a></h1>
 <h2 id="11-为什么用ruff"><a href="#11-为什么用ruff" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:11-为什么用ruff" class="headings">1.1 为什么用Ruff</a></h2>
 <p>这次介绍我的毕业设计，这是个非常简单的东西。所有的源码在**<a href="https://github.com/HeroadZ/Ruff-graduation-project" target="_blank" rel="noopener">Github</a>**上，还包含了配置信息。</p>
 <p>因为接触了好长时间的前端，然后本身是EE专业，就是搞单片机这种东西嘛，所以对js能否搞硬件一直保有期待。正好快毕业了，老师呢，也说让我自主选题。于是在网上搜索好久，先是舍友推荐了<strong>ESP8266</strong>。这是一块自带wifi的板子，毫无疑问，对于长期只能玩51板子的我有巨大吸引力！都能上网了还有什么不能干！然后又是一顿搜索，找到了集成度更高的**<a href="http://www.nodemcu.com/index_cn.html" target="_blank" rel="noopener">nodemcu</a>**，哇，这货就是我心中想要的。Nodejs编写网络应用，然后Lua操作硬件，可惜的是学习Lua也要一定的成本，不过这个很便宜，可以说是非常好的物联网开发板了。</p>
@@ -283,12 +243,12 @@ end
 </code></pre><p>是不是很烦，而且是从给引脚赋值，真的是蛋疼啊，完全没有阅读性可言。</p>
 <p><strong>C语言</strong>是这样的：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-c" data-lang="c"><span class="n">sbit</span>  <span class="n">led1</span><span class="o">=</span><span class="n">P1</span><span class="o">^</span><span class="mi">0</span><span class="p">;</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>前面的一堆引入就不放进去了，同样是对引脚操作，东西一多，代码看起来真费劲。</p>
 <p>所以看到js的开发方式，的确很感动。我很欣赏Ruff创始人的观点：</p>
@@ -311,7 +271,7 @@ end
 <p>如上所示，我最上面有3个功能模块，放后面讲，然后中间的ip修改是方便局域网时，可以修改发送地址的。其实就是把ip地址放在**<a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">localStorage</a>**里面，每个页面都可以共享，然后有需要就改掉。注意这里需要**正则验证**一下输入，用<code>/^([0-9]{1,3}\.){3}[0-9]{1,3}$/.test(ipInput.val())</code>就可以了。然后下面的修改颜色模块，其实就是我所说的点亮一盏灯的功能了。因为这边用的是RGB三色灯，是基于PWM波。根据简单的三原色原理，我们直到**当R,G,B都是255的时候，就是白光；R,G,B都是0的时候，就灭掉**。</p>
 <p>然后修改页面的代码大致如下，使用ES6写的，不过就语法变了下：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -340,14 +300,14 @@ end
 		 <span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改失败!&#34;</span><span class="p">)</span><span class="p">;</span>
 	<span class="p">}</span>
 <span class="p">}</span><span class="p">)</span><span class="p">;</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>可以看到，我们把颜色参数添加到了链接后面，注意这边需要编码，因为<code>#</code>是特殊字符。所以最后这个网址可能是这样的，6318是监听的端口号：</p>
 <pre><code>http://192.168.78.1:6318/colorChange?color=%23ffffff
 </code></pre><h2 id="23-服务器端程序"><a href="#23-服务器端程序" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:23-服务器端程序" class="headings">2.3 服务器端程序</a></h2>
 <p>那么现在客户端可以发送请求了，服务器端必须监听这个请求并做出相应的处理。幸运地是，Node.js有相应的http库，但是所有的发送，接收，监听，回掉都要自己慢慢写，而Ruff替我们封装了一个库**<a href="https://github.com/vilic/ruff-home" target="_blank" rel="noopener">home</a>**，我们可以很简单地处理请求，但是需要注意的是，为了解决跨域问题，我们需要在response的header上加上允许跨域。所以最终的部分代码可能是这样的：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -392,7 +352,7 @@ end
 </span><span class="c1"></span>    <span class="p">}</span><span class="p">;</span>
 <span class="p">}</span><span class="p">)</span><span class="p">;</span>
 
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><h1 id="3-其他功能"><a href="#3-其他功能" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-其他功能" class="headings">3. 其他功能</a></h1>
 <h2 id="31-自适应灯光"><a href="#31-自适应灯光" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:31-自适应灯光" class="headings">3.1 自适应灯光</a></h2>
@@ -401,7 +361,7 @@ end
 <p>也就是，到了晚上（光照传感器确定），睡觉的人起床（声音传感器听到声音），led灯渐渐变亮。这里的难点是js的回掉太多了，简直回掉深渊，各种绑定取消。其实也没这么烦的，但是我想做一个类似按键防抖的功能，因为有时候会有比如说人经过会遮挡光照传感器等特殊情况。还好有人设计了<strong>promise</strong>这个东东，简单又使用。<strong>张鑫旭</strong>写了<a href="http://www.zhangxinxu.com/wordpress/2014/02/es6-javascript-promise-%E6%84%9F%E6%80%A7%E8%AE%A4%E7%9F%A5/" target="_blank" rel="noopener">一篇文章</a>来介绍这个概念，Ruff官方也封装了<a href="https://github.com/vilic/ruff-promise" target="_blank" rel="noopener">一个专门的库</a>来供我们使用。</p>
 <p>所以一个简单的确认到晚上的功能是这样的：</p>
 <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
@@ -464,7 +424,7 @@ end
             <span class="nx">nightFlag</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span><span class="p">)</span>
-</code></pre></td></tr></table>
+</code></pre></td></tr></table></div>
 </div>
 </div><p>不过声音传感器的防抖因为设计原因，我暂时还没什么好想法。</p>
 <h2 id="33-监控模式"><a href="#33-监控模式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:33-监控模式" class="headings">3.3 监控模式</a></h2>
@@ -484,7 +444,10 @@ end
 </blockquote>
 <p>其实还挺有趣的，我没有用到Ruff的测试环境，没有自己写驱动包，因为没有用其他模块，尝试了下ES6和webpack，最近了解到写sass可以用csscombine来调节顺序什么的。所有的东西我只学了个皮毛，所以做出来的东西也只能是皮毛。不过毕业设计能做自己感兴趣的东西还是挺好玩的。</p>
 <p>以上。</p>
-</div>
+<p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
+<img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>
+
+            </div>
 
         </article>
 
@@ -499,9 +462,7 @@ end
         
 
 
-        
-
-<div class="post-share">
+        <div class="post-share">
 
         
 
@@ -630,9 +591,7 @@ end
 
 
         </div>
-        <script src="/js/meme.min.5d34fb8bf7cd205f83284aff4c8e8eb0e907d0dc97b7c0a52f82505040721c3d.js" integrity="sha256-XTT7i/fNIF&#43;DKEr/TI6OsOkH0NyXt8ClL4JQUEByHD0="></script>
-
-
+        
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
 <script>

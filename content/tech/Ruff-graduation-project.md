@@ -188,3 +188,6 @@ In a nutshell，就是人体红外传感器检测到人，向微信发送消息�
 
 以上。
 
+
+<p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
+<img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>

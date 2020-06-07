@@ -214,3 +214,6 @@ E-mail：XXX
 周围都是大佬，我这个弟弟怎么能不努力呢？
 
 以上。
+
+<p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
+<img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>

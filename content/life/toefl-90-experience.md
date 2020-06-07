@@ -266,18 +266,5 @@ Toefl的成绩单分为两个，一个是**official score reports**，也就是�
 
 总之，不要放弃，练习再练习，给自己一个合理的预期分数！
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
+<img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>
