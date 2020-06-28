@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">醉乐轩</title>
     <subtitle type="html">张程的个人博客，分享技术以及日本留学生活。</subtitle>
-    <updated>2020-06-07T11:08:51&#43;09:00</updated>
+    <updated>2020-06-28T16:49:28&#43;09:00</updated>
     <id>https://example.com/</id>
     <link rel="alternate" type="text/html" href="https://example.com/" />
     <link rel="self" type="application/atom&#43;xml" href="https://example.com/atom.xml" />
@@ -15,12 +15,12 @@
                 <email>zchelllo@gmail.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.62.2">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.73.0">Hugo</generator>
         <entry>
             <title type="text">2018，学会去拥抱！</title>
             <link rel="alternate" type="text/html" href="https://example.com/2019/01/02/2018-final/" />
             <id>https://example.com/2019/01/02/2018-final/</id>
-            <updated>2020-06-04T20:36:20&#43;09:00</updated>
+            <updated>2020-06-24T09:28:00&#43;09:00</updated>
             <published>2019-01-02T19:43:59&#43;00:00</published>
             <author>
                     <name>张程</name>
@@ -82,6 +82,10 @@
                     
                     
                     
+                        
+                            <category scheme="https://example.com/life/" term="life\" label="life\" />
+                        
+                    
                 
             
             
@@ -104,7 +108,7 @@
             <title type="text">日本求学之路</title>
             <link rel="alternate" type="text/html" href="https://example.com/2018/09/01/how-to-study-in-japan/" />
             <id>https://example.com/2018/09/01/how-to-study-in-japan/</id>
-            <updated>2020-06-07T10:44:25&#43;09:00</updated>
+            <updated>2020-06-24T09:28:00&#43;09:00</updated>
             <published>2018-09-01T10:23:59&#43;00:00</published>
             <author>
                     <name>张程</name>
@@ -344,6 +348,10 @@ E-mail：XXX
                     
                     
                     
+                        
+                            <category scheme="https://example.com/life/" term="life\" label="life\" />
+                        
+                    
                 
             
             
@@ -366,7 +374,7 @@ E-mail：XXX
             <title type="text">在日半年</title>
             <link rel="alternate" type="text/html" href="https://example.com/2018/03/31/half-year-in-japan/" />
             <id>https://example.com/2018/03/31/half-year-in-japan/</id>
-            <updated>2020-06-07T10:44:21&#43;09:00</updated>
+            <updated>2020-06-24T09:28:00&#43;09:00</updated>
             <published>2018-03-31T15:44:00&#43;00:00</published>
             <author>
                     <name>张程</name>
@@ -444,6 +452,10 @@ E-mail：XXX
                     
                     
                     
+                        
+                            <category scheme="https://example.com/life/" term="life\" label="life\" />
+                        
+                    
                 
             
             
@@ -466,7 +478,7 @@ E-mail：XXX
             <title type="text">六级466到托福首战94的心得总结</title>
             <link rel="alternate" type="text/html" href="https://example.com/2017/07/27/toefl-90-experience/" />
             <id>https://example.com/2017/07/27/toefl-90-experience/</id>
-            <updated>2020-06-07T10:44:31&#43;09:00</updated>
+            <updated>2020-06-24T09:28:00&#43;09:00</updated>
             <published>2017-07-27T07:13:26&#43;00:00</published>
             <author>
                     <name>张程</name>
@@ -715,6 +727,10 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                     
                     
                     
+                        
+                            <category scheme="https://example.com/life/" term="life\" label="life\" />
+                        
+                    
                 
             
             
@@ -729,7 +745,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
             <title type="text">2016总结与展望</title>
             <link rel="alternate" type="text/html" href="https://example.com/2017/01/26/2016-final/" />
             <id>https://example.com/2017/01/26/2016-final/</id>
-            <updated>2020-06-04T20:36:20&#43;09:00</updated>
+            <updated>2020-06-24T09:28:00&#43;09:00</updated>
             <published>2017-01-26T21:49:37&#43;00:00</published>
             <author>
                     <name>张程</name>
@@ -781,6 +797,10 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                     
                     
                     
+                        
+                            <category scheme="https://example.com/life/" term="life\" label="life\" />
+                        
+                    
                 
             
             
@@ -803,7 +823,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
             <title type="text">《艾伦图灵传》记录</title>
             <link rel="alternate" type="text/html" href="https://example.com/2015/05/09/turing/" />
             <id>https://example.com/2015/05/09/turing/</id>
-            <updated>2020-06-04T20:36:20&#43;09:00</updated>
+            <updated>2020-06-24T09:28:00&#43;09:00</updated>
             <published>2015-05-09T10:21:46&#43;00:00</published>
             <author>
                     <name>张程</name>
@@ -830,6 +850,10 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                     
                     
                     
+                        
+                            <category scheme="https://example.com/life/" term="life\" label="life\" />
+                        
+                    
                 
             
             
@@ -852,7 +876,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
             <title type="text">读《暗时间》</title>
             <link rel="alternate" type="text/html" href="https://example.com/2015/03/28/how-to-study-in-japan/" />
             <id>https://example.com/2015/03/28/how-to-study-in-japan/</id>
-            <updated>2020-06-04T20:36:20&#43;09:00</updated>
+            <updated>2020-06-24T09:28:00&#43;09:00</updated>
             <published>2015-03-28T09:48:04&#43;00:00</published>
             <author>
                     <name>张程</name>
@@ -895,6 +919,10 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                     
                     
                     
+                        
+                            <category scheme="https://example.com/life/" term="life\" label="life\" />
+                        
+                    
                 
             
             
@@ -917,7 +945,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
             <title type="text">不求有功，但求无过——2014终了</title>
             <link rel="alternate" type="text/html" href="https://example.com/2014/12/30/2014-final/" />
             <id>https://example.com/2014/12/30/2014-final/</id>
-            <updated>2020-06-04T20:36:20&#43;09:00</updated>
+            <updated>2020-06-24T09:28:00&#43;09:00</updated>
             <published>2014-12-30T22:55:32&#43;00:00</published>
             <author>
                     <name>张程</name>
@@ -958,6 +986,10 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                 
                     
                     
+                    
+                        
+                            <category scheme="https://example.com/life/" term="life\" label="life\" />
+                        
                     
                 
             
