@@ -3,18 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/tech/</loc>
-    <lastmod>2020-06-28T16:49:12+09:00</lastmod>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2020-07-11T00:51:05+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/2020/06/28/the-simplest-single-wechat-official-account-spider/</loc>
-    <lastmod>2020-06-28T16:49:12+09:00</lastmod>
+    <loc>https://example.com/tech/</loc>
+    <lastmod>2020-07-11T00:51:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2020/07/01/trends-in-tokyos-chinese-students/</loc>
+    <lastmod>2020-07-11T00:51:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/</loc>
+    <lastmod>2020-07-11T00:51:05+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2020-06-28T16:49:12+09:00</lastmod>
+    <lastmod>2020-07-11T00:51:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/2020/06/28/the-simplest-single-wechat-official-account-spider/</loc>
+    <lastmod>2020-06-28T16:53:42+09:00</lastmod>
   </url>
   
   <url>
@@ -33,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://example.com/tags/</loc>
-    <lastmod>2020-06-24T09:28:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://example.com/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2020-06-24T09:28:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/</loc>
     <lastmod>2020-06-24T09:28:00+09:00</lastmod>
   </url>
   
