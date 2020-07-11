@@ -407,7 +407,7 @@ uglyURLs = false
     # 标签页面
 
     # 是否开启标签云
-    enableTagCloud = false
+    enableTagCloud = true
     # 字号单位
     fontUnit = "em"
     # 最大字号
