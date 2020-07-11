@@ -407,7 +407,7 @@ uglyURLs = false
     # 标签页面
 
     # 是否开启标签云
-    enableTagCloud = true
+    enableTagCloud = false
     # 字号单位
     fontUnit = "em"
     # 最大字号
@@ -1122,7 +1122,7 @@ uglyURLs = false
     # 文章的标签
 
     # 是否开启
-    enablePostTags = false
+    enablePostTags = true
 
     # 标签的图标
     postTagsIcon = "tag"
