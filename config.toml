@@ -179,13 +179,10 @@ uglyURLs = false
 #               `lang-switcher`）
 
 [menu]
-    ## 菜单栏
-    # [[menu.main]]
-    #     url = "/"
-    #     name = "首页"
-    #     weight = 1
-    #     pre = "internal"
-    #     post = "home"
+
+    [[menu.main]]
+        weight = 6
+        identifier = "theme-switcher"
 
     [[menu.main]]
         url = "/life/"
@@ -211,9 +208,7 @@ uglyURLs = false
         weight = 4
         pre = "internal"
         identifier = "about"
-    [[menu.main]]
-        weight = 6
-        identifier = "theme-switcher"
+
     
 
 
