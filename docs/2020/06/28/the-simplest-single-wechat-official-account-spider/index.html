@@ -14,11 +14,11 @@
 
     <title>最简单的微信公众号爬虫 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.88862f313a4a0f9b80b5c4cb2fefa229c328c56d2d22da3f4d4e918a15c9f2a7.css" integrity="sha256-iIYvMTpKD5uAtcTLL&#43;&#43;iKcMoxW0tIto/TU6RihXJ8qc=" />
+    <link rel="stylesheet" href="/css/meme.min.ca7244a6ac2e991fbbe3b0d8d3424ed8f24cba5bfb96a2f3ef7d24f8c9515df5.css"/>
 
     
     
-        <script src="/js/meme.min.2ead9b4febaad936b25d0699b3eedbe8b828f960c7f05d0b103478e82636240b.js" integrity="sha256-Lq2bT&#43;uq2TayXQaZs&#43;7b6Lgo&#43;WDH8F0LEDR46CY2JAs="></script>
+        <script src="/js/meme.min.2ead9b4febaad936b25d0699b3eedbe8b828f960c7f05d0b103478e82636240b.js"></script>
 
     
 
@@ -118,7 +118,7 @@
     <body>
         <div class="container">
             
-    <header class="header" data-scroll-header>
+    <header class="header">
         
             <div class="header-wrapper">
                 <div class="header-inner single">
@@ -193,9 +193,9 @@
 
         
 
-        <article class="content post" data-align="justify" data-type="tech">
+        <article class="content post h-entry" data-align="justify" data-type="tech">
 
-            <h1 class="post-title">最简单的微信公众号爬虫</h1>
+            <h1 class="post-title p-name">最简单的微信公众号爬虫</h1>
 
             
 
@@ -210,7 +210,7 @@
     <li><a id="contents:1-开发者工具提取网址" href="#1-开发者工具提取网址">1. 开发者工具提取网址</a></li>
     <li><a id="contents:2-puppeteer爬虫" href="#2-puppeteer爬虫">2. Puppeteer爬虫</a></li>
   </ol>
-</nav><div class="post-body">
+</nav><div class="post-body e-content">
               <p style="text-indent:0"><span class="drop-cap">时</span>间过得真快，看了一下上次发文的日期，发现几乎快一年半没有更新博客了。这一年半，做了些事情，也荒废了些光阴，遇到了各式各样的人，收获良多。以后可能会把所得的感悟记录总结下来，不过这次的文章主要是关于技术方面的，也就不多嚼舌根了。</p>
 <p>这次的内容如题，微信公众号爬虫。关于微信公众号爬虫，肯定之前就有很多解决方案了，毕竟有需求就有市场嘛。<a href="https://github.com/DropsDevopsOrg/ECommerceCrawlers/wiki/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%88%AC%E5%8F%96%E7%A0%94%E7%A9%B6" target="_blank" rel="noopener">「这里」</a>提供了大概4种思路去实现一个微信公众号爬虫，有兴趣的朋友可以深入研究一下。</p>
 <p>可是无论是上面的哪种方式，都需要很复杂的流程和环境，而且随着微信的迭代更新，大部分的开源代码都失效了。然而我的需求很简单，仅仅只是爬取这个公众号所有的历史文章。经过一番折腾，我找到了比较简单的实现思路，分为两部分，浏览器开发者工具 + headless 爬虫。</p>
@@ -391,12 +391,12 @@
 
             </div>
 
+            
+
+
         </article>
 
         
-
-        
-
 
         
 
@@ -536,18 +536,8 @@
 
         </div>
         
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
-<script>
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speedAsDuration: true,
-        header: '[data-scroll-header]'
-    });
-</script>
-
-
-
-
+        
 
 
 
@@ -567,10 +557,7 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
 
 
 
