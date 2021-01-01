@@ -2,18 +2,13 @@
     font-family: 'glyph-correction', 'Cinzel Decorative', 'Noto Serif SC', serif;
 }
 
-.brand {
-    font-family: 'Lato', sans-serif;
-    line-height: 1;
-}
 
 .nav {
     font-size: 1em;
-    margin-top: 0.4em;
 }
 
 .home .poetry {
-    padding: 9em 1em;
+    padding: 9rem 1em;
 }
 
 @media (max-width: $maxWidth) {
