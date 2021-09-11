@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://example.com/"
+baseURL = "https://behappy.cc/"
 title = "醉乐轩"
 languageCode = "zh-CN"
 hasCJKLanguage = true
@@ -344,7 +344,7 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "张程的个人博客，分享技术以及日本留学生活。"
+    siteDescription = "以梦为马，醉乐其中。"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
@@ -353,7 +353,7 @@ uglyURLs = false
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
-    siteTwitter = "Merlini_zc"
+    siteTwitter = ""
     # 说明：用于 Twitter Cards
 
 
