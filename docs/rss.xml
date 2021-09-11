@@ -8,9 +8,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>醉乐轩</title>
-        <link>https://example.com/</link>
-        <description>张程的个人博客，分享技术以及日本留学生活。</description>
-        <generator>Hugo 0.73.0 https://gohugo.io/</generator>
+        <link>https://behappy.cc/</link>
+        <description>以梦为马，醉乐其中。</description>
+        <generator>Hugo 0.88.1 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
         
@@ -23,15 +23,15 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 01 Jan 2021 14:11:27 &#43;0900</lastBuildDate>
+        <lastBuildDate>Sat, 11 Sep 2021 17:00:59 &#43;0900</lastBuildDate>
         
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://example.com/rss.xml" />
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://behappy.cc/rss.xml" />
         
         
             <item>
                 <title>在早稻田的这两年</title>
-                <link>https://example.com/2020/12/31/two-years-in-waseda/</link>
-                <guid isPermaLink="true">https://example.com/2020/12/31/two-years-in-waseda/</guid>
+                <link>https://behappy.cc/2020/12/31/two-years-in-waseda/</link>
+                <guid isPermaLink="true">https://behappy.cc/2020/12/31/two-years-in-waseda/</guid>
                 <pubDate>Thu, 31 Dec 2020 17:42:39 &#43;0900</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -43,7 +43,7 @@
 &lt;p&gt;19 年 3 月中旬，在入境处和日本小哥简单寒暄后，我拿到了新的在留卡，而这也标志着我两年的硕士生活的正式开始。新的环境新的人群，刚开始的生活是非常新鲜的，但适应它也需要很多时间和精力。我需要跟研究室的老师同学用英日交流我的研究，我需要跟各种国籍的人一起合作完成课程上的作业，我还需要为了能在假期获得一份实习而不断学习。然而尽管之前已经在京都有过一年的日本语言学校的经历，我还是忙的狼狈不堪且收效甚微。&lt;/p&gt;
 &lt;p&gt;本科几乎没有接触过科研的我开始从零看晦涩难懂的顶会论文， python 只会写 &lt;code&gt;hello, world&lt;/code&gt; 的我后知后觉地加入了机器学习和自然语言处理的内卷浪潮，即便我大一的高数只考了 61 分。同时，我总是在查词典，英语和日语都查。对了，那时候的我还申请了十几个公司的暑期实习。毫无悬念，全部落选，原因也很明了，语言和编程能力都不达标。总之，2019年于我来说是一个默默发育的年份。后来和朋友去拜神社的时候，才知道本命年24岁是大厄年，的确是不太顺利啊。&lt;/p&gt;
 &lt;p&gt;其实 19 年也经历一些有趣开心的事，比如参加上海的谷歌开发者大会和东京的LINE开发者大会让我感受到科技的魅力；带领经济和政治学的朋友们一起参加学校举办的预测日本参议院大选的比赛并上台发表；和研究室的同学们一起合宿喝酒听他们吐槽日本的未来；各种樱花和美丽的花火大会；以及遇到了我现在的女朋友。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/2019_highlights.jpg&#34; alt=&#34;2019_highlights&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/2019_highlights.jpg&#34; alt=&#34;2019_highlights&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;2020-逆风成长&#34;&gt;2020 逆风成长&lt;/h2&gt;
 &lt;p&gt;2020 对全世界来说都很特别很魔幻，人类遭遇了历史上屈指可数的大型生化攻击 —— ..新冠病毒..，并且渗透影响到人类社会的各个方面。国内一月份开始正式封国，而此时日本丝毫没有警觉的迹象。到了二月份，日本加强了宣传，不过大部分日本人自恃医疗先进，只是把新冠当普通流感对待。三月份，我找到了第一份it打工，负责网站前端和人脸识别系统的开发。不过仅仅是工作了一个月，日本也开始封锁了，公司以疫情和资金问题停止了合同让我回去待业。&lt;/p&gt;
 &lt;p&gt;说到这里，我想起当初非常..幼稚且可笑..的认知，说出来博君一笑。在三月份打工期间，我每天都需要坐单程一小时的电车到公司上班。那时候在我看来，这是非常痛苦和低效率的工作方式，所以我非常..期待..日本宣布封锁，这样我就可以在家远程工作了，可以说是很直白的精致利己的想法了。可我从来没想到，疫情带来的各种负面影响，它能让一个企业甚至一个国家遭受巨大的损失，它能让很多人失业，它让大家处于水深火热中，而我仅仅觉得带个口罩就可以事不关己了，实在是荒唐可笑。 疫情现在还在持续，未来的生活是 with corona 的。&lt;/p&gt;
@@ -51,7 +51,7 @@
 &lt;p&gt;今年其实也很幸运，算是苦尽甘来。 6 月，我找到一家搞 AI 的日企的远程实习，直到现在。社长和带我的部长都非常 nice，工资不错工作内容也非常有趣。 我很感恩他们给了我转正的 offer ，不过最终还是没有接受，因为我还有一份雅虎的 offer，虽然工资相对其他大厂不高，但是刚毕业进大厂可能是一个更好的选择。&lt;/p&gt;
 &lt;p&gt;说到在日本找工作，其实有非常多的东西可以聊，我稍微提两句。我虽然人比较菜，但是投的公司都是大厂（气势不能输），投了大概十几家。很多日企因为 SPI 测试（日语和逻辑）没过直接被拒，外企被拒的话都是因为实力不达标，毕竟我 leetcode 才刷了几十道，入门都不到的水平😭。 LINE 的笔试过了，但是面试因为没准备计算机基础相关的知识跪了，非常可惜。那我雅虎的 SPI 是怎么过的呢？这还得感谢我实验室的一个关系很好的日本朋友，没有他的助攻，估计我这日语水平就是白给。&lt;/p&gt;
 &lt;p&gt;学术方面也是运气很好地取得了一些进展，在日本国内会议，国际学会和国际会议上都水了一篇论文，算是有点基础的科研能力了，同时对自然语言处理也有了一个系统的认知。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/2020_highlights.jpg&#34; alt=&#34;2020_highlights&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/2020_highlights.jpg&#34; alt=&#34;2020_highlights&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;一点碎碎念&#34;&gt;一点碎碎念&lt;/h2&gt;
 &lt;p&gt;最近得闲回顾了一下自己的人生轨迹，感觉真是选择大于努力。大四的时候，我实习一个月2400，还得加班；而现在我打工一天8小时的工资就有1000，还可以远程工作。虽然中国日本的物价和工资水平不一样不能直接比较，但是我还是感慨颇多的。如果我当初选择在那家公司转正，如果我当初选择加入国内考研的内卷，那么我这时应该是什么样呢？我自认是一个智商普通且一般努力的人，能够一切顺利地走到现在真得归功于幸运吧。&lt;/p&gt;
 &lt;p&gt;明年 4 月开始要在日本工作了，希望少受些社会的毒打。也有点想家了，已经一年半没回国了，想念国内的家人和朋友们。2021 年的 flag 暂时就不立了，关于想要的和想做的还在迷茫中......&lt;/p&gt;
@@ -69,7 +69,7 @@
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -82,7 +82,7 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
+                                    <category domain="https://behappy.cc/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
                                 
                             
                         
@@ -92,8 +92,8 @@
         
             <item>
                 <title>2018，学会去拥抱！</title>
-                <link>https://example.com/2019/01/02/2018-final/</link>
-                <guid isPermaLink="true">https://example.com/2019/01/02/2018-final/</guid>
+                <link>https://behappy.cc/2019/01/02/2018-final/</link>
+                <guid isPermaLink="true">https://behappy.cc/2019/01/02/2018-final/</guid>
                 <pubDate>Wed, 02 Jan 2019 19:43:59 &#43;0000</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -119,8 +119,8 @@
 &lt;p&gt;职业技能方面，由于准备考试，对科班的计算机知识构建了一个比较完整的体系，对基础数学也有了个很全面的理解。最近在看机器学习和大数据的书，也是慢慢在往这方面靠了，挺好的，只是越来越浮躁，经常看不进去书，每天浑浑噩噩，需要一个压力来push我。&lt;/p&gt;
 &lt;p&gt;业务爱好方面，网球和口琴目前都荒废了，只有转笔还在坚持。然后今年新增加了一个技能，吉他，感觉还是挺好玩的。下面放一段才弹一个月的录音，以后坚持每年都记录对比一下。也是终于打通了基础乐理的盲点，希望我能在音乐的道路上发现更多好玩的。现在会理发了，不过只能帮别人理，这技能日了狗哈哈哈。看书看电影这些，我倒是从来没落下，不想学习的时候，只有看剧才能打发时间了。&lt;/p&gt;
 &lt;audio controls height=&#34;100&#34; width=&#34;100&#34;&gt;
-  &lt;source src=&#34;https://example.com/videos/scarborough_fair.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
-  &lt;embed height=&#34;50&#34; width=&#34;100&#34; src=&#34;https://example.com/audio/scarborough_fair.mp3&#34;&gt;
+  &lt;source src=&#34;https://behappy.cc/videos/scarborough_fair.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+  &lt;embed height=&#34;50&#34; width=&#34;100&#34; src=&#34;https://behappy.cc/audio/scarborough_fair.mp3&#34;&gt;
 &lt;/audio&gt;
 &lt;h2 id=&#34;5-情感方面&#34;&gt;5. 情感方面&lt;/h2&gt;
 &lt;p&gt;经历了异国恋的分手，现在非常不看好以后也不想经历异地恋了。看shameless的时候，有句台词挺好玩的，&lt;strong&gt;“我们都是成年人了，不可能再轻易爱上别人了”&lt;/strong&gt;，所以不要轻易的开始一段感情。然后就是不要花时间在得不到的人事上。关于男女情感方面的事，还是有很多疑惑的，比如现在男女性越来越对立，也越来越独立，该如何与女生相处也是个值得思考的问题。这一年09结婚了，阿岳生小孩了，老菊也结婚了，感叹自己是真的不再年轻了，而且还一事无成，迷茫呀。&lt;/p&gt;
@@ -152,7 +152,7 @@
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -165,7 +165,7 @@
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
+                                    <category domain="https://behappy.cc/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
                                 
                             
                         
@@ -175,8 +175,8 @@
         
             <item>
                 <title>日本求学之路</title>
-                <link>https://example.com/2018/09/01/how-to-study-in-japan/</link>
-                <guid isPermaLink="true">https://example.com/2018/09/01/how-to-study-in-japan/</guid>
+                <link>https://behappy.cc/2018/09/01/how-to-study-in-japan/</link>
+                <guid isPermaLink="true">https://behappy.cc/2018/09/01/how-to-study-in-japan/</guid>
                 <pubDate>Sat, 01 Sep 2018 10:23:59 &#43;0000</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -188,26 +188,26 @@
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;报考的学校及专攻&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;是否合格&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;报考的学校及专攻&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;是否合格&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;早稻田大学基干理工cs&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;合格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;早稻田大学基干理工cs&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;合格&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;京都大学系统情报系&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;不合格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;京都大学系统情报系&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;不合格&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;东京大学复杂理工系&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;笔试合格，面试不合&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;东京大学复杂理工系&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;笔试合格，面试不合&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;筑波大学cs&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;合格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;筑波大学cs&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;合格&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -252,7 +252,7 @@
 &lt;h2 id=&#34;22-备考书籍以及过去问&#34;&gt;2.2 备考书籍以及过去问&lt;/h2&gt;
 &lt;p&gt;这个其实要看完出願阶段才能讲。首先呢，每个学校每个研究科的考试时间、考试内容、考试形式都不一样，所以需要先确定考试学校和研究科，然后看过去问，确定考试范围，最后再买书复习。所以，&lt;strong&gt;学校 -&amp;gt; 考试范围 -&amp;gt; 书籍&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;我是差不多考试前3个月开始复习的吧，其实还是懒了，如果要考东大京大这样的学校，还是要认真复习半年比较稳妥。比如东大京大要考数学，而早大只考专业课，所以要学习的范围很广，然后自己本科又不是计算机的，所以还是要花很多功夫的。我先列给出自己的复习用书吧，其实还有很多都是看的电子版恶补的，比如计算理论、离散数学、18.06的线代等等。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/test-study-books.jpg&#34; alt=&#34;备考实体书籍&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/test-study-books.jpg&#34; alt=&#34;备考实体书籍&#34;&gt;&lt;/p&gt;
 &lt;p&gt;从下往上讲把，东大京大和筑波这些学校要考数学，而复习数学最快的方法就是一本考研全书了，日本也分为3块，&lt;strong&gt;微积分、线性代数和概率统计&lt;/strong&gt;。当然中日的考试范围可能会略微有些差异，比如日本的线性代数还会考&lt;strong&gt;线性空间&lt;/strong&gt;，所以需要看额外的书籍了，然后日版书籍也要买的，不然到时候题目和专业术语看不懂就很尴尬了。我这边买的不全，有些是看舍友的，有些是上报的塾的课学的。&lt;/p&gt;
 &lt;p&gt;然后就是国内计算机考研408的书籍了，这四本刷完也算入门计算机科学了。这些东西日文版的到没那么需要，我买的那两本都没看过。TCP/IP还是需要看看的，计算机网络我记得就早稻田和阪大会考。重点还是推荐&lt;strong&gt;坂井修一&lt;/strong&gt;的书，真的是通俗易懂，不愧是东大大佬，图片上有两本，一本是数电（&lt;code&gt;論理回路&lt;/code&gt;），一本是计算机系统的组成（&lt;code&gt;コンピューターアーキテクチャ&lt;/code&gt;），都是会考的很实用的书，一般都会考数电的，简单而且覆盖的学校又多，一定要掌握。&lt;/p&gt;
 &lt;p&gt;**过去问一定要刷啊！过去问一定要刷啊！过去问一定要刷啊！**只有刷了过去问才能了解出题的范围，然后比如京大的算法题，永远是考排序和页面置换算法，针对复习就行。&lt;/p&gt;
@@ -272,13 +272,13 @@
 &lt;p&gt;从募集要项上，我们大致会了解到以下几个东西，&lt;strong&gt;招生人数、出願时间、出願材料、考试时间地点形式、合格通知&lt;/strong&gt;，所以募集要项很重要。&lt;/p&gt;
 &lt;p&gt;首先，募集要项这个东西应该在每个学校的官网都有电子版，可以下载下来好好看。但是，出願的时候可是需要纸质版的募集要项的，因为有些材料必须使用学校给定的格式。所以有些学校是需要跟学校申请&lt;strong&gt;纸质版募集要项&lt;/strong&gt;的，比如东大京大东工大这些学校，早大和筑波不需要。具体的做法呢，就是去便利店买一个角形2号信封，差不多比A4纸大一点那种。然后在封面写上学校的教务处地址，这个地址学校会给出的。然后里面要塞什么呢，要塞一个&lt;strong&gt;贴好邮票&lt;/strong&gt;的2号信封，这个信封是学校寄募集要项给你用的，邮票要贴多少学校也会有指示。然后可能还要在里面添个表，申明自己需要哪个专攻的募集要项。记得在&lt;strong&gt;出願截止时间前&lt;/strong&gt;申请就行了。&lt;/p&gt;
 &lt;p&gt;简单说一下流程吧。一般寄的话都要加急比较保险。
-&lt;img src=&#34;https://example.com/images/admission-procedure.jpg&#34; alt=&#34;报名流程&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;并不是所有学校都有冬入试&lt;/strong&gt;，这个需要自己去确认，我这边就讲一下夏入试的流程吧，以早稻田大学的大学院基幹理工学研究科的情報理工・情報通信専攻为例吧。这边提供一份2018年夏入试的募集要项，&lt;strong&gt;&lt;a href=&#34;https://example.com/files/waseda_2018_cs_guide.pdf&#34; title=&#34;早稻田2018cs募集要项&#34;&gt;点此下载&lt;/a&gt;&lt;/strong&gt;，以这份为例讲解一下如何出願，看看我们能得到哪些信息。&lt;/p&gt;
+&lt;img src=&#34;https://behappy.cc/images/admission-procedure.jpg&#34; alt=&#34;报名流程&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;并不是所有学校都有冬入试&lt;/strong&gt;，这个需要自己去确认，我这边就讲一下夏入试的流程吧，以早稻田大学的大学院基幹理工学研究科的情報理工・情報通信専攻为例吧。这边提供一份2018年夏入试的募集要项，&lt;strong&gt;&lt;a href=&#34;https://behappy.cc/files/waseda_2018_cs_guide.pdf&#34; title=&#34;早稻田2018cs募集要项&#34;&gt;点此下载&lt;/a&gt;&lt;/strong&gt;，以这份为例讲解一下如何出願，看看我们能得到哪些信息。&lt;/p&gt;
 &lt;h3 id=&#34;312-招生人数&#34;&gt;3.1.2 招生人数&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/waseda_planned_enrollment.jpg&#34; alt=&#34;招生人数&#34;&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/waseda_planned_enrollment.jpg&#34; alt=&#34;招生人数&#34;&gt;
 如图发现招生是140个人，这是总招生人数，包含了9月入学、4月入学、跳级考试以及保研的人。事实上，这个专攻的保研率在65%，这个消息在宣传册上可以看到。我记得当时考上的总考生是70个人，估计招35个左右吧。所以140个人里面，本校保研的人占了90个左右，还要加上一些其他考试收的人，真正招的其他学校的学生只有35个不到，还是有竞争的。&lt;/p&gt;
 &lt;h3 id=&#34;313-出願时间&#34;&gt;3.1.3 出願时间&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/waseda-admission-time.jpg&#34; alt=&#34;出願时间&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/waseda-admission-time.jpg&#34; alt=&#34;出願时间&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这张图信息量挺大的，刚接触的人可能会比较难懂。首先第一行给的是&lt;strong&gt;考试报名费支付和报名的时间&lt;/strong&gt;，没错在6月份，所以说考试前1，2个月就要报名，然后报名费要3W日元哦，真的超贵。报名方法就是你要把你的报名材料邮寄过去，日本这一点还是挺古老的，所有学校都要邮寄材料过去才能报名。然后呢，&lt;strong&gt;持参不可&lt;/strong&gt;的意思是，不能你直接跑到早大把材料给他，一定要邮寄（汗）。&lt;strong&gt;消印有效&lt;/strong&gt;的意思是你可以在6月11号的时候寄材料，而&lt;strong&gt;必着&lt;/strong&gt;就是6月11号你的材料一定要到。感觉在国外报名的人时间真的挺赶的。不过教务处的人会尽量帮助你，遇到问题发邮件问教务处，总会有解决办法。&lt;/p&gt;
 &lt;h3 id=&#34;314-出願材料&#34;&gt;3.1.4 出願材料&lt;/h3&gt;
 &lt;p&gt;出願材料还挺多的，我就不一一细讲了。比较重要的就是&lt;strong&gt;毕业证明、学位证明、成绩单&lt;/strong&gt;和&lt;strong&gt;英语成绩&lt;/strong&gt;。&lt;/p&gt;
@@ -293,10 +293,10 @@
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;315-考试时间地点形式&#34;&gt;3.1.5 考试时间地点形式&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/waseda-test-time.jpg&#34; alt=&#34;考试时间&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/waseda-test-time.jpg&#34; alt=&#34;考试时间&#34;&gt;&lt;/p&gt;
 &lt;p&gt;由图可知，考试时间在7/7和7/8，7/7是笔试，7/8是面试。这边其实有两个地方需要说明一下。第一，早稻田是私立，考试时间比较早，像国公立这些学校都是8月份考试。所以早稻田要早报名，国公立比较晚在6月末7月初。第二个就是有些学校只有笔试合格了才有面试资格，有些学校是两个一起进行。不过以个人经验来说，笔试还是占大头的，面试相对来说没那么重要。&lt;/p&gt;
 &lt;p&gt;考试地点的话，在其他资料上有，这边就不说了，反正到时候去学校有引导，比较重要的是考试范围和过去问，这些资料在官网上也能找到，迫于我的博客空间有限，就不给大家上传了，就发个早大cs的考试范围图吧。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/waseda-cs-test-range.jpg&#34; alt=&#34;考试范围&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/waseda-cs-test-range.jpg&#34; alt=&#34;考试范围&#34;&gt;&lt;/p&gt;
 &lt;p&gt;总共要考4题，全要做，150分钟时间，还是挺紧张的，考试范围也很广。我把考试科目换成中文，也就是编程、计算机数学、离散数学、计算机系统、计算机组成、数电、电路、模电和计算机网络。这样一看是不是贼恐怖。其实早大的题目就是这样，广但不深，了解过就能做，没了解过就难了。&lt;/p&gt;
 &lt;p&gt;然后面试要做ppt，自己带电脑发表10分钟，老师提问5分钟。&lt;/p&gt;
 &lt;h3 id=&#34;316-合格发表&#34;&gt;3.1.6 合格发表&lt;/h3&gt;
@@ -305,7 +305,7 @@
 &lt;p&gt;如果要考试的话，直接发信给教授说你要考试就行，不用像申请研究生那样畏畏缩缩，教授一般会这样回，你来考吧，合格了就要你。如果5天没回信，你特别喜欢这个教授的话就再发一封，还是不回就换教授把。以下为我的模板。当然你也可以发英文的，英文格式比较随意。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
@@ -331,7 +331,7 @@
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;XX大学大学院XX研究科
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;XX大学大学院XX研究科
 XX先生
 
 お忙しい中、突然のご連絡、大変申し訳ございません。
@@ -404,7 +404,7 @@ E-mail：XXX
 &lt;p&gt;周围都是大佬，我这个弟弟怎么能不努力呢？&lt;/p&gt;
 &lt;p&gt;以上。&lt;/p&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;如果本文对您有帮助，欢迎打赏。&lt;/p&gt;
-&lt;img src=&#34;https://example.com/images/qr-wechat.png&#34; alt=&#34;赞赏码&#34; width=&#34;300&#34;/&gt;</description>
+&lt;img src=&#34;https://behappy.cc/images/qr-wechat.png&#34; alt=&#34;赞赏码&#34; width=&#34;300&#34;/&gt;</description>
                 
                 
                 
@@ -415,7 +415,7 @@ E-mail：XXX
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -428,7 +428,7 @@ E-mail：XXX
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/">在日本</category>
+                                    <category domain="https://behappy.cc/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/">在日本</category>
                                 
                             
                         
@@ -438,8 +438,8 @@ E-mail：XXX
         
             <item>
                 <title>在日半年</title>
-                <link>https://example.com/2018/03/31/half-year-in-japan/</link>
-                <guid isPermaLink="true">https://example.com/2018/03/31/half-year-in-japan/</guid>
+                <link>https://behappy.cc/2018/03/31/half-year-in-japan/</link>
+                <guid isPermaLink="true">https://behappy.cc/2018/03/31/half-year-in-japan/</guid>
                 <pubDate>Sat, 31 Mar 2018 15:44:00 &#43;0000</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -449,7 +449,7 @@ E-mail：XXX
                     <description>&lt;p&gt;不知不觉来日本已经半年了，时间过的也真是太快了。依然记得出发前为各种资料烦恼的样子，还有和新同学在机场候机的场景。半年多也没有写博客了，本来想过年的时候总结一下，终究还是因为各种原因被搁置了。最近是日本的樱花季，几乎天天出去转悠，有点看腻了，今天就在宿舍好好休息，回忆一下这半年吧。看看照片，看看便签，想到哪写到哪。&lt;/p&gt;
 &lt;h1 id=&#34;1-厨艺&#34;&gt;1. 厨艺&lt;/h1&gt;
 &lt;p&gt;刚来日本的时候，觉得这是一个提升自己厨艺的好机会。于是下了一个下厨房app，找几个喜欢的菜做做，非常有成就感哈哈。调料，食材，做菜工具这些都需要自己准备，还好这边没有菜市场，都是直接从超市买处理过的，不然光是菜市场的味道就会把我的热情全部浇灭。不过日本这边的酱油我感觉没有国内的鲜，下面放上几道做的菜。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/japan-food.jpg&#34; alt=&#34;自己做的菜&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/japan-food.jpg&#34; alt=&#34;自己做的菜&#34;&gt;&lt;/p&gt;
 &lt;p&gt;总之全是肉哈哈，没肉是不可能没肉的，主要还是素菜太难做了。不过现在渐渐也不怎么下厨了，买菜的钱跟外面吃一顿差不多，做菜还需要很多时间。厨艺算稍稍有点长进吧。&lt;/p&gt;
 &lt;h1 id=&#34;2-打工アルバイト&#34;&gt;2. 打工(アルバイト)&lt;/h1&gt;
 &lt;p&gt;来日本之前就想着要找份工作赚点零花钱，我估计同学也都是这么想的，除了个别富家子弟哈哈。如果日语好的话，找份兼职是挺容易的，但对我这种日语渣渣就有点困难了。刚来日本前2个月的时候，脑子里完全没有找兼职的想法。那个时候只会几句简单的寒暄，连数字、日期什么的都数不过来。后来渐渐习惯了，想着找份可以锻炼日语的工作，正好大学舍友阿远所在的优衣库缺人，就让我去面试看看。要知道那时候阿远已经可以跟同事谈笑风生了，我还只是N5都勉强的水平，结局貌似已经注定了。不过我本来就对优衣库很有好感，而且这种工作也不像在餐厅后厨洗盘子一样很无聊，所以认真地准备了履歴書就去了。&lt;/p&gt;
@@ -457,19 +457,19 @@ E-mail：XXX
 &lt;p&gt;然后1月下旬的时候，阿远正好要回国不干了，问我要不要再面试一次，我心想这次机会不能错过了。那时候《大家的日本语初级1》应该已经学完了，简单的对话基本没什么问题了。这次总算面试通过了，然后2月1号办入社手续，这里让我印象深刻的是，办理入社的时间也算在工时里，真是贴心啊。还有一个好玩的事，就是让我填姓和名的读音。我的&lt;strong&gt;名&lt;/strong&gt;是&lt;strong&gt;Cheng&lt;/strong&gt;，我的&lt;strong&gt;姓&lt;/strong&gt;的日语罗马音是&lt;strong&gt;Chou(ちょう、張)&lt;/strong&gt;。因为两个都是&lt;strong&gt;C&lt;/strong&gt;开头的，所以店長就觉得我是不是写反了，觉得我的姓应该是&lt;strong&gt;Cheng&lt;/strong&gt;，当时我解释了半天哈哈。&lt;/p&gt;
 &lt;p&gt;然后我没干几天，就说要换店長了，貌似优衣库就是干一段时间，换一家店这种。然后就要办店長送別会，我对吉川店長很感激，就决定参与了，感觉外国人参与他们的聚会应该是第一次哈哈。依然记得江口前辈拉着我一个一个猜名字的场景，太恐怖了，日本人的名字还是很难记的，有时候脸又对应不上。送别会后半段我就有点困了，很多东西听不懂，只能玩玩手机，偶尔问几个问题。不过总的来说还是很高兴，很好玩的。&lt;/p&gt;
 &lt;p&gt;然后因为要通勤，买了个bridgestone的公路自行车，看着很骚气哈哈。现在除了收银和補正没干过，其他基本的也差不多了解了。要知道每一个新的活，都是前辈们手把手教学的，因为日语比较差。在这里非常感谢前辈们，真的都很温柔。虽然等我考上大学院以后要离开，但这段记忆会永远铭记在心里的。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/uniqlo.jpg&#34; alt=&#34;优衣库伏見店&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/uniqlo.jpg&#34; alt=&#34;优衣库伏見店&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;3-旅游&#34;&gt;3. 旅游&lt;/h1&gt;
 &lt;p&gt;京都是一个很有名的旅游城市，但是其他方面感觉都一般。离我最近的就是稲荷神社啊，东福寺这些，很有名，不过感觉也没啥看头。日本两个大季节算比较火，一个是紅葉季，还有一个就是樱花季了。&lt;/p&gt;
 &lt;h2 id=&#34;31-紅葉&#34;&gt;3.1 紅葉&lt;/h2&gt;
 &lt;p&gt;个人感觉琉璃光院比较好看。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/momiji.jpg&#34; alt=&#34;红叶1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/momiji2.jpg&#34; alt=&#34;红叶2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/momiji.jpg&#34; alt=&#34;红叶1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/momiji2.jpg&#34; alt=&#34;红叶2&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;32-桜&#34;&gt;3.2 桜&lt;/h2&gt;
 &lt;p&gt;这个地方就很多了，不过我现在很喜欢背割堤，因为那边可以野餐晒太阳。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/sakura.jpg&#34; alt=&#34;樱花&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/sakura.jpg&#34; alt=&#34;樱花&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;33-温泉&#34;&gt;3.3 温泉&lt;/h2&gt;
 &lt;p&gt;第一次泡温泉，跟着大佬奢侈了一把，日本最古老的温泉————有馬温泉。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/arima-onsen.jpg&#34; alt=&#34;温泉&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/arima-onsen.jpg&#34; alt=&#34;温泉&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;4-学业&#34;&gt;4. 学业&lt;/h1&gt;
 &lt;p&gt;果然进了语言学校，斗志渐渐被消磨了。感觉没了考托福时那种劲了，一直在浑浑噩噩。每天上午半天的课程，下午的时间玩玩游戏，发发呆就过去了，真的是太快了。我发现自己现在越来越会逃避了，喜欢用游戏来麻痹自己，喜欢在很偏的地方来获取成就，而忽略正面战场。比如考进大学院和学好日语才是我现在的主要任务，可能因为这个是个长期的计划，比较艰难，我就会转去别的领域寻找成就感，比如吃鸡，看剧，转笔之类吧。这应该是一种逃避行为，一种傻逼行为，暂时没有想到好的方法，应该只能直接正面主要任务。&lt;/p&gt;
 &lt;p&gt;感觉自己的日语的确是有进步的，毕竟每天学的东西不是很多，一直在对话使用，也和日本人经常沟通。感觉脑子里日语已经形成了一个体系，大概不会像以前自己学的时候，纯记单词那样，过一年就全忘了吧。就像很多单词，自己说过很多遍，也听过很多遍，已经形成反射了。果然语言这种东西不听不说是不行的，现在吃鸡上经常和日本小哥聊聊天，还是挺好玩的。&lt;/p&gt;
@@ -499,11 +499,11 @@ E-mail：XXX
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;下面上一些说明的图。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/japan-suosui.jpg&#34; alt=&#34;琐碎图&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/japan-suosui.jpg&#34; alt=&#34;琐碎图&#34;&gt;&lt;/p&gt;
 &lt;p&gt;先记录到这吧。&lt;/p&gt;
 &lt;p&gt;じゃ、以上です。&lt;/p&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;如果本文对您有帮助，欢迎打赏。&lt;/p&gt;
-&lt;img src=&#34;https://example.com/images/qr-wechat.png&#34; alt=&#34;赞赏码&#34; width=&#34;300&#34;/&gt;</description>
+&lt;img src=&#34;https://behappy.cc/images/qr-wechat.png&#34; alt=&#34;赞赏码&#34; width=&#34;300&#34;/&gt;</description>
                 
                 
                 
@@ -514,7 +514,7 @@ E-mail：XXX
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -527,7 +527,7 @@ E-mail：XXX
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/">在日本</category>
+                                    <category domain="https://behappy.cc/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/">在日本</category>
                                 
                             
                         
@@ -537,8 +537,8 @@ E-mail：XXX
         
             <item>
                 <title>六级466到托福首战94的心得总结</title>
-                <link>https://example.com/2017/07/27/toefl-90-experience/</link>
-                <guid isPermaLink="true">https://example.com/2017/07/27/toefl-90-experience/</guid>
+                <link>https://behappy.cc/2017/07/27/toefl-90-experience/</link>
+                <guid isPermaLink="true">https://behappy.cc/2017/07/27/toefl-90-experience/</guid>
                 <pubDate>Thu, 27 Jul 2017 07:13:26 &#43;0000</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -546,7 +546,7 @@ E-mail：XXX
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;p&gt;刚刚查了成绩，94分，虽然不高，但是去日本留学是够用的了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/toefl-score.png&#34; alt=&#34;toefl成绩&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/toefl-score.png&#34; alt=&#34;toefl成绩&#34;&gt;&lt;/p&gt;
 &lt;p&gt;从成绩表可以看出，我的阅读和作文比较高，听力和口语很差。其实大部分中国考生都是这样，因为听力和口语短期提分比较难，需要长时间的积累。所以我的经验对&lt;strong&gt;国人&lt;/strong&gt;比较适用，&lt;strong&gt;想考90分套路就够了，想考100分还是需要实力的&lt;/strong&gt;，因为&lt;strong&gt;听力&lt;/strong&gt;不能拖后腿，具体的看下面。&lt;/p&gt;
 &lt;h1 id=&#34;1-预期分数&#34;&gt;1. 预期分数&lt;/h1&gt;
 &lt;p&gt;Toefl毕竟还是考试，任何考试都应该给自己一个&lt;strong&gt;预期分数&lt;/strong&gt;。比如说我要留学日本，东大的最高难度就是90分（东大冬入试的toefl成绩以前规定必须90，这个是看知乎考上的前辈说的，不过现在我看官网没写这个硬性规定），那么我的预期目标就设定为90。其他同理，其实日本帝国大学80分以上就够了。那么接下来我就以90分作为参照，你们可以根据自己的预期目标调整。&lt;/p&gt;
@@ -555,20 +555,20 @@ E-mail：XXX
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;Reading&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Listening&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Speaking&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Writing&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Total&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Listening&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Speaking&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Writing&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Total&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;20&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;20&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;90&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;25&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;25&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;90&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -585,20 +585,20 @@ E-mail：XXX
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;Reading&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Listening&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Speaking&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Writing&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Total&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Listening&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Speaking&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Writing&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Total&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;20&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;10&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;20&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;20&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;70&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;10&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;70&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -612,20 +612,20 @@ E-mail：XXX
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th align=&#34;left&#34;&gt;Reading&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Listening&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Speaking&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Writing&lt;/th&gt;
-&lt;th align=&#34;left&#34;&gt;Total&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Reading&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Listening&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Speaking&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Writing&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Total&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;20&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;20&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;25&lt;/td&gt;
-&lt;td align=&#34;left&#34;&gt;90&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;25&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;20&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;25&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;90&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -638,7 +638,7 @@ E-mail：XXX
 &lt;p&gt;所以说单词方面我没什么心得，经常在练习中遇到不认识的单词，而我的策略就是&lt;strong&gt;第一遍，大概记住就行，如果第二遍再看到，一定要记住&lt;/strong&gt;，因为这肯定是个常考词汇。&lt;/p&gt;
 &lt;h1 id=&#34;3-阅读&#34;&gt;3. 阅读&lt;/h1&gt;
 &lt;p&gt;这个我可以好好说说我的经验了。从我的练习记录和感觉来看，我觉得阅读要突破高分要分为&lt;strong&gt;3个阶段&lt;/strong&gt;。
-&lt;img src=&#34;https://example.com/images/toefl-tpo-record.png&#34; alt=&#34;toefl练习记录&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://behappy.cc/images/toefl-tpo-record.png&#34; alt=&#34;toefl练习记录&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;31-熟悉题型期瞎jb选&#34;&gt;3.1 熟悉题型期（瞎jb选）&lt;/h2&gt;
 &lt;p&gt;就是跟随感觉选，这个时候对阅读还有&lt;strong&gt;恐惧&lt;/strong&gt;，觉得阅读&lt;strong&gt;很难&lt;/strong&gt;，&lt;strong&gt;文章很长&lt;/strong&gt;，很多单词和关键句都&lt;strong&gt;看不懂&lt;/strong&gt;。我相信大部分考生的初始阅读水平应该会在18左右，也就是&lt;strong&gt;看得懂一半，连蒙带猜&lt;/strong&gt;。我觉得可以先不急，就这种状态做个&lt;strong&gt;5套&lt;/strong&gt;，每天一套，大致了解下自己的真实水平。&lt;/p&gt;
 &lt;p&gt;在这个期间，你需要了解的有：&lt;/p&gt;
@@ -759,20 +759,20 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
 &lt;p&gt;太早进去也没事，因为还是要等到8点半才开始考啊，建议先在外面解决完一切问题再进去。然后就就是测试耳机啦，麦克风测试就一直重复&lt;strong&gt;describe the city you live in&lt;/strong&gt;就行了，不用真的讲！&lt;/p&gt;
 &lt;p&gt;做完阅读和听力，中场可以休息10分钟，去喝水或者上厕所。关于做快点还是做慢点，还是有争论的，做快点的话，听力不会被人影响到。做慢点的话，中场休息回座位可以听到别人在讲口语啦，是能猜测出题目的，这时候可以直接在草稿纸上准备啦！&lt;/p&gt;
 &lt;p&gt;然后做完口语写作就可以回家了,真够累的！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/images/toefl-man.jpg&#34; alt=&#34;托福小黑哥&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://behappy.cc/images/toefl-man.jpg&#34; alt=&#34;托福小黑哥&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;8-加试和机经&#34;&gt;8. 加试和机经&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;加试&lt;/strong&gt;是什么意思呢？就是因为每次考试的难度可能不一样，ETS为了平衡每次考试考生的成绩，再额外给你多加一套。比如阅读加试就是4篇文章，80分钟；听力加试就是3套了。我考前看了很多资料，加上考试经验，结论是这样的。以前加试90%都是听力加试，而且加试内容是一样的，都是大王花，ID卡这种，详细可以看我网盘的经典听力加试。加试是怎么用的，这点没有定论，有人说加试不算分，有人说根据加试微调。但是因为以前都是经典听力加试，所以大家都知道它就是加试了，而且答案都背住了。&lt;/p&gt;
 &lt;p&gt;而2017年4月份，托福&lt;strong&gt;改革&lt;/strong&gt;了，几乎再也碰不到经典听力加试，而且开始有阅读加试了，而且题目也变成了很多套，ETS是真的狠啊！所以考前花了5分钟看一下经典听力加试内容就行了，而且也别抱希望能考到。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;机经&lt;/strong&gt;这个东西是更加&lt;strong&gt;无用&lt;/strong&gt;的，可能以前还有点用，自托福改革后，一套卷子大部分是新题，几乎不可能命中。我觉得机经就看看&lt;strong&gt;阅读词汇&lt;/strong&gt;的押题把，这个的确可能会中，可以去小站下载，其他的口语写作题目都不靠谱！还是实力说话，背题目真的是没有用！&lt;/p&gt;
 &lt;h1 id=&#34;9-送分和纸质成绩单&#34;&gt;9. 送分和纸质成绩单&lt;/h1&gt;
 &lt;p&gt;关于免费填的4个学校，我觉得&lt;strong&gt;一定要填&lt;/strong&gt;。首先，要是以后再加送是要钱的，然后就是如果寄多次成绩到学校，一般都是可以选最高成绩的。不过免费送分以后，口语和作文不可复议了，而且再取消免费送分也有点麻烦。&lt;/p&gt;
-&lt;p&gt;Toefl的成绩单分为两个，一个是&lt;strong&gt;official score reports&lt;/strong&gt;，也就是送给学校的；另一个是&lt;strong&gt;examinee score reports&lt;/strong&gt;，也就是送给个人的成绩单。official的成绩单可以加送很多，一份&lt;strong&gt;$20&lt;/strong&gt;，现在大概￥134。但是examinee的成绩单，&lt;strong&gt;国内是只有一份的&lt;/strong&gt;，不能加送，但是国外注册考试的，是可以加送的，这点我跟客服确认过，这里还是要表扬一下客服，每次打都有人接，貌似不是很忙，为啥网站就一直挂。国内是在NEEA上注册的，国外是直接在ETS官网注册的，虽然你登录NEEA发现账户上有个ETS ID，但其实根本登不上ETS官网，不知道有什么卵用。然后关于送examinee到个人手里，是&lt;strong&gt;直接送到你注册的时候填的地址的&lt;/strong&gt;，一般大概一个月左右，可能会在官网显示快递号。我看网上说还要去考点领，或者考完要在考点留信息交邮费等，这些都是已经过时的消息了。&lt;/p&gt;
+&lt;p&gt;Toefl的成绩单分为两个，一个是&lt;strong&gt;official score reports&lt;/strong&gt;，也就是送给学校的；另一个是&lt;strong&gt;examinee score reports&lt;/strong&gt;，也就是送给个人的成绩单。official的成绩单可以加送很多，一份**$20**，现在大概￥134。但是examinee的成绩单，**国内是只有一份的**，不能加送，但是国外注册考试的，是可以加送的，这点我跟客服确认过，这里还是要表扬一下客服，每次打都有人接，貌似不是很忙，为啥网站就一直挂。国内是在NEEA上注册的，国外是直接在ETS官网注册的，虽然你登录NEEA发现账户上有个ETS ID，但其实根本登不上ETS官网，不知道有什么卵用。然后关于送examinee到个人手里，是**直接送到你注册的时候填的地址的**，一般大概一个月左右，可能会在官网显示快递号。我看网上说还要去考点领，或者考完要在考点留信息交邮费等，这些都是已经过时的消息了。&lt;/p&gt;
 &lt;p&gt;对了，关于送分时候写的机构代码，还有一点需要注意。比如东大的机构代码是9259，但是情报理工科的代码是8445。有的学校的系必须要你写&lt;strong&gt;准确的系的机构代码&lt;/strong&gt;，如果只写学校的机构代码的话，系里会无法接收到你的托福成绩，比如，情报理工系就在官网要求一定要写8445。Department code一般写99就行，就是暂时空着的意思。&lt;/p&gt;
 &lt;h1 id=&#34;10-总结&#34;&gt;10. 总结&lt;/h1&gt;
 &lt;p&gt;准备了4个月，酱油2个月，认真2个月。其实到后面复习的时候真的是挺绝望的，天天呆在家里脱产学习，然而听力根本提不上来，独立口语每次一模拟就咿咿呀呀，写作也是没有好观点和例子。然后就会想，不过还要再考，1800的报名费，考位还都满了等等。一般这个时候，我会上知乎或者贴吧看看别人考托福的经历，比如有人考了13次才和托福分手，有人考了5次也没上80之类，还有各种好玩的事情，比如&lt;strong&gt;destroy the city you live in&lt;/strong&gt;等等。&lt;/p&gt;
 &lt;p&gt;总之，不要放弃，练习再练习，给自己一个合理的预期分数！&lt;/p&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;如果本文对您有帮助，欢迎打赏。&lt;/p&gt;
-&lt;img src=&#34;https://example.com/images/qr-wechat.png&#34; alt=&#34;赞赏码&#34; width=&#34;300&#34;/&gt;
+&lt;img src=&#34;https://behappy.cc/images/qr-wechat.png&#34; alt=&#34;赞赏码&#34; width=&#34;300&#34;/&gt;
 </description>
                 
                 
@@ -784,7 +784,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -799,8 +799,8 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
         
             <item>
                 <title>2016总结与展望</title>
-                <link>https://example.com/2017/01/26/2016-final/</link>
-                <guid isPermaLink="true">https://example.com/2017/01/26/2016-final/</guid>
+                <link>https://behappy.cc/2017/01/26/2016-final/</link>
+                <guid isPermaLink="true">https://behappy.cc/2017/01/26/2016-final/</guid>
                 <pubDate>Thu, 26 Jan 2017 21:49:37 &#43;0000</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -849,7 +849,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -862,7 +862,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
+                                    <category domain="https://behappy.cc/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
                                 
                             
                         
@@ -872,8 +872,8 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
         
             <item>
                 <title>《艾伦图灵传》记录</title>
-                <link>https://example.com/2015/05/09/turing/</link>
-                <guid isPermaLink="true">https://example.com/2015/05/09/turing/</guid>
+                <link>https://behappy.cc/2015/05/09/turing/</link>
+                <guid isPermaLink="true">https://behappy.cc/2015/05/09/turing/</guid>
                 <pubDate>Sat, 09 May 2015 10:21:46 &#43;0000</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -897,7 +897,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -910,7 +910,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E4%B9%A6%E7%97%9E%E4%B9%8B%E8%A8%80/">书痞之言</category>
+                                    <category domain="https://behappy.cc/tags/%E4%B9%A6%E7%97%9E%E4%B9%8B%E8%A8%80/">书痞之言</category>
                                 
                             
                         
@@ -920,8 +920,8 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
         
             <item>
                 <title>读《暗时间》</title>
-                <link>https://example.com/2015/03/28/how-to-study-in-japan/</link>
-                <guid isPermaLink="true">https://example.com/2015/03/28/how-to-study-in-japan/</guid>
+                <link>https://behappy.cc/2015/03/28/how-to-study-in-japan/</link>
+                <guid isPermaLink="true">https://behappy.cc/2015/03/28/how-to-study-in-japan/</guid>
                 <pubDate>Sat, 28 Mar 2015 09:48:04 &#43;0000</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -961,7 +961,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -974,7 +974,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E4%B9%A6%E7%97%9E%E4%B9%8B%E8%A8%80/">书痞之言</category>
+                                    <category domain="https://behappy.cc/tags/%E4%B9%A6%E7%97%9E%E4%B9%8B%E8%A8%80/">书痞之言</category>
                                 
                             
                         
@@ -984,8 +984,8 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
         
             <item>
                 <title>不求有功，但求无过——2014终了</title>
-                <link>https://example.com/2014/12/30/2014-final/</link>
-                <guid isPermaLink="true">https://example.com/2014/12/30/2014-final/</guid>
+                <link>https://behappy.cc/2014/12/30/2014-final/</link>
+                <guid isPermaLink="true">https://behappy.cc/2014/12/30/2014-final/</guid>
                 <pubDate>Tue, 30 Dec 2014 22:55:32 &#43;0000</pubDate>
                 
                     <author>zchelllo@gmail.com (张程)</author>
@@ -997,9 +997,9 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
 &lt;p&gt;然后是暑假打工之收银。没错，就是小小收银了。虽然的确浪费了我大量的时间，但不得不说还是有益处的。比如改正了我大少爷似得乱扔零钱的坏习惯，同时让我对物价又了一个全新的认识。当然好处还有很多，尤其在你第二天看误差结算时，尤其在你犯错时，尤其在你面对顾客的指责时。（别问我工资！）&lt;/p&gt;
 &lt;p&gt;然后建了这个个人网站。从什么都不懂到什么都懂一点，这个个人网站应该是我这一年做的最正确的选择了。&lt;/p&gt;
 &lt;p&gt;搬到了美女多的校区，然后，还是单身dog。这是在江枫宿舍阳台上拍的纪念照，那时候怎么这么会作死。。。
-&lt;img src=&#34;https://example.com/images/jiangfeng.jpg&#34; alt=&#34;江枫照片&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://behappy.cc/images/jiangfeng.jpg&#34; alt=&#34;江枫照片&#34;&gt;&lt;/p&gt;
 &lt;p&gt;真是个奇怪的念头，不知当时是哪来的冲动啊，貌似当时想的是如果以后当了程序员就没机会健身了，这么有趣的一个项目不体验多可惜啊。到现在练了也快两个半月了，附一张效果图，等2015再来比较。^_^
-&lt;img src=&#34;https://example.com/images/muscle.jpg&#34; alt=&#34;健身肌肉&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;https://behappy.cc/images/muscle.jpg&#34; alt=&#34;健身肌肉&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;再来说些不怎么满意的事情吧。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;编程方面，学了python,写了个查询打卡程序。然后就再也没写什么程序了。为了建网站准备学的html+css+php+javascript，最后也只学了html和css。真的是一塌糊涂！&lt;/p&gt;
 &lt;p&gt;爱好方面，网球打了一年还在入门阶段，还在纠结单反双反问题，钟情于费德勒啊，苦于野路子又偷懒还是郁郁不得志。
@@ -1024,7 +1024,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                         
                         
                             
-                                <category domain="https://example.com/life/">life\</category>
+                                <category domain="https://behappy.cc/life/">life\</category>
                             
                         
                     
@@ -1037,7 +1037,7 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
                                 
                                 
                                 
-                                    <category domain="https://example.com/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
+                                    <category domain="https://behappy.cc/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
                                 
                             
                         
