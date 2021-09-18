@@ -22,8 +22,9 @@ draft: true
 
 根据[文档](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)，得到安装docker的脚本，运行安装。
 
-```bash
+```sh
 $ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sudo sh get-docker.sh
 Executing docker install script
 ```
+
