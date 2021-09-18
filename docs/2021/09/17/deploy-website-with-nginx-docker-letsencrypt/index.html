@@ -14,7 +14,7 @@
 
     <title>nginx &#43; docker &#43; letsencrpty 部署网站 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.6e7dcc8ea6d691d870d0b24b3d53a24628ee8ac7728220f4ac7cb84bf7be349c.css"/>
+    <link rel="stylesheet" href="/css/meme.min.e9fed2ec0c7f1c0679a9c1f3b3bc1c845478eb0f3fc78de0f5cd4409115856e1.css"/>
 
     
     
@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Cinzel&#43;Decorative:wght@700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;family=Cinzel&#43;Decorative:wght@700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="张程" /><meta name="description" content="前端后端都稍微写过，也有一个基于hugo的静态博客，不过在部署网站方面都是靠别人或者……" />
+    <meta name="author" content="张程" /><meta name="description" content="前端后端都稍微写过，也有一个基于 hugo 的静态博客，不过在部署网站方面都是靠别人或者工具自……" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -54,10 +54,10 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "datePublished": "2021-09-17T20:00:39+09:00",
-        "dateModified": "2021-09-18T18:49:07+09:00",
+        "dateModified": "2021-09-18T21:50:31+09:00",
         "url": "https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/",
         "name": "nginx + docker + letsencrpty 部署网站",
-        "description": "前端后端都稍微写过，也有一个基于hugo的静态博客，不过在部署网站方面都是靠别人或者……",
+        "description": "前端后端都稍微写过，也有一个基于 hugo 的静态博客，不过在部署网站方面都是靠别人或者工具自……",
         "image": "https://behappy.cc/icons/apple-touch-icon.png",
         "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
         "publisher": {
@@ -87,7 +87,7 @@
 
 
 <meta property="og:title" content="nginx &#43; docker &#43; letsencrpty 部署网站" />
-<meta property="og:description" content="前端后端都稍微写过，也有一个基于hugo的静态博客，不过在部署网站方面都是靠别人或者……" />
+<meta property="og:description" content="前端后端都稍微写过，也有一个基于 hugo 的静态博客，不过在部署网站方面都是靠别人或者工具自……" />
 <meta property="og:url" content="https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/" />
 <meta property="og:site_name" content="醉乐轩" />
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://behappy.cc/icons/apple-touch-icon.png" />
@@ -214,7 +214,10 @@
               <ol>
                 <li><a id="contents:目标" href="#目标">目标</a></li>
                 <li><a id="contents:需要准备的东西" href="#需要准备的东西">需要准备的东西</a></li>
-                <li><a id="contents:1-安装docker" href="#1-安装docker">1. 安装Docker</a></li>
+                <li><a id="contents:1-环境安装" href="#1-环境安装">1. 环境安装</a></li>
+                <li><a id="contents:2-配置-nginx开启http通信" href="#2-配置-nginx开启http通信">2. 配置 nginx，开启HTTP通信</a></li>
+                <li><a id="contents:3-开启https" href="#3-开启https">3. 开启HTTPS</a></li>
+                <li><a id="contents:4-自动更新证书" href="#4-自动更新证书">4. 自动更新证书</a></li>
               </ol>
             </li>
           </ol>
@@ -223,19 +226,215 @@
     </li>
   </ol>
 </nav><div class="post-body e-content">
-              <p>前端后端都稍微写过，也有一个基于hugo的静态博客，不过在部署网站方面都是靠别人或者工具自动化，真要自己从头部署一个网站还真是两眼一抹黑，抓瞎。所以记录一下部署一个https网站的折腾过程，给有需要的人。</p>
+              <p>前端后端都稍微写过，也有一个基于 hugo 的静态博客，不过在部署网站方面都是靠别人或者工具自动化，真要自己从头部署一个网站还真是两眼一抹黑，抓瞎。所以记录一下部署一个 https 网站的折腾过程，给有需要的人。</p>
 <h5 id="目标"><a href="#目标" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:目标" class="headings">目标</a></h5>
 <ul>
-<li>在ubuntu系统上启动nginx容器</li>
-<li>通过Let's encrypt得到HTTPS功能</li>
+<li>在 ubuntu 系统上启动 nginx 容器</li>
+<li>通过 Let's encrypt 得到 HTTPS 功能</li>
 </ul>
 <h5 id="需要准备的东西"><a href="#需要准备的东西" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:需要准备的东西" class="headings">需要准备的东西</a></h5>
 <ul>
 <li>域名</li>
 <li>服务器</li>
 </ul>
-<h5 id="1-安装docker"><a href="#1-安装docker" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-安装docker" class="headings">1. 安装Docker</a></h5>
-<p>根据<a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script" target="_blank" rel="noopener">文档</a>，得到安装docker的脚本，运行安装。</p>
+<h5 id="1-环境安装"><a href="#1-环境安装" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-环境安装" class="headings">1. 环境安装</a></h5>
+<ul>
+<li>按照<a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script" target="_blank" rel="noopener">文档</a>，安装 Docker</li>
+<li>按照<a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener">文档</a>， 安装 Docker Compose</li>
+</ul>
+<h5 id="2-配置-nginx开启http通信"><a href="#2-配置-nginx开启http通信" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-配置-nginx开启http通信" class="headings">2. 配置 nginx，开启HTTP通信</a></h5>
+<p>先准备好对应的文件，文件结构如下</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">└── example
+    ├── html
+    │   └── index.html                   <span class="c1"># 主页</span>
+    ├── nginx
+    │   ├── default.conf                 <span class="c1"># 网站相关配置</span>
+    │   ├── nginx.conf                   <span class="c1"># nginx配置</span>
+    │   ├── Dockerfile                   <span class="c1"># 制作nginx容器的文件</span>
+    │   ├── letsencrypt                  <span class="c1"># let&#39;s encrypt相关的文件放在这</span>
+    │   └── logs            
+    │       ├── access.log               
+    │       ├── certbot.log              <span class="c1"># 证书更新的log</span>
+    │       └── error.log 
+    └── docker-compose.yml               <span class="c1"># 一键启动nginx的脚本</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p><code>Dockerfile</code>中的内容为</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="k">FROM</span><span class="s"> nginx:latest                                             </span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> <span class="se">\ </span>           <span class="err">
+</span><span class="err"></span>    apt-get install -y certbot python-certbot-nginx <span class="o">&amp;&amp;</span> <span class="se">\ </span>  <span class="c1"># 安装certbot</span><span class="err">
+</span><span class="err"></span>    apt-get clean<span class="err">
+</span><span class="err"></span><span class="k">ADD</span> nginx.conf /etc/nginx/               <span class="c1"># 将我们定义好的配置加入nginx容器中</span><span class="err">
+</span><span class="err"></span><span class="k">ADD</span> default.conf /etc/nginx/conf.d/<span class="err">
+</span></code></pre></td></tr></table></div>
+</div>
+</div><p><code>nginx.conf</code>中的内容为</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="c1"># nginx.conf
+</span><span class="c1"></span><span class="k">user</span>  <span class="s">nginx</span><span class="p">;</span>
+<span class="k">worker_processes</span>  <span class="s">auto</span><span class="p">;</span>
+
+<span class="k">error_log</span>  <span class="s">/var/log/nginx/error.log</span> <span class="s">warn</span><span class="p">;</span>
+<span class="k">pid</span>        <span class="s">/var/run/nginx.pid</span><span class="p">;</span>
+
+<span class="k">events</span> <span class="p">{</span>
+    <span class="kn">worker_connections</span>  <span class="mi">1024</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">http</span> <span class="p">{</span>
+    <span class="kn">include</span>       <span class="s">/etc/nginx/mime.types</span><span class="p">;</span>
+    <span class="kn">default_type</span>  <span class="s">application/octet-stream</span><span class="p">;</span>
+
+    <span class="kn">log_format</span>  <span class="s">main</span>  <span class="s">&#39;</span><span class="nv">$remote_addr</span> <span class="s">-</span> <span class="nv">$remote_user</span> <span class="s">[</span><span class="nv">$time_local]</span> <span class="s">&#34;</span><span class="nv">$request&#34;</span> <span class="s">&#39;</span>
+                      <span class="s">&#39;</span><span class="nv">$status</span> <span class="nv">$body_bytes_sent</span> <span class="s">&#34;</span><span class="nv">$http_referer&#34;</span> <span class="s">&#39;</span>
+                      <span class="s">&#39;&#34;</span><span class="nv">$http_user_agent&#34;</span> <span class="s">&#34;</span><span class="nv">$http_x_forwarded_for&#34;&#39;</span><span class="p">;</span>
+
+    <span class="kn">access_log</span>  <span class="s">/var/log/nginx/access.log</span>  <span class="s">main</span><span class="p">;</span>
+    <span class="kn">sendfile</span>        <span class="no">on</span><span class="p">;</span>
+    <span class="kn">tcp_nopush</span>     <span class="no">on</span><span class="p">;</span>
+    <span class="kn">keepalive_timeout</span>  <span class="mi">65</span><span class="p">;</span>
+    <span class="kn">include</span> <span class="s">/etc/nginx/conf.d/*.conf</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p><code>default.conf</code>中的内容为</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="c1"># default.conf
+</span><span class="c1"></span><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>           <span class="c1"># ipv6对应
+</span><span class="c1"></span>
+    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+        <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
+    <span class="kn">location</span> <span class="p">=</span> <span class="s">/50x.html</span> <span class="p">{</span>
+        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p><code>docker-compose.yml</code>中的内容为</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">./nginx</span><span class="w">
+</span><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">proxy</span><span class="w">
+</span><span class="w">    </span><span class="nt">logging</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;json-file&#34;</span><span class="w">
+</span><span class="w">      </span><span class="nt">options</span><span class="p">:</span><span class="w">
+</span><span class="w">        </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;10m&#34;</span><span class="w">
+</span><span class="w">        </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">     </span><span class="c"># 映射80和443端口</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;80:80&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;443:443&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">      </span><span class="c"># 将本地的文件映射到容器中， 注意左边为相对路径</span><span class="w">
+</span><span class="w">      </span>- <span class="s1">&#39;./nginx/logs:/var/log/nginx&#39;</span><span class="w"> 
+</span><span class="w">      </span>- <span class="s1">&#39;./nginx/letsencrypt:/etc/letsencrypt&#39;</span><span class="w">
+</span><span class="w">      </span>- <span class="s1">&#39;./html:/usr/share/nginx/html&#39;</span><span class="w">
+</span></code></pre></td></tr></table></div>
+</div>
+</div><p>最后在<code>example</code>文件夹下运行<code>sudo docker-compose up -d</code>，nginx容器就搭起来了。浏览器访问<code>http://&lt;hostname&gt;</code>就能够看到<code>index.html</code>里面的内容了。也可以通过<code>docker ps</code>确认现在在运行的容器。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -243,12 +442,119 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ curl -fsSL https://get.docker.com -o get-docker.sh
-$ sudo sh get-docker.sh
-Executing docker install script
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ sudo docker ps
+CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS         PORTS                                                                      NAMES
+9bbc29f18441   cool_proxy   <span class="s2">&#34;/docker-entrypoint.…&#34;</span>   <span class="m">43</span> hours ago   Up <span class="m">8</span> minutes   0.0.0.0:80-&gt;80/tcp, :::80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp, :::443-&gt;443/tcp   proxy
 </code></pre></td></tr></table></div>
 </div>
+</div><h5 id="3-开启https"><a href="#3-开启https" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-开启https" class="headings">3. 开启HTTPS</a></h5>
+<p>通过上面的流程，我们的网站已经可以HTTP访问了。如果想要开启HTTPS访问，就必须要有私钥和证书。<a href="https://letsencrypt.org/zh-cn/" target="_blank" rel="noopener">Let's Encrypt</a>提供免费的证书，但是有效期为3个月，需要定期更新。这个并不是太大的问题，只要通过cron加个定时任务就行。</p>
+<p>运行<code>sudo docker exec -it proxy bash</code>进入到我们刚刚建立的 nginx 容器中，运行<code>certbot</code>获得证书（中间会让你填写域名相关信息）。证书会保存在<code>/etc/letsencrypt/live/&lt;hostname&gt;</code>文件夹下。</p>
+<p>接下来修改<code>default.conf</code>，加入HTTPS相关配置（注意替换成自己的域名）。</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
+    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="k">server</span> <span class="p">{</span>
+    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
+    <span class="kn">listen</span>       <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+
+    <span class="kn">ssl_protocols</span>       <span class="s">TLSv1.2</span> <span class="s">TLSv1.3</span><span class="p">;</span>
+    <span class="kn">ssl_ciphers</span>         <span class="s">&#34;ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384&#34;</span><span class="p">;</span>
+    <span class="kn">ssl_prefer_server_ciphers</span>   <span class="no">on</span><span class="p">;</span>
+    <span class="kn">ssl_certificate</span>     <span class="s">/etc/letsencrypt/live/&lt;hostname&gt;/fullchain.pem</span><span class="p">;</span>
+    <span class="kn">ssl_certificate_key</span> <span class="s">/etc/letsencrypt/live/&lt;hostname&gt;/privkey.pem</span><span class="p">;</span>
+
+    <span class="c1"># Improve HTTPS performance with session resumption
+</span><span class="c1"></span>  	<span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:10m</span><span class="p">;</span>
+  	<span class="kn">ssl_session_timeout</span> <span class="mi">10m</span><span class="p">;</span>
+
+    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+        <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
+    <span class="kn">location</span> <span class="p">=</span> <span class="s">/50x.html</span> <span class="p">{</span>
+        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
 </div>
+</div><p>然后<code>example</code>文件夹下运行<code>docker-compose restart</code>将刚刚的更改重载，浏览器访问<code>https://&lt;hostname&gt;</code>，如果能打开就代表HTTPS已经开启。</p>
+<h5 id="4-自动更新证书"><a href="#4-自动更新证书" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:4-自动更新证书" class="headings">4. 自动更新证书</a></h5>
+<p>因为let's encrypt证书是3个月一过期，所以我们需要在cron里面加一个定时任务，比如每个月更新一次证书。
+运行<code>sudo crontab -e</code>打开定时任务配置文件，在最后一行添加以下代码。</p>
+<pre tabindex="0"><code>@monthly { date; docker exec proxy certbot renew; } &gt;&gt; ~/example/nginx/logs/certbot.log 2&gt;&amp;1
+</code></pre><p>为了确定命令是否可以被正确运行，在命令行运行</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ <span class="o">{</span> date<span class="p">;</span> sudo docker <span class="nb">exec</span> proxy certbot renew<span class="p">;</span> <span class="o">}</span> &gt;&gt; ~/example/nginx/logs/certbot.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>然后运行<code>cat ~/example/nginx/logs/certbot.log</code>查看certbot证书更新日志，有以下log代表可以运行。</p>
+<pre tabindex="0"><code>Thu 16 Sep 2021 05:48:59 PM UTC
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Processing /etc/letsencrypt/renewal/&lt;hostname&gt;.conf
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cert not yet due for renewal
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+The following certs are not due for renewal yet:
+  /etc/letsencrypt/live/&lt;hostname&gt;/fullchain.pem expires on 2021-12-15 (skipped)
+No renewals were attempted.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</code></pre><p>接下来可以将目前的文件备份到github上，以后只要安装完Docker环境，即使换服务器，也可以一键搞定。</p>
+<p><br />
+<br /></p>
+<p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
+<img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>
             </div>
 
             
@@ -287,7 +593,7 @@ Executing docker install script
             
                 <div class="share-item linkedin">
                     
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/&amp;title=nginx%20&#43;%20docker%20&#43;%20letsencrpty%20%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99&amp;summary=%e5%89%8d%e7%ab%af%e5%90%8e%e7%ab%af%e9%83%bd%e7%a8%8d%e5%be%ae%e5%86%99%e8%bf%87%ef%bc%8c%e4%b9%9f%e6%9c%89%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8ehugo%e7%9a%84%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%ef%bc%8c%e4%b8%8d%e8%bf%87%e5%9c%a8%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99%e6%96%b9%e9%9d%a2%e9%83%bd%e6%98%af%e9%9d%a0%e5%88%ab%e4%ba%ba%e6%88%96%e8%80%85%e2%80%a6%e2%80%a6&amp;source=%e9%86%89%e4%b9%90%e8%bd%a9" title="分享到「LinkedIn」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/&amp;title=nginx%20&#43;%20docker%20&#43;%20letsencrpty%20%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99&amp;summary=%e5%89%8d%e7%ab%af%e5%90%8e%e7%ab%af%e9%83%bd%e7%a8%8d%e5%be%ae%e5%86%99%e8%bf%87%ef%bc%8c%e4%b9%9f%e6%9c%89%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8e%20hugo%20%e7%9a%84%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%ef%bc%8c%e4%b8%8d%e8%bf%87%e5%9c%a8%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99%e6%96%b9%e9%9d%a2%e9%83%bd%e6%98%af%e9%9d%a0%e5%88%ab%e4%ba%ba%e6%88%96%e8%80%85%e5%b7%a5%e5%85%b7%e8%87%aa%e2%80%a6%e2%80%a6&amp;source=%e9%86%89%e4%b9%90%e8%bd%a9" title="分享到「LinkedIn」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
                 </div>
             
 
@@ -308,21 +614,21 @@ Executing docker install script
             
                 <div class="share-item douban">
                     
-                    <a href="https://www.douban.com/share/service?href=https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/&amp;name=nginx%20&#43;%20docker%20&#43;%20letsencrpty%20%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99&amp;text=%e5%89%8d%e7%ab%af%e5%90%8e%e7%ab%af%e9%83%bd%e7%a8%8d%e5%be%ae%e5%86%99%e8%bf%87%ef%bc%8c%e4%b9%9f%e6%9c%89%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8ehugo%e7%9a%84%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%ef%bc%8c%e4%b8%8d%e8%bf%87%e5%9c%a8%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99%e6%96%b9%e9%9d%a2%e9%83%bd%e6%98%af%e9%9d%a0%e5%88%ab%e4%ba%ba%e6%88%96%e8%80%85%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                    <a href="https://www.douban.com/share/service?href=https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/&amp;name=nginx%20&#43;%20docker%20&#43;%20letsencrpty%20%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99&amp;text=%e5%89%8d%e7%ab%af%e5%90%8e%e7%ab%af%e9%83%bd%e7%a8%8d%e5%be%ae%e5%86%99%e8%bf%87%ef%bc%8c%e4%b9%9f%e6%9c%89%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8e%20hugo%20%e7%9a%84%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%ef%bc%8c%e4%b8%8d%e8%bf%87%e5%9c%a8%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99%e6%96%b9%e9%9d%a2%e9%83%bd%e6%98%af%e9%9d%a0%e5%88%ab%e4%ba%ba%e6%88%96%e8%80%85%e5%b7%a5%e5%85%b7%e8%87%aa%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qq">
                     
-                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/&amp;title=nginx%20&#43;%20docker%20&#43;%20letsencrpty%20%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99&amp;summary=%e5%89%8d%e7%ab%af%e5%90%8e%e7%ab%af%e9%83%bd%e7%a8%8d%e5%be%ae%e5%86%99%e8%bf%87%ef%bc%8c%e4%b9%9f%e6%9c%89%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8ehugo%e7%9a%84%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%ef%bc%8c%e4%b8%8d%e8%bf%87%e5%9c%a8%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99%e6%96%b9%e9%9d%a2%e9%83%bd%e6%98%af%e9%9d%a0%e5%88%ab%e4%ba%ba%e6%88%96%e8%80%85%e2%80%a6%e2%80%a6&amp;pics=https://behappy.cc/icons/apple-touch-icon.png&amp;site=%e9%86%89%e4%b9%90%e8%bd%a9" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/&amp;title=nginx%20&#43;%20docker%20&#43;%20letsencrpty%20%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99&amp;summary=%e5%89%8d%e7%ab%af%e5%90%8e%e7%ab%af%e9%83%bd%e7%a8%8d%e5%be%ae%e5%86%99%e8%bf%87%ef%bc%8c%e4%b9%9f%e6%9c%89%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8e%20hugo%20%e7%9a%84%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%ef%bc%8c%e4%b8%8d%e8%bf%87%e5%9c%a8%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99%e6%96%b9%e9%9d%a2%e9%83%bd%e6%98%af%e9%9d%a0%e5%88%ab%e4%ba%ba%e6%88%96%e8%80%85%e5%b7%a5%e5%85%b7%e8%87%aa%e2%80%a6%e2%80%a6&amp;pics=https://behappy.cc/icons/apple-touch-icon.png&amp;site=%e9%86%89%e4%b9%90%e8%bd%a9" title="分享到「QQ」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qzone">
                     
-                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/&amp;title=nginx%20&#43;%20docker%20&#43;%20letsencrpty%20%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99&amp;summary=%e5%89%8d%e7%ab%af%e5%90%8e%e7%ab%af%e9%83%bd%e7%a8%8d%e5%be%ae%e5%86%99%e8%bf%87%ef%bc%8c%e4%b9%9f%e6%9c%89%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8ehugo%e7%9a%84%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%ef%bc%8c%e4%b8%8d%e8%bf%87%e5%9c%a8%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99%e6%96%b9%e9%9d%a2%e9%83%bd%e6%98%af%e9%9d%a0%e5%88%ab%e4%ba%ba%e6%88%96%e8%80%85%e2%80%a6%e2%80%a6&amp;pics=https://behappy.cc/icons/apple-touch-icon.png&amp;site=%e9%86%89%e4%b9%90%e8%bd%a9" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/&amp;title=nginx%20&#43;%20docker%20&#43;%20letsencrpty%20%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99&amp;summary=%e5%89%8d%e7%ab%af%e5%90%8e%e7%ab%af%e9%83%bd%e7%a8%8d%e5%be%ae%e5%86%99%e8%bf%87%ef%bc%8c%e4%b9%9f%e6%9c%89%e4%b8%80%e4%b8%aa%e5%9f%ba%e4%ba%8e%20hugo%20%e7%9a%84%e9%9d%99%e6%80%81%e5%8d%9a%e5%ae%a2%ef%bc%8c%e4%b8%8d%e8%bf%87%e5%9c%a8%e9%83%a8%e7%bd%b2%e7%bd%91%e7%ab%99%e6%96%b9%e9%9d%a2%e9%83%bd%e6%98%af%e9%9d%a0%e5%88%ab%e4%ba%ba%e6%88%96%e8%80%85%e5%b7%a5%e5%85%b7%e8%87%aa%e2%80%a6%e2%80%a6&amp;pics=https://behappy.cc/icons/apple-touch-icon.png&amp;site=%e9%86%89%e4%b9%90%e8%bd%a9" title="分享到「QQ 空间」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
                 </div>
             
 

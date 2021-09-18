@@ -7,12 +7,16 @@
     font-size: 1em;
 }
 
-.brand {
-    font-size: 1.1em;
-}
-
 .home .poetry {
     padding: 9rem 1em;
+}
+
+.main {
+    padding-top: 4em;
+}
+
+.contents {
+    margin-top: 3em;
 }
 
 @media (max-width: $maxWidth) {

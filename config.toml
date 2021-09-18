@@ -275,7 +275,7 @@ uglyURLs = false
     # 如果否，则会使用你的站点标题作为默认值，并
     # 以文字的形式显示，下方可配置字号和字色。字
     # 体请到底部的字体部分配置。单位：em。
-    siteBrandFontSize = 1.5
+    siteBrandFontSize = 1.1
     siteBrandFontColor = "var(--color-contrast-high)"
 
 
@@ -406,7 +406,7 @@ uglyURLs = false
     # 字号单位
     fontUnit = "em"
     # 最大字号
-    largestFontSize = 2.5
+    largestFontSize = 2
     # 最小字号
     smallestFontSize = 1
 
@@ -929,7 +929,7 @@ uglyURLs = false
     ######################################
     ## 行间距
 
-    lineHeight = 2
+    lineHeight = 1.8
     # 说明：只会应用到文章的段落和目录
 
     ######################################
