@@ -129,13 +129,13 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS      
 9bbc29f18441   cool_proxy   "/docker-entrypoint.…"   43 hours ago   Up 8 minutes   0.0.0.0:80->80/tcp, :::80->80/tcp, 0.0.0.0:443->443/tcp, :::443->443/tcp   proxy
 ```
 
-##### 3. 开启HTTPS
+##### 3. 开启 HTTPS
 
-通过上面的流程，我们的网站已经可以HTTP访问了。如果想要开启HTTPS访问，就必须要有私钥和证书。[Let's Encrypt](https://letsencrypt.org/zh-cn/)提供免费的证书，但是有效期为3个月，需要定期更新。这个并不是太大的问题，只要通过cron加个定时任务就行。
+通过上面的流程，我们的网站已经可以 HTTP 访问了。如果想要开启 HTTPS 访问，就必须要有私钥和证书。[Let's Encrypt](https://letsencrypt.org/zh-cn/) 提供免费的证书，但是有效期为 3 个月，需要定期更新。这个并不是太大的问题，只要通过 cron 加个定时任务就行。
 
 运行`sudo docker exec -it proxy bash`进入到我们刚刚建立的 nginx 容器中，运行`certbot`获得证书（中间会让你填写域名相关信息）。证书会保存在`/etc/letsencrypt/live/<hostname>`文件夹下。
 
-接下来修改`default.conf`，加入HTTPS相关配置（注意替换成自己的域名）。
+接下来修改`default.conf`，加入 HTTPS 相关配置（注意替换成自己的域名）。
 ```nginx
 server {
     server_name  localhost;
@@ -171,11 +171,11 @@ server {
 }
 ```
 
-然后`example`文件夹下运行`docker-compose restart`将刚刚的更改重载，浏览器访问`https://<hostname>`，如果能打开就代表HTTPS已经开启。
+然后`example`文件夹下运行`docker-compose restart`将刚刚的更改重载，浏览器访问`https://<hostname>`，如果能打开就代表 HTTPS 已经开启。
 
 ##### 4. 自动更新证书
 
-因为let's encrypt证书是3个月一过期，所以我们需要在cron里面加一个定时任务，比如每个月更新一次证书。
+因为 let's encrypt 证书是 3 个月一过期，所以我们需要在 cron 里面加一个定时任务，比如每个月更新一次证书。
 运行`sudo crontab -e`打开定时任务配置文件，在最后一行添加以下代码。
 ```
 @monthly { date; docker exec proxy certbot renew; } >> ~/example/nginx/logs/certbot.log 2>&1
@@ -185,7 +185,7 @@ server {
 ```sh
 $ { date; sudo docker exec proxy certbot renew; } >> ~/example/nginx/logs/certbot.log 2>&1
 ```
-然后运行`cat ~/example/nginx/logs/certbot.log`查看certbot证书更新日志，有以下log代表可以运行。
+然后运行`cat ~/example/nginx/logs/certbot.log`查看 certbot 证书更新日志，有以下 log 代表可以运行。
 ```
 Thu 16 Sep 2021 05:48:59 PM UTC
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
@@ -203,7 +203,7 @@ No renewals were attempted.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ```
 
-接下来可以将目前的文件备份到github上，以后只要安装完Docker环境，即使换服务器，也可以一键搞定。
+接下来可以将目前的文件备份到 github 上，以后只要安装完 Docker 环境，即使换服务器，也可以一键搞定。
 
 <br />
 <br />

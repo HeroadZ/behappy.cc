@@ -54,7 +54,7 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "datePublished": "2021-09-17T20:00:39+09:00",
-        "dateModified": "2021-09-18T21:52:37+09:00",
+        "dateModified": "2021-09-18T23:12:11+09:00",
         "url": "https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/",
         "name": "nginx + docker + letsencrpty 部署网站",
         "description": "前端后端都稍微写过，也有一个基于 hugo 的静态博客，不过在部署网站方面都是靠别人或者工具自……",
@@ -216,7 +216,7 @@
                 <li><a id="contents:需要准备的东西" href="#需要准备的东西">需要准备的东西</a></li>
                 <li><a id="contents:1-环境安装" href="#1-环境安装">1. 环境安装</a></li>
                 <li><a id="contents:2-配置-nginx开启http通信" href="#2-配置-nginx开启http通信">2. 配置 nginx，开启HTTP通信</a></li>
-                <li><a id="contents:3-开启https" href="#3-开启https">3. 开启HTTPS</a></li>
+                <li><a id="contents:3-开启-https" href="#3-开启-https">3. 开启 HTTPS</a></li>
                 <li><a id="contents:4-自动更新证书" href="#4-自动更新证书">4. 自动更新证书</a></li>
               </ol>
             </li>
@@ -447,10 +447,10 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS      
 9bbc29f18441   cool_proxy   <span class="s2">&#34;/docker-entrypoint.…&#34;</span>   <span class="m">43</span> hours ago   Up <span class="m">8</span> minutes   0.0.0.0:80-&gt;80/tcp, :::80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp, :::443-&gt;443/tcp   proxy
 </code></pre></td></tr></table></div>
 </div>
-</div><h5 id="3-开启https"><a href="#3-开启https" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-开启https" class="headings">3. 开启HTTPS</a></h5>
-<p>通过上面的流程，我们的网站已经可以HTTP访问了。如果想要开启HTTPS访问，就必须要有私钥和证书。<a href="https://letsencrypt.org/zh-cn/" target="_blank" rel="noopener">Let's Encrypt</a>提供免费的证书，但是有效期为3个月，需要定期更新。这个并不是太大的问题，只要通过cron加个定时任务就行。</p>
+</div><h5 id="3-开启-https"><a href="#3-开启-https" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-开启-https" class="headings">3. 开启 HTTPS</a></h5>
+<p>通过上面的流程，我们的网站已经可以 HTTP 访问了。如果想要开启 HTTPS 访问，就必须要有私钥和证书。<a href="https://letsencrypt.org/zh-cn/" target="_blank" rel="noopener">Let's Encrypt</a> 提供免费的证书，但是有效期为 3 个月，需要定期更新。这个并不是太大的问题，只要通过 cron 加个定时任务就行。</p>
 <p>运行<code>sudo docker exec -it proxy bash</code>进入到我们刚刚建立的 nginx 容器中，运行<code>certbot</code>获得证书（中间会让你填写域名相关信息）。证书会保存在<code>/etc/letsencrypt/live/&lt;hostname&gt;</code>文件夹下。</p>
-<p>接下来修改<code>default.conf</code>，加入HTTPS相关配置（注意替换成自己的域名）。</p>
+<p>接下来修改<code>default.conf</code>，加入 HTTPS 相关配置（注意替换成自己的域名）。</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -521,9 +521,9 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS      
 <span class="p">}</span>
 </code></pre></td></tr></table></div>
 </div>
-</div><p>然后<code>example</code>文件夹下运行<code>docker-compose restart</code>将刚刚的更改重载，浏览器访问<code>https://&lt;hostname&gt;</code>，如果能打开就代表HTTPS已经开启。</p>
+</div><p>然后<code>example</code>文件夹下运行<code>docker-compose restart</code>将刚刚的更改重载，浏览器访问<code>https://&lt;hostname&gt;</code>，如果能打开就代表 HTTPS 已经开启。</p>
 <h5 id="4-自动更新证书"><a href="#4-自动更新证书" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:4-自动更新证书" class="headings">4. 自动更新证书</a></h5>
-<p>因为let's encrypt证书是3个月一过期，所以我们需要在cron里面加一个定时任务，比如每个月更新一次证书。
+<p>因为 let's encrypt 证书是 3 个月一过期，所以我们需要在 cron 里面加一个定时任务，比如每个月更新一次证书。
 运行<code>sudo crontab -e</code>打开定时任务配置文件，在最后一行添加以下代码。</p>
 <pre tabindex="0"><code>@monthly { date; docker exec proxy certbot renew; } &gt;&gt; ~/example/nginx/logs/certbot.log 2&gt;&amp;1
 </code></pre><p>为了确定命令是否可以被正确运行，在命令行运行</p>
@@ -535,7 +535,7 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS      
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ <span class="o">{</span> date<span class="p">;</span> sudo docker <span class="nb">exec</span> proxy certbot renew<span class="p">;</span> <span class="o">}</span> &gt;&gt; ~/example/nginx/logs/certbot.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
 </code></pre></td></tr></table></div>
 </div>
-</div><p>然后运行<code>cat ~/example/nginx/logs/certbot.log</code>查看certbot证书更新日志，有以下log代表可以运行。</p>
+</div><p>然后运行<code>cat ~/example/nginx/logs/certbot.log</code>查看 certbot 证书更新日志，有以下 log 代表可以运行。</p>
 <pre tabindex="0"><code>Thu 16 Sep 2021 05:48:59 PM UTC
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 
@@ -550,7 +550,7 @@ The following certs are not due for renewal yet:
   /etc/letsencrypt/live/&lt;hostname&gt;/fullchain.pem expires on 2021-12-15 (skipped)
 No renewals were attempted.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-</code></pre><p>接下来可以将目前的文件备份到github上，以后只要安装完Docker环境，即使换服务器，也可以一键搞定。</p>
+</code></pre><p>接下来可以将目前的文件备份到 github 上，以后只要安装完 Docker 环境，即使换服务器，也可以一键搞定。</p>
 <p><br />
 <br /></p>
 <p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
