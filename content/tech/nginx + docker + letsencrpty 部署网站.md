@@ -3,7 +3,6 @@ title: "nginx + docker + letsencrpty 部署网站"
 date: 2021-09-17T20:00:39+09:00
 slug: "deploy-website-with-nginx-docker-letsencrypt"
 dropCap: false
-draft: true
 ---
 
 前端后端都稍微写过，也有一个基于 hugo 的静态博客，不过在部署网站方面都是靠别人或者工具自动化，真要自己从头部署一个网站还真是两眼一抹黑，抓瞎。所以记录一下部署一个 https 网站的折腾过程，给有需要的人。
