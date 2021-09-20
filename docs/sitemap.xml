@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://behappy.cc/life/</loc>
+    <lastmod>2021-09-20T14:32:49+09:00</lastmod>
+  </url><url>
+    <loc>https://behappy.cc/2021/09/20/catch-irreplaceability/</loc>
+    <lastmod>2021-09-20T14:32:49+09:00</lastmod>
+  </url><url>
+    <loc>https://behappy.cc/</loc>
+    <lastmod>2021-09-20T14:32:49+09:00</lastmod>
+  </url><url>
     <loc>https://behappy.cc/2021/09/17/deploy-website-with-nginx-docker-letsencrypt/</loc>
     <lastmod>2021-09-18T23:12:11+09:00</lastmod>
   </url><url>
     <loc>https://behappy.cc/tech/</loc>
     <lastmod>2021-09-18T23:12:11+09:00</lastmod>
-  </url><url>
-    <loc>https://behappy.cc/</loc>
-    <lastmod>2021-09-18T23:12:11+09:00</lastmod>
-  </url><url>
-    <loc>https://behappy.cc/life/</loc>
-    <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
     <loc>https://behappy.cc/tags/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
