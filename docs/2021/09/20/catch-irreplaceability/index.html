@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>抓住不可替代性 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.e9fed2ec0c7f1c0679a9c1f3b3bc1c845478eb0f3fc78de0f5cd4409115856e1.css"/>
+    <link rel="stylesheet" href="/css/meme.min.c825befed34848d7ce6abc4ba4617f1b647e455df9d2c59353a0ca34393ec3ba.css"/>
 
     
     
-        <script src="/js/meme.min.95bbbcbfd5d9d1a02500ee069f2b6b05d2fff0cb8d77e10d4af732d1df3f0253.js"></script>
+        <script src="/js/meme.min.cb6768ab827abe8914c789013215e928c2670d1867a2277055689b3a3761cfd2.js"></script>
 
     
 
@@ -129,6 +132,9 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
@@ -222,7 +228,7 @@
             
 
             <nav class="contents"></nav><div class="post-body e-content">
-              <p>最近在看吴军写的<a href="https://book.douban.com/subject/6709783/" target="_blank" rel="noopener">《浪潮之巅》</a>，内容是近百年来一些知名IT公司的兴衰起伏以及科技工业一百多年的发展历程。</p>
+                <p>最近在看吴军写的<a href="https://book.douban.com/subject/6709783/" target="_blank" rel="noopener">《浪潮之巅》</a>，内容是近百年来一些知名IT公司的兴衰起伏以及科技工业一百多年的发展历程。</p>
 <p>与AT&amp;T公司（发明电话）的没落，IBM的动荡相比，巨无霸微软的发展历程可谓是一帆风顺，直到现在还是一个很有影响力的公司。盖茨准确地抓住了操作系统的不可替代性，并在乔布斯之前完善了图形操作界面，因此几乎垄断了操作系统市场。</p>
 <p>从仙童半导体出来的英特尔公司，也是抓住了芯片这一不可代替的商品，成为了过去几十年信息革命大潮中最成功的公司之一。</p>
 <p>可以看出把抓住时代浪潮中不可替代部分，并做精做深的公司不会差到哪里去。想到这里，不由得反思一下自己的一些缺点，那就是明知道有些东西是很重要的，不可替代的，但是总想着曲线救国避免正面对应，说难听点就是搞花里胡哨。</p>
@@ -368,6 +374,10 @@
     
         <ul class="post-nav">
             
+                <li class="post-nav-prev">
+                    <a href="/2021/12/29/2021-final/" rel="prev">&lt; 按部就班的2021</a>
+                </li>
+            
             
                 <li class="post-nav-next">
                     <a href="/2020/12/31/two-years-in-waseda/" rel="next">在早稻田的这两年 &gt;</a>
@@ -419,7 +429,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>

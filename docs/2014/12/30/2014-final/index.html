@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>不求有功，但求无过——2014终了 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.e9fed2ec0c7f1c0679a9c1f3b3bc1c845478eb0f3fc78de0f5cd4409115856e1.css"/>
+    <link rel="stylesheet" href="/css/meme.min.c825befed34848d7ce6abc4ba4617f1b647e455df9d2c59353a0ca34393ec3ba.css"/>
 
     
     
-        <script src="/js/meme.min.95bbbcbfd5d9d1a02500ee069f2b6b05d2fff0cb8d77e10d4af732d1df3f0253.js"></script>
+        <script src="/js/meme.min.cb6768ab827abe8914c789013215e928c2670d1867a2277055689b3a3761cfd2.js"></script>
 
     
 
@@ -129,6 +132,9 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
@@ -222,7 +228,7 @@
             
 
             <nav class="contents"></nav><div class="post-body e-content">
-              <p style="text-indent:0"><span class="drop-cap">虽</span>然想用短短几行涂鸦来概括这么精彩的一年是有点不自量力了，但是总结毕竟是一个良好的习惯啊。（特么的万一以后出名要写自传呢！！！）那就闲聊些印象深刻的事吧。</p>
+                <p style="text-indent:0"><span class="drop-cap">虽</span>然想用短短几行涂鸦来概括这么精彩的一年是有点不自量力了，但是总结毕竟是一个良好的习惯啊。（特么的万一以后出名要写自传呢！！！）那就闲聊些印象深刻的事吧。</p>
 <p>首先是大一最后的考试月，大概是自高考完以后第一次专注那么长时间了，早上8点到晚上9点，太_unbelievable_了，再次体验到了学习的快感（真心话）。当然最后结果还是不错的，拿了个一奖。</p>
 <p>然后是暑假打工之收银。没错，就是小小收银了。虽然的确浪费了我大量的时间，但不得不说还是有益处的。比如改正了我大少爷似得乱扔零钱的坏习惯，同时让我对物价又了一个全新的认识。当然好处还有很多，尤其在你第二天看误差结算时，尤其在你犯错时，尤其在你面对顾客的指责时。（别问我工资！）</p>
 <p>然后建了这个个人网站。从什么都不懂到什么都懂一点，这个个人网站应该是我这一年做的最正确的选择了。</p>
@@ -445,7 +451,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>

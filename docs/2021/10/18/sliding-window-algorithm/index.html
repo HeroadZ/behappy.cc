@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>滑动窗口算法 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.e9fed2ec0c7f1c0679a9c1f3b3bc1c845478eb0f3fc78de0f5cd4409115856e1.css"/>
+    <link rel="stylesheet" href="/css/meme.min.c825befed34848d7ce6abc4ba4617f1b647e455df9d2c59353a0ca34393ec3ba.css"/>
 
     
     
-        <script src="/js/meme.min.95bbbcbfd5d9d1a02500ee069f2b6b05d2fff0cb8d77e10d4af732d1df3f0253.js"></script>
+        <script src="/js/meme.min.cb6768ab827abe8914c789013215e928c2670d1867a2277055689b3a3761cfd2.js"></script>
 
     
 
@@ -110,6 +113,9 @@
 
 
 
+
+    
+    
 
     
 </head>
@@ -212,7 +218,7 @@
     <li><a id="contents:4-总结" href="#4-总结">4. 总结</a></li>
   </ol>
 </nav><div class="post-body e-content">
-              <p>最近买了 educative.io 的会员，正在刷 <a href="https://www.educative.io/courses/grokking-the-coding-interview" target="_blank" rel="noopener">Grokking the Coding Interview: Patterns for Coding Questions</a> 这门课程，课程里总结了 16 种常见的算法题模式。刚刷完第一种类型<em class="emphasis-point">滑动窗口</em>，总结一下模板和题型。</p>
+                <p>最近买了 educative.io 的会员，正在刷 <a href="https://www.educative.io/courses/grokking-the-coding-interview" target="_blank" rel="noopener">Grokking the Coding Interview: Patterns for Coding Questions</a> 这门课程，课程里总结了 16 种常见的算法题模式。刚刷完第一种类型<em class="emphasis-point">滑动窗口</em>，总结一下模板和题型。</p>
 <p>滑动窗口是TCPIP协议中使用的一种算法，详情访问「<a href="https://blog.csdn.net/wdscq1234/article/details/52444277" target="_blank" rel="noopener">这篇文章</a>」，写的很通俗易懂。</p>
 <p>滑动窗口算法可以用来解决<em class="emphasis-point">数组和字符串</em>的子元素问题，它可以将嵌套的循环问题，转换为单循环问题，降低时间复杂度。具体思想是，利用两个指针来控制窗口（子数组或子字符串）的大小，窗口的大小可以是固定的，也可以是可变长度的。窗口大小的控制以及滑动的控制条件是根据窗口内的元素值来判断的。</p>
 <p>所以一般能用滑动窗口解决的问题有以下特点：</p>
@@ -599,7 +605,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>

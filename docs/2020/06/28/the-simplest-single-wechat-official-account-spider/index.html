@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>最简单的微信公众号爬虫 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.e9fed2ec0c7f1c0679a9c1f3b3bc1c845478eb0f3fc78de0f5cd4409115856e1.css"/>
+    <link rel="stylesheet" href="/css/meme.min.c825befed34848d7ce6abc4ba4617f1b647e455df9d2c59353a0ca34393ec3ba.css"/>
 
     
     
-        <script src="/js/meme.min.95bbbcbfd5d9d1a02500ee069f2b6b05d2fff0cb8d77e10d4af732d1df3f0253.js"></script>
+        <script src="/js/meme.min.cb6768ab827abe8914c789013215e928c2670d1867a2277055689b3a3761cfd2.js"></script>
 
     
 
@@ -110,6 +113,9 @@
 
 
 
+
+    
+    
 
     
 </head>
@@ -210,7 +216,7 @@
     <li><a id="contents:2-puppeteer爬虫" href="#2-puppeteer爬虫">2. Puppeteer爬虫</a></li>
   </ol>
 </nav><div class="post-body e-content">
-              <p style="text-indent:0"><span class="drop-cap">时</span>间过得真快，看了一下上次发文的日期，发现几乎快一年半没有更新博客了。这一年半，做了些事情，也荒废了些光阴，遇到了各式各样的人，收获良多。以后可能会把所得的感悟记录总结下来，不过这次的文章主要是关于技术方面的，也就不多嚼舌根了。</p>
+                <p style="text-indent:0"><span class="drop-cap">时</span>间过得真快，看了一下上次发文的日期，发现几乎快一年半没有更新博客了。这一年半，做了些事情，也荒废了些光阴，遇到了各式各样的人，收获良多。以后可能会把所得的感悟记录总结下来，不过这次的文章主要是关于技术方面的，也就不多嚼舌根了。</p>
 <p>这次的内容如题，微信公众号爬虫。关于微信公众号爬虫，肯定之前就有很多解决方案了，毕竟有需求就有市场嘛。<a href="https://github.com/DropsDevopsOrg/ECommerceCrawlers/wiki/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E7%88%AC%E5%8F%96%E7%A0%94%E7%A9%B6" target="_blank" rel="noopener">「这里」</a>提供了大概4种思路去实现一个微信公众号爬虫，有兴趣的朋友可以深入研究一下。</p>
 <p>可是无论是上面的哪种方式，都需要很复杂的流程和环境，而且随着微信的迭代更新，大部分的开源代码都失效了。然而我的需求很简单，仅仅只是爬取这个公众号所有的历史文章。经过一番折腾，我找到了比较简单的实现思路，分为两部分，浏览器开发者工具 + headless 爬虫。</p>
 <p>“最简单”虽然有点标题党的味道，不过跟其他人的源码相比，我的代码肯定是最少的，因为只有两个js文件，连数据库都不需要安装。所谓鱼和熊掌不可兼得，我的思路代码少，但是也有缺点。第一个缺点是这种方式是半自动的，一次只能爬<em class="emphasis-point">一个</em>公众号。第二个缺点是功能目前仅限于爬取所有历史文章。接下来，我会用图文的形式讲解我的思路，详细的代码可以参考<a href="https://github.com/HeroadZ/SSWS" target="_blank" rel="noopener">「此处」</a>。<strong>注</strong>：此次演示所用公众号为「东京留学生活小助手」，<em class="emphasis-point">仅供学习交流，如有侵权，请联系我。</em></p>
@@ -548,7 +554,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>

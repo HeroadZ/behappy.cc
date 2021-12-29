@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>读《暗时间》 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.e9fed2ec0c7f1c0679a9c1f3b3bc1c845478eb0f3fc78de0f5cd4409115856e1.css"/>
+    <link rel="stylesheet" href="/css/meme.min.c825befed34848d7ce6abc4ba4617f1b647e455df9d2c59353a0ca34393ec3ba.css"/>
 
     
     
-        <script src="/js/meme.min.95bbbcbfd5d9d1a02500ee069f2b6b05d2fff0cb8d77e10d4af732d1df3f0253.js"></script>
+        <script src="/js/meme.min.cb6768ab827abe8914c789013215e928c2670d1867a2277055689b3a3761cfd2.js"></script>
 
     
 
@@ -128,6 +131,9 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
@@ -221,7 +227,7 @@
             
 
             <nav class="contents"></nav><div class="post-body e-content">
-              <p style="text-indent:0"><span class="drop-cap">仅</span>站在一个知识匮乏的大学生的角度。</p>
+                <p style="text-indent:0"><span class="drop-cap">仅</span>站在一个知识匮乏的大学生的角度。</p>
 <p>没有小说的行云流水，没有美文的平淡清雅，仅仅是几篇松散的博文串联起来的一本书，但是却刺激到了我的大脑认知层。起初看时，只是把它当做程序员的碎碎念，亦或是打着噱头的成功类书籍，然而最终我却只能以科普文的方式来看了。此处并不是说这本书的深度不够，恰恰相反，作者的阅读量是我远远无法企及的。这也说明了我的一个问题，对没有干货的书嗤之以鼻，等别人把真正的干货拿出来的时候，你却懵比了，实在是太蠢。</p>
 <p>虽然如此，依然有许多观点令人印象深刻。</p>
 <ol>
@@ -449,7 +455,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>

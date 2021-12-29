@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>日本求学之路 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.e9fed2ec0c7f1c0679a9c1f3b3bc1c845478eb0f3fc78de0f5cd4409115856e1.css"/>
+    <link rel="stylesheet" href="/css/meme.min.c825befed34848d7ce6abc4ba4617f1b647e455df9d2c59353a0ca34393ec3ba.css"/>
 
     
     
-        <script src="/js/meme.min.95bbbcbfd5d9d1a02500ee069f2b6b05d2fff0cb8d77e10d4af732d1df3f0253.js"></script>
+        <script src="/js/meme.min.cb6768ab827abe8914c789013215e928c2670d1867a2277055689b3a3761cfd2.js"></script>
 
     
 
@@ -127,6 +130,9 @@
 
 
 
+
+    
+    
 
     
 </head>
@@ -249,7 +255,7 @@
     <li><a id="contents:45-面试总结" href="#45-面试总结">4.5 面试总结</a></li>
   </ol>
 </nav><div class="post-body e-content">
-              <p style="text-indent:0"><span class="drop-cap">这</span>篇文章记录自己在日本的求学之路，顺便也写给有兴趣来日本读研的人。我会以我的切身经历来讲述日本的求学之路是怎样的，从两眼一抹黑到入学合格。</p>
+                <p style="text-indent:0"><span class="drop-cap">这</span>篇文章记录自己在日本的求学之路，顺便也写给有兴趣来日本读研的人。我会以我的切身经历来讲述日本的求学之路是怎样的，从两眼一抹黑到入学合格。</p>
 <p>先记录一下自己申报的学校和结果吧，具体情况后面会细讲。没错，日本可以报很多学校，只要考试时间不冲突。</p>
 <div class="table-container"><table>
 <thead>
@@ -676,7 +682,10 @@ E-mail：XXX
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>

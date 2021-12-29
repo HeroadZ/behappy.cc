@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
 
     <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="color-scheme" content="light dark">
+
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,11 +17,11 @@
 
     <title>《艾伦图灵传》记录 | 醉乐轩</title>
 
-    <link rel="stylesheet" href="/css/meme.min.e9fed2ec0c7f1c0679a9c1f3b3bc1c845478eb0f3fc78de0f5cd4409115856e1.css"/>
+    <link rel="stylesheet" href="/css/meme.min.c825befed34848d7ce6abc4ba4617f1b647e455df9d2c59353a0ca34393ec3ba.css"/>
 
     
     
-        <script src="/js/meme.min.95bbbcbfd5d9d1a02500ee069f2b6b05d2fff0cb8d77e10d4af732d1df3f0253.js"></script>
+        <script src="/js/meme.min.cb6768ab827abe8914c789013215e928c2670d1867a2277055689b3a3761cfd2.js"></script>
 
     
 
@@ -128,6 +131,9 @@
 
 
     
+    
+
+    
 </head>
 
     <body>
@@ -221,7 +227,7 @@
             
 
             <nav class="contents"></nav><div class="post-body e-content">
-              <p style="text-indent:0"><span class="drop-cap">首</span>先吐槽一下李笑来的<em>把时间当作朋友</em>第三版，看的过程中感觉都不需要用脑子，全书看完没有惊艳到我的地方，个人认为，不符合豆瓣这么高分的评价，因为看完了就只有一个反应哦。</p>
+                <p style="text-indent:0"><span class="drop-cap">首</span>先吐槽一下李笑来的<em>把时间当作朋友</em>第三版，看的过程中感觉都不需要用脑子，全书看完没有惊艳到我的地方，个人认为，不符合豆瓣这么高分的评价，因为看完了就只有一个反应哦。</p>
 <p>在《如谜的解谜者》第二章，写道，拉普拉斯在1795年总结到：“假如有一位强大的智者，他能综合所有驱动自然的力，以及施力物体的所有情况，并且能够分析所有这些数据，那么对他来说，就没有什么是不确定的。未来就会如同历史一样，展现在他的眼前。”拉普拉斯的观点是，<strong>没有任何事情是不确定的，也许它们看起来像是不确定的，那只是因为人类无法实现必要的测量手段。</strong></p>
 <p>但是爱丁顿却认为，<strong>物理上的“必然”和心理的“必然”没有联系</strong>，物理规则决定了你一定会怎样，但实际上却没有人觉得自己像被线牵着的木偶。他写道，“我的直觉是，并不存在一种能够决定未来的因素，秘密地隐藏在过去当中。”但是，他并不满足于保持“<strong>科学和直觉井水不犯河水</strong>”。因为他也无法否认，身体是服从物理规律的。于是他发问：“<strong>一堆普通的原子，是如何构成一个能思考的系统的</strong>？”（这个问题惊艳到我了！）</p>
 <p>新兴的量子理论认为，<strong>一个事件是绝对不确定的</strong>。薛定谔的概率波和海森堡的不确定原理，使得爱丁顿认为，<strong>思维作用于实体，它也许可以决定那些不确定事件的结果</strong>。但是思维如何决定一个原子的波函数呢？但是量子论中并没有给出解释。于是最后爱丁顿认为，“我们有一种意识，能够决定大脑中一部分或者所有原子的行为。”</p>
@@ -433,7 +439,10 @@
     <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
 
 <script>
-    mediumZoom(document.querySelectorAll('div.post-body img'), {
+    let imgNodes = document.querySelectorAll('div.post-body img');
+    imgNodes = Array.from(imgNodes).filter(node => node.parentNode.tagName !== "A");
+
+    mediumZoom(imgNodes, {
         background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
     })
 </script>
