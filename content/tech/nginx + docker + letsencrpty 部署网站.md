@@ -178,12 +178,12 @@ server {
 因为 let's encrypt 证书是 3 个月一过期，所以我们需要在 cron 里面加一个定时任务，比如每个月更新一次证书。
 运行`sudo crontab -e`打开定时任务配置文件，在最后一行添加以下代码。
 ```
-@monthly { date; docker exec proxy certbot renew; } >> ~/example/nginx/logs/certbot.log 2>&1
+@monthly { date; docker exec proxy certbot renew; } >> /home/<user>/example/nginx/logs/certbot.log 2>&1
 ```
 
 为了确定命令是否可以被正确运行，在命令行运行
 ```sh
-$ { date; sudo docker exec proxy certbot renew; } >> ~/example/nginx/logs/certbot.log 2>&1
+$ { date; sudo docker exec proxy certbot renew; } >> /home/<user>/example/nginx/logs/certbot.log 2>&1
 ```
 然后运行`cat ~/example/nginx/logs/certbot.log`查看 certbot 证书更新日志，有以下 log 代表可以运行。
 ```
