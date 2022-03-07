@@ -1,5 +1,5 @@
 ---
-title: "Google Recaptcha使用教程"
+title: "Google reCAPTCHA使用教程"
 date: 2022-03-06T17:15:55+09:00
 slug: "google-recaptcha-tutorial"
 dropCap: false
@@ -7,9 +7,9 @@ tags:
   - demo教程
 ---
 
-生活在互联网时代，我们会经常要跟网页打交道。即便现在手机APP也在不断的发展，Web应用依旧是最古老最常见的。在与用户进行交互的过程中，验证码有时候扮演着重要的角色，比如在用户注册，登录，提交表单的场景中，为了防止机器人浪费服务器的资源，我们需要验证在操作的是真实的用户而不是机器人。作为开发者我们当然可以从零开发一个验证码组件，不过很可能会不够完善。 [Google reCaptcha](https://developers.google.com/recaptcha) 是一个不错的选择，一个月可以支持一百万次免费验证。
+生活在互联网时代，我们会经常要跟网页打交道。即便现在手机APP也在不断的发展，Web应用依旧是最古老最常见的。在与用户进行交互的过程中，验证码有时候扮演着重要的角色，比如在用户注册，登录，提交表单的场景中，为了防止机器人浪费服务器的资源，我们需要验证在操作的是真实的用户而不是机器人。作为开发者我们当然可以从零开发一个验证码组件，不过很可能会不够完善。 [Google reCAPTCHA](https://developers.google.com/recaptcha) 是一个不错的选择，一个月可以支持一百万次免费验证。
 
-然而在搜索了Google reCaptcha相关的资料[^1][^2][^3]后，发现现有的教程并不是很完善，比如：
+然而在搜索了Google reCAPTCHA相关的资料[^1][^2][^3]后，发现现有的教程并不是很完善，比如：
 1. 没有很详尽的前后端分离验证代码（可能因为起服务器比较麻烦
 2. 几乎所有的demo代码语言都是PHP（其实就是想拿Python写一个:grin:
 3. 最新的v3版本的资料很少
@@ -18,12 +18,12 @@ tags:
 
 ## 注册账号和配置
 
-首先去 [Google reCaptcha Admin Console](https://www.google.com/recaptcha/admin) 注册账号。
+首先去 [Google reCAPTCHA Admin Console](https://www.google.com/recaptcha/admin) 注册账号。
 创建一个配置，demo如下：
 <img src="/images/register-recaptcha.png" alt="register google recaptcha" width="400"/>
 需要注意的有两个地方：
 
-1. 一个是选择想要使用的reCaptcha类型，目前有3种。显式复选框的v2版本，隐藏式的v2版本以及最新的v3版本。所以对于不同的版本，我们需要创建不同的配置。这三种类型的区别可以见下表：
+1. 一个是选择想要使用的reCAPTCHA类型，目前有3种。显式复选框的v2版本，隐藏式的v2版本以及最新的v3版本。所以对于不同的版本，我们需要创建不同的配置。这三种类型的区别可以见下表：
 |                | 显式v2 |  隐式v2  |   v3   |
 |:----------------|:------|:-------|:-----|
 | 是否显示验证框   | :o:    |  :x:    |    :x: |
@@ -47,7 +47,7 @@ tags:
 </form>
 ```
 
-接下来根据 [recaptcha文档](https://developers.google.com/recaptcha/docs/display) 我们需要引入js用来渲染验证复选框。js部分代码为:
+接下来根据 [reCAPTCHA文档](https://developers.google.com/recaptcha/docs/display) 我们需要引入js用来渲染验证复选框。js部分代码为:
 
 ```html
 <script>
@@ -72,7 +72,7 @@ tags:
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 ```
 ### url参数说明
-除了渲染复选框可以指定参数外（代码里的注释部分），引用reCaptcha js的时候有3个可选参数。
+除了渲染复选框可以指定参数外（代码里的注释部分），引用reCAPTCHA js的时候有3个可选参数。
 - onload：加载完依赖项时的callback函数
 - render：是否显式加载组件，默认值为onload，表示自动加载，也就是默认找到第一个class为g-recaptcha的标签来加载组件。例子中我们设置的值为explicit，意思是不启用自动加载，而是根据我们提供的DOM id进行加载。
 - hl：语言，不设置的话自动检测浏览器语言作为标准，建议不设置。
@@ -191,7 +191,7 @@ verfication result from google: {'success': True, 'challenge_ts': '2022-03-06T15
 ```
 
 ## 总结
-Google reCaptcha从v1版的文字验证，到v2版的图片显式/隐式验证，再到v3版的score验证，的确是解决了之前存在的问题，变得越来越好用了。Google内部靠什么来进行风险分析不会公开出来，可能会用到你的IP请求数，浏览器指纹，谷歌账号cookies之类的。当然Google Recaptcha不是万能的，肯定有方法可以hack，但是肯定会比较复杂，能够提高攻击者的攻击难度和成本我觉得这就足够了。以上。
+Google reCAPTCHA从v1版的文字验证，到v2版的图片显式/隐式验证，再到v3版的score验证，的确是解决了之前存在的问题，变得越来越好用了。Google内部靠什么来进行风险分析不会公开出来，可能会用到你的IP请求数，浏览器指纹，谷歌账号cookies之类的。当然Google reCAPTCHA不是万能的，肯定有方法可以hack，但是肯定会比较复杂，能够提高攻击者的攻击难度和成本我觉得这就足够了。以上。
 
 
 <br />
