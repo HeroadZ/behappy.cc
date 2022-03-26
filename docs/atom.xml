@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">醉乐轩</title>
     <subtitle type="html">以梦为马，醉乐其中。</subtitle>
-    <updated>2022-03-07T19:09:32&#43;09:00</updated>
+    <updated>2022-03-26T11:53:43&#43;09:00</updated>
     <id>https://behappy.cc/</id>
     <link rel="alternate" type="text/html" href="https://behappy.cc/" />
     <link rel="self" type="application/atom&#43;xml" href="https://behappy.cc/atom.xml" />
@@ -18,8 +18,8 @@
     <generator uri="https://gohugo.io/" version="0.88.1">Hugo</generator>
         <entry>
             <title type="text">按部就班的2021</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2021/12/29/2021-final/" />
-            <id>https://behappy.cc/2021/12/29/2021-final/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/2021-final/" />
+            <id>https://behappy.cc/life/2021-final/</id>
             <updated>2021-12-29T18:31:14&#43;09:00</updated>
             <published>2021-12-29T12:38:51&#43;09:00</published>
             <author>
@@ -96,8 +96,8 @@
     
         <entry>
             <title type="text">抓住不可替代性</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2021/09/20/catch-irreplaceability/" />
-            <id>https://behappy.cc/2021/09/20/catch-irreplaceability/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/catch-irreplaceability/" />
+            <id>https://behappy.cc/life/catch-irreplaceability/</id>
             <updated>2021-09-20T14:33:23&#43;09:00</updated>
             <published>2021-09-20T13:45:52&#43;09:00</published>
             <author>
@@ -142,8 +142,8 @@
     
         <entry>
             <title type="text">在早稻田的这两年</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2020/12/31/two-years-in-waseda/" />
-            <id>https://behappy.cc/2020/12/31/two-years-in-waseda/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/two-years-in-waseda/" />
+            <id>https://behappy.cc/life/two-years-in-waseda/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2020-12-31T17:42:39&#43;09:00</published>
             <author>
@@ -207,8 +207,8 @@
     
         <entry>
             <title type="text">2018，学会去拥抱！</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2019/01/02/2018-final/" />
-            <id>https://behappy.cc/2019/01/02/2018-final/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/2018-final/" />
+            <id>https://behappy.cc/life/2018-final/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2019-01-02T19:43:59&#43;00:00</published>
             <author>
@@ -293,8 +293,8 @@
     
         <entry>
             <title type="text">日本求学之路</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2018/09/01/how-to-study-in-japan/" />
-            <id>https://behappy.cc/2018/09/01/how-to-study-in-japan/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/how-to-study-in-japan/" />
+            <id>https://behappy.cc/life/how-to-study-in-japan/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2018-09-01T10:23:59&#43;00:00</published>
             <author>
@@ -559,8 +559,8 @@ E-mail：XXX
     
         <entry>
             <title type="text">在日半年</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2018/03/31/half-year-in-japan/" />
-            <id>https://behappy.cc/2018/03/31/half-year-in-japan/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/half-year-in-japan/" />
+            <id>https://behappy.cc/life/half-year-in-japan/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2018-03-31T15:44:00&#43;00:00</published>
             <author>
@@ -661,8 +661,8 @@ E-mail：XXX
     
         <entry>
             <title type="text">六级466到托福首战94的心得总结</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2017/07/27/toefl-90-experience/" />
-            <id>https://behappy.cc/2017/07/27/toefl-90-experience/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/toefl-90-experience/" />
+            <id>https://behappy.cc/life/toefl-90-experience/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2017-07-27T07:13:26&#43;00:00</published>
             <author>
@@ -926,8 +926,8 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
     
         <entry>
             <title type="text">2016总结与展望</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2017/01/26/2016-final/" />
-            <id>https://behappy.cc/2017/01/26/2016-final/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/2016-final/" />
+            <id>https://behappy.cc/life/2016-final/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2017-01-26T21:49:37&#43;00:00</published>
             <author>
@@ -1002,8 +1002,8 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
     
         <entry>
             <title type="text">《艾伦图灵传》记录</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2015/05/09/turing/" />
-            <id>https://behappy.cc/2015/05/09/turing/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/turing/" />
+            <id>https://behappy.cc/life/turing/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2015-05-09T10:21:46&#43;00:00</published>
             <author>
@@ -1053,8 +1053,8 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
     
         <entry>
             <title type="text">读《暗时间》</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2015/03/28/how-to-study-in-japan/" />
-            <id>https://behappy.cc/2015/03/28/how-to-study-in-japan/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/how-to-study-in-japan/" />
+            <id>https://behappy.cc/life/how-to-study-in-japan/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2015-03-28T09:48:04&#43;00:00</published>
             <author>
@@ -1120,8 +1120,8 @@ Environment Enjoyment Efficiency Employment &lt;strong&gt;|&lt;/strong&gt; Team 
     
         <entry>
             <title type="text">不求有功，但求无过——2014终了</title>
-            <link rel="alternate" type="text/html" href="https://behappy.cc/2014/12/30/2014-final/" />
-            <id>https://behappy.cc/2014/12/30/2014-final/</id>
+            <link rel="alternate" type="text/html" href="https://behappy.cc/life/2014-final/" />
+            <id>https://behappy.cc/life/2014-final/</id>
             <updated>2021-09-11T16:20:05&#43;09:00</updated>
             <published>2014-12-30T22:55:32&#43;00:00</published>
             <author>

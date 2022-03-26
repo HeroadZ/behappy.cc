@@ -51,8 +51,8 @@ uglyURLs = false
 [permalinks]
     # categories = "/categories/:slug/"
     tags = "/tags/:slug/"
-    life = "/:year/:month/:day/:slug"
-    tech = "/:year/:month/:day/:slug"
+    life = "/:section/:slug"
+    tech = "/:section/:slug"
 
 # 类别
 [taxonomies]
