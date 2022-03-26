@@ -2,7 +2,7 @@
 title="读《暗时间》"
 tags=["书痞之言"]
 date="2015-03-28 09:48:04"
-slug="how-to-study-in-japan"
+slug="dark-time-review"
 +++
 
 仅站在一个知识匮乏的大学生的角度。  
