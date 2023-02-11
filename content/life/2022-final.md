@@ -2,6 +2,8 @@
 title: 不务正业的2022
 date: 2022-12-30T14:14:31+09:00
 slug: 2022-final
+tags:
+  - 年终总结
 dropCap: false
 ---
 

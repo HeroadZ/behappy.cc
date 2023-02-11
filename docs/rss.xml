@@ -23,10 +23,116 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sat, 31 Dec 2022 20:48:53 &#43;0900</lastBuildDate>
+        <lastBuildDate>Sat, 11 Feb 2023 18:14:24 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://behappy.cc/rss.xml" />
         
+        
+            <item>
+                <title>与ChatGPT合作解决问题</title>
+                <link>https://behappy.cc/life/cooperate-with-chatgpt/</link>
+                <guid isPermaLink="true">https://behappy.cc/life/cooperate-with-chatgpt/</guid>
+                <pubDate>Mon, 06 Feb 2023 20:44:04 &#43;0900</pubDate>
+                
+                    <author>zchelllo@gmail.com (醉乐轩)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;chatgpt是什么&#34;&gt;ChatGPT是什么&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://openai.com/blog/chatgpt/&#34;&gt;ChatGPT&lt;/a&gt; 简单来说是一个聊天机器人。
+最近它又成为了国内社交网络的爆点话题，其实去年12月份openAI刚推出这个产品的时候就火过一波，只是国内的人无法注册使用所以只是在国外的论坛上比较火。最近随着国内一些聪明的商家开始在淘宝卖账号，以及有些人把ChatGPT接入到微信，ChatGPT又一次在社交平台上火了。&lt;/p&gt;
+&lt;p&gt;聊天机器人已经有很多了，为什么偏偏是ChatGPT火了？因为其他是智障聊天机器人，而ChatGPT真的有点东西。它生成的东西不是狗屁不通的，而且知识量非常丰富，可以支持现有的几乎所有流行语言，甚至还能写代码。&lt;/p&gt;
+&lt;h2 id=&#34;分享我与chatgpt的一次成功的合作&#34;&gt;分享我与ChatGPT的一次成功的合作&lt;/h2&gt;
+&lt;p&gt;因为ChatGPT很智能，有遇到想不通的问题，我会尝试询问它，没准它就能给我一个不错的解决方案。我在这边分享一下我是如何利用ChatGPT解决我实际生活中遇到的一个问题的。&lt;/p&gt;
+&lt;h3 id=&#34;问题描述&#34;&gt;问题描述&lt;/h3&gt;
+&lt;p&gt;在打网球的时候，通过手机录像记录自己的动作，从而进行分析改正是一个提高自己网球水平的好办法。而一般好的录制视角是在偏高的位置，这样能够清晰地看到球打到对面场地的情况。（如下图所示）
+&lt;img src=&#34;https://behappy.cc/images/tennis_camera.png&#34; alt=&#34;tennis_camera&#34;&gt;
+为了能够方便操作，一般会用前置摄像头，因为可以看到画面从而调整拍摄的角度，以及可以简单地开始和结束录制。但是呢，前置摄像头的像素很低拍的很糊，所以这几天我一直在想如何利用&lt;strong&gt;后置摄像头&lt;/strong&gt;来拍摄。&lt;/p&gt;
+&lt;h3 id=&#34;后置摄像头的使用难点&#34;&gt;后置摄像头的使用难点&lt;/h3&gt;
+&lt;h5 id=&#34;1-无法看到正在拍摄的画面&#34;&gt;1. 无法看到正在拍摄的画面&lt;/h5&gt;
+&lt;p&gt;首先最大的难题是，当使用后置时，无法通过屏幕看到正在拍摄的画面，这样无法保证是否将整个网球场的画面拍摄进去。因为手机时放在高处录制的，所以即使跑到网球场背面也无法看清楚画面，而且实际上也无法跑到背面去（没有空间）。比较常见的解决方案是，通过另一台手机远程查看当前手机的摄像头。这个我也想到了，我尝试了小米通话，AirDroid等软件，但是发现不符合我的使用需求。于是我向ChatGPT求助。
+&lt;img src=&#34;https://behappy.cc/images/tennis_camera_chat1.png&#34; alt=&#34;tennis_camera&#34;&gt;
+ChatGPT给了我一个模糊的解决方案，于是我接着追问。
+&lt;img src=&#34;https://behappy.cc/images/tennis_camera_chat2.png&#34; alt=&#34;tennis_camera&#34;&gt;
+在这里，ChatGPT给我推荐了明确的软件，我尝试了一下“Alfred”，发现它正是我想要的。而且一般的软件是需要两个手机在同一wifi下，而Alfred即使是热点也没问题。通过利用Alfred，现在我可以看到正在拍摄的画面了。然而还没有完，还有许多问题需要解决。&lt;/p&gt;
+&lt;h5 id=&#34;2-如何录制&#34;&gt;2. 如何录制&lt;/h5&gt;
+&lt;p&gt;现在我们可以通过手机B（监控端）来看到手机A（相机端）的画面，但是如何录制是一个问题。Alfred是有录制功能的，但是如果没有充值会员的话，只能看到360p的画面，比前置的像素还低。抛开会员费的问题，这种录制方式还有一个问题，那就是两个手机需要一直传输数据，非常费电和流量，几乎只能录一个小时。Alfred的使用场景是相机端是插着电的，所以不考虑这个问题。但我的理想使用情况是，通过远程监控将手机A调整到合适的位置后，通过手机A自带的相机录制就好，这样既省电又不用数据传输。&lt;/p&gt;
+&lt;p&gt;当然我可以将相机app的图标放在屏幕上某个固定的位置，然后凭感觉打开手机A的相机，再凭感觉找到录制按钮。但是这样的操作鲁棒性实在太低了，我也无法确认手机是否真的在录制。想了半天我也只能想到打开相机声音，并将声音开到最大，这样可以通过声音确认手机是否在录制。但是即使这样，无法看到画面单凭感觉弄这一整套操作的可行性还是很低。流程大致是&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;关闭Alfred&lt;/li&gt;
+&lt;li&gt;打开原生相机&lt;/li&gt;
+&lt;li&gt;点击录制按钮&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;想了半天没有好的办法，于是我又向ChatGPT求助。
+&lt;img src=&#34;https://behappy.cc/images/tennis_camera_chat3.png&#34; alt=&#34;tennis_camera&#34;&gt;
+看着 &lt;strong&gt;..语音控制..&lt;/strong&gt; 这四个字，我突然想到既然用手操作困难的话，那就用声音操作呗。于是我打开了手机A的小爱同学，说到“小爱同学，帮我关闭阿福管家并打开相机app。”，然后盯着手机屏幕。我发现小爱同学准确地完成了这些操作并回复了我一声“好的”。然后我再说了一句“小爱同学，开始录像”，随着“嘀嘟”一声，真的开始录像了！我试验了好几次，每次小爱同学都能够准确无误地完成操作并给我反馈，太完美了！&lt;/p&gt;
+&lt;h4 id=&#34;经过chatgpt指点后目前的解决方案&#34;&gt;经过ChatGPT指点后目前的解决方案&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;手机A(相机端)一些必要的设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;相机默认初始状态为记住上次状态，即保证每次打开相机都是在录像状态&lt;/li&gt;
+&lt;li&gt;打开相机声音，并将声音调到最大&lt;/li&gt;
+&lt;li&gt;禁止alfred使用麦克风（保证小爱同学可以正常唤醒）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;手机A（录像端）打开alfred并连接到手机B（监控端）的热点。&lt;/li&gt;
+&lt;li&gt;手机B看手机A的画面，调整手机A摆放角度。&lt;/li&gt;
+&lt;li&gt;对手机A说话：“小爱同学，关闭阿福管家并打开相机”&lt;/li&gt;
+&lt;li&gt;听到小爱同学回复“好的”之后，再说“小爱同学，开始录制”&lt;/li&gt;
+&lt;li&gt;听到一声“嘀嘟“后，可以确认正在录制。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;总结&#34;&gt;总结&lt;/h4&gt;
+&lt;p&gt;在这次的解决方案中，ChatGPT给了我两点提示，一个是alfred，还有一个是语音控制，很给力。在跟ChatGPT头脑风暴的过程中，我也发现了ChatGPT相比于人的优势，那就是知识很丰富思维特别发散，我觉得如果光让我一个人想没有提示的话，我可能得想好久才能想出来甚至想不出来。&lt;/p&gt;
+&lt;p&gt;总的来说，这次跟ChatGPT合作一起头脑风暴的经历我非常喜欢。其实除了这次合作，有几次代码方面的问题也给了我提供了帮助。Github Copilot更多的是基于现有的代码上下文给建议，而ChatGPT可以应用于更广的场景。&lt;/p&gt;
+&lt;p&gt;我们从小到大的学习中一直存在着老师这位角色，而进入社会以后，没有老师来指导我们了。现在好了，有一位不厌其烦地一直准备待命的老师可以供我们提问求助。在我看来，其实ChatGPT更像是一位助教，它会说自己不像老师那么权威说一不二，它会跟你一起探讨，辅助你解决问题。我觉得这种方式更加有趣，也更加能够提高我们的学习效率。&lt;/p&gt;
+&lt;h2 id=&#34;chatgpt的未来&#34;&gt;ChatGPT的未来&lt;/h2&gt;
+&lt;p&gt;目前大家测试下来的结果，在金融，法律，开发等领域ChatGPT都有不错的表现，但是真正在商业上落实的，目前可能还只有微软的搜索引擎Bing。新一代的搜索引擎究竟是什么样，我们需要拭目以待，我个人是非常期待的。&lt;/p&gt;
+&lt;p&gt;但是目前有一个问题是，这种大模型基本都掌握在大公司手上，个人开发者很难构建自己的语言模型（数据和算力都不够），这就导致只能调用大公司的API。这些大公司提供的训练模型可能会存在偏见，同时用于训练的数据也有点灰色地带，其他公司是否能放心地使用这些模型，是一个需要时间检验的问题。&lt;/p&gt;
+&lt;p&gt;但至少，目前，我个人是非常喜欢ChatGPT的。不过ChatGPT $20/月，Github Copilot $10/月的价格，还是挺贵的。以后没准会出各种各样的AI模型，我们每个都得付费吗？Model as a service(MaaS)的时代终于要来了吗？&lt;/p&gt;
+&lt;p&gt;PS：ChatGPT的各种用法可以参考 &lt;a href=&#34;https://github.com/f/awesome-chatgpt-prompts&#34;&gt;https://github.com/f/awesome-chatgpt-prompts&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以上。
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&#34;text-align: center;&#34;&gt;如果本文对您有帮助，欢迎打赏。&lt;/p&gt;
+&lt;img src=&#34;https://behappy.cc/images/qr-wechat.png&#34; alt=&#34;赞赏码&#34; width=&#34;300&#34;/&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://behappy.cc/life/">life\</category>
+                            
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://behappy.cc/tags/ai/">AI</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://behappy.cc/tags/nlp/">NLP</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>不务正业的2022</title>
@@ -110,6 +216,14 @@
                 
                 
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://behappy.cc/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/">年终总结</category>
+                                
+                            
                         
                     
                 
