@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on 醉乐轩</title>
+    <link>https://behappy.cc/zh/tags/ai/</link>
+    <description>Recent content in AI on 醉乐轩</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>zchelllo@gmail.com (醉乐轩)</managingEditor>
+    <webMaster>zchelllo@gmail.com (醉乐轩)</webMaster>
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+    <lastBuildDate>Mon, 06 Feb 2023 20:44:04 +0900</lastBuildDate>
+    <atom:link href="https://behappy.cc/zh/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>与ChatGPT合作解决问题</title>
+      <link>https://behappy.cc/zh/life/cooperate-with-chatgpt/</link>
+      <pubDate>Mon, 06 Feb 2023 20:44:04 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
+      <guid>https://behappy.cc/zh/life/cooperate-with-chatgpt/</guid>
+      <description>ChatGPT是什么 ChatGPT 简单来说是一个聊天机器人。 最近它又成为了国内社交网络的爆点话题</description>
+    </item>
+  </channel>
+</rss>

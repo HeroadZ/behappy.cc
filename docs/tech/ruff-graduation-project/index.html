@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.121.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.edb88a9b91ba2cad065d6daeee096db2fd7740a61633ff602017686808c733d1.js"></script>
+        <script src="/js/meme.min.8963f88e53c667beac6b24803f8df81032735025c3f6cb9ad362c1d3e9eea9f9.js"></script>
 
     
 
@@ -232,7 +232,7 @@
 <h2 id="11-为什么用ruff"><a href="#11-为什么用ruff" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:11-为什么用ruff" class="headings">1.1 为什么用Ruff</a></h2>
 <p>这次介绍我的毕业设计，这是个非常简单的东西。所有的源码在**<a href="https://github.com/HeroadZ/Ruff-graduation-project" target="_blank" rel="noopener">Github</a>**上，还包含了配置信息。</p>
 <p>因为接触了好长时间的前端，然后本身是EE专业，就是搞单片机这种东西嘛，所以对js能否搞硬件一直保有期待。正好快毕业了，老师呢，也说让我自主选题。于是在网上搜索好久，先是舍友推荐了<strong>ESP8266</strong>。这是一块自带wifi的板子，毫无疑问，对于长期只能玩51板子的我有巨大吸引力！都能上网了还有什么不能干！然后又是一顿搜索，找到了集成度更高的**<a href="http://www.nodemcu.com/index_cn.html" target="_blank" rel="noopener">nodemcu</a>**，哇，这货就是我心中想要的。Nodejs编写网络应用，然后Lua操作硬件，可惜的是学习Lua也要一定的成本，不过这个很便宜，可以说是非常好的物联网开发板了。</p>
-<p>然而我还是找到了**<a href="https://ruff.io/zh-cn/" target="_blank" rel="noopener">Ruff</a>**。这是一家专业的公司，有着成熟的开发方式和套件。底层SDK给你了，规范的常用的硬件模块给你了，甚至连软件封装都给你封装好了，你只需要有想法就行，剩下的几行代码足以。而且还有戴尔售后般的服务，缺点就是比较贵，板子加上官方硬件模块需要**300**块，不过老师可以报销，加上老师也挺感兴趣的，最终就决定拿Ruff来开发啦。</p>
+<p>然而我还是找到了**<a href="https://ruff.io/zh-cn/" target="_blank" rel="noopener">Ruff</a><strong>。这是一家专业的公司，有着成熟的开发方式和套件。底层SDK给你了，规范的常用的硬件模块给你了，甚至连软件封装都给你封装好了，你只需要有想法就行，剩下的几行代码足以。而且还有戴尔售后般的服务，缺点就是比较贵，板子加上官方硬件模块需要</strong>300**块，不过老师可以报销，加上老师也挺感兴趣的，最终就决定拿Ruff来开发啦。</p>
 <h2 id="12-ruff的开发方式"><a href="#12-ruff的开发方式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:12-ruff的开发方式" class="headings">1.2 Ruff的开发方式</a></h2>
 <p>我们看一下Ruff的开发方式。</p>
 <p><img src="/images/Ruff-turnOn-led.png" alt="Ruff之helloworld"></p>
@@ -250,8 +250,8 @@ end
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="n">sbit</span>  <span class="n">led1</span><span class="o">=</span><span class="n">P1</span><span class="o">^</span><span class="mi">0</span><span class="p">;</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">sbit</span>  <span class="n">led1</span><span class="o">=</span><span class="n">P1</span><span class="o">^</span><span class="mi">0</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>前面的一堆引入就不放进去了，同样是对引脚操作，东西一多，代码看起来真费劲。</p>
 <p>所以看到js的开发方式，的确很感动。我很欣赏Ruff创始人的观点：</p>
@@ -271,7 +271,7 @@ end
 <p>然后可以开始写手机端的程序了，怎么搞？一开始还想着搞个React Native，写个原生APP把，后来看了官方文档，放弃了。本来就不会React，还要懂各种安卓开发技巧。于是最终就简单写了个移动端页面。flex布局+jQuery就行了，图标用iconfont的。</p>
 <p>下面放上我毕业设计的最终图，由于Ruff开发板答辩完以后被收走了，我也懒得再重新写页面了。</p>
 <p><img src="/images/Ruff-phone.png" alt="Ruff手机端主页面"></p>
-<p>如上所示，我最上面有3个功能模块，放后面讲，然后中间的ip修改是方便局域网时，可以修改发送地址的。其实就是把ip地址放在**<a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">localStorage</a>**里面，每个页面都可以共享，然后有需要就改掉。注意这里需要**正则验证**一下输入，用<code>/^([0-9]{1,3}\.){3}[0-9]{1,3}$/.test(ipInput.val())</code>就可以了。然后下面的修改颜色模块，其实就是我所说的点亮一盏灯的功能了。因为这边用的是RGB三色灯，是基于PWM波。根据简单的三原色原理，我们直到**当R,G,B都是255的时候，就是白光；R,G,B都是0的时候，就灭掉**。</p>
+<p>如上所示，我最上面有3个功能模块，放后面讲，然后中间的ip修改是方便局域网时，可以修改发送地址的。其实就是把ip地址放在**<a href="https://developer.mozilla.org/en/docs/Web/API/Window/localStorage" target="_blank" rel="noopener">localStorage</a><strong>里面，每个页面都可以共享，然后有需要就改掉。注意这里需要</strong>正则验证<strong>一下输入，用<code>/^([0-9]{1,3}\.){3}[0-9]{1,3}$/.test(ipInput.val())</code>就可以了。然后下面的修改颜色模块，其实就是我所说的点亮一盏灯的功能了。因为这边用的是RGB三色灯，是基于PWM波。根据简单的三原色原理，我们直到</strong>当R,G,B都是255的时候，就是白光；R,G,B都是0的时候，就灭掉**。</p>
 <p>然后修改页面的代码大致如下，使用ES6写的，不过就语法变了下：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
@@ -290,20 +290,20 @@ end
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;ruffUrl&#39;</span><span class="p">)</span> 
- <span class="o">+</span> <span class="s1">&#39;colorChange?color=&#39;</span> 
- <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">colorCode</span><span class="p">),</span> <span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">status</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
- 	<span class="k">if</span><span class="p">(</span><span class="nx">status</span> <span class="o">===</span> <span class="s1">&#39;success&#39;</span><span class="p">)</span> <span class="p">{</span>
- 		<span class="k">if</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">colorChange</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
- 			<span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改成功！&#34;</span><span class="p">);</span>
- 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
- 			<span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改失败!&#34;</span><span class="p">);</span>
- 		<span class="p">}</span>
- 	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-		 <span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改失败!&#34;</span><span class="p">);</span>
-	<span class="p">}</span>
-<span class="p">});</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">getItem</span><span class="p">(</span><span class="s1">&#39;ruffUrl&#39;</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">+</span> <span class="s1">&#39;colorChange?color=&#39;</span> 
+</span></span><span class="line"><span class="cl"> <span class="o">+</span> <span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">colorCode</span><span class="p">),</span> <span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">status</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> 	<span class="k">if</span><span class="p">(</span><span class="nx">status</span> <span class="o">===</span> <span class="s1">&#39;success&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> 		<span class="k">if</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">colorChange</span> <span class="o">===</span> <span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> 			<span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改成功！&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> 			<span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改失败!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"> 		<span class="p">}</span>
+</span></span><span class="line"><span class="cl"> 	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		 <span class="nb">window</span><span class="p">.</span><span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;修改失败!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>可以看到，我们把颜色参数添加到了链接后面，注意这边需要编码，因为<code>#</code>是特殊字符。所以最后这个网址可能是这样的，6318是监听的端口号：</p>
 <pre tabindex="0"><code>http://192.168.78.1:6318/colorChange?color=%23ffffff
@@ -331,35 +331,33 @@ end
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;home&#39;</span><span class="p">).</span><span class="nx">Server</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Server</span><span class="p">();</span>
-  
-
-<span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">6318</span><span class="p">);</span> <span class="c1">//监听端口
-</span><span class="c1"></span><span class="nx">server</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/colorChange&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">res</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span> <span class="c1">//允许跨域
-</span><span class="c1"></span>    <span class="kd">var</span> <span class="nx">urlObj</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">queryObj</span> <span class="o">=</span> <span class="nx">queryString</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">urlObj</span><span class="p">.</span><span class="nx">query</span><span class="p">);</span>
-    <span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">queryObj</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>  <span class="c1">//颜色参数
-</span><span class="c1"></span>    <span class="kd">var</span> <span class="nx">sColorChange</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">sColorChange</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&#34;0x&#34;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)));</span> <span class="c1">//转换成特定格式
-</span><span class="c1"></span>    <span class="p">}</span>
-    <span class="nx">led</span><span class="p">.</span><span class="nx">setRGB</span><span class="p">(</span><span class="nx">sColorChange</span><span class="p">);</span> <span class="c1">//设置颜色
-</span><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;color Change: &#39;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
-    <span class="k">return</span> <span class="p">{</span>
-        <span class="nx">colorChange</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">//返回数据以便客户端确认
-</span><span class="c1"></span>    <span class="p">};</span>
-<span class="p">});</span>
-
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">Server</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;home&#39;</span><span class="p">).</span><span class="nx">Server</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Server</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">6318</span><span class="p">);</span> <span class="c1">//监听端口
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">server</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/colorChange&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">res</span><span class="p">.</span><span class="nx">setHeader</span><span class="p">(</span><span class="s1">&#39;Access-Control-Allow-Origin&#39;</span><span class="p">,</span> <span class="s1">&#39;*&#39;</span><span class="p">);</span> <span class="c1">//允许跨域
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">var</span> <span class="nx">urlObj</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">queryObj</span> <span class="o">=</span> <span class="nx">queryString</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">urlObj</span><span class="p">.</span><span class="nx">query</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">color</span> <span class="o">=</span> <span class="nx">queryObj</span><span class="p">.</span><span class="nx">color</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>  <span class="c1">//颜色参数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">var</span> <span class="nx">sColorChange</span> <span class="o">=</span> <span class="p">[];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">sColorChange</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="s2">&#34;0x&#34;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)));</span> <span class="c1">//转换成特定格式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">led</span><span class="p">.</span><span class="nx">setRGB</span><span class="p">(</span><span class="nx">sColorChange</span><span class="p">);</span> <span class="c1">//设置颜色
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;color Change: &#39;</span> <span class="o">+</span> <span class="nx">color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">colorChange</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">//返回数据以便客户端确认
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h1 id="3-其他功能"><a href="#3-其他功能" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-其他功能" class="headings">3. 其他功能</a></h1>
 <h2 id="31-自适应灯光"><a href="#31-自适应灯光" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:31-自适应灯光" class="headings">3.1 自适应灯光</a></h2>
-<p>说白了就是led灯的亮度根据当前环境亮度（通过光照传感器获得）作出改变。需要注意的是，这里有个难点，因为led灯是RGB标准的，而无法直观改变亮暗度。所以我采用了**<a href="https://zh.wikipedia.org/wiki/HSL%E5%92%8CHSV%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4" target="_blank" rel="noopener">HSL标准</a>**，这里L表示亮度，然后色彩只保存在H和S里。至于这个转换的代码，直接从**<a href="https://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion" target="_blank" rel="noopener">stackoverflow</a>**上复制了，虽说也不难，但省事。</p>
+<p>说白了就是led灯的亮度根据当前环境亮度（通过光照传感器获得）作出改变。需要注意的是，这里有个难点，因为led灯是RGB标准的，而无法直观改变亮暗度。所以我采用了**<a href="https://zh.wikipedia.org/wiki/HSL%E5%92%8CHSV%E8%89%B2%E5%BD%A9%E7%A9%BA%E9%97%B4" target="_blank" rel="noopener">HSL标准</a><strong>，这里L表示亮度，然后色彩只保存在H和S里。至于这个转换的代码，直接从</strong><a href="https://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion" target="_blank" rel="noopener">stackoverflow</a>**上复制了，虽说也不难，但省事。</p>
 <h2 id="32-夜间睡眠模式"><a href="#32-夜间睡眠模式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:32-夜间睡眠模式" class="headings">3.2 夜间睡眠模式</a></h2>
 <p>也就是，到了晚上（光照传感器确定），睡觉的人起床（声音传感器听到声音），led灯渐渐变亮。这里的难点是js的回掉太多了，简直回掉深渊，各种绑定取消。其实也没这么烦的，但是我想做一个类似按键防抖的功能，因为有时候会有比如说人经过会遮挡光照传感器等特殊情况。还好有人设计了<strong>promise</strong>这个东东，简单又使用。<strong>张鑫旭</strong>写了<a href="http://www.zhangxinxu.com/wordpress/2014/02/es6-javascript-promise-%E6%84%9F%E6%80%A7%E8%AE%A4%E7%9F%A5/" target="_blank" rel="noopener">一篇文章</a>来介绍这个概念，Ruff官方也封装了<a href="https://github.com/vilic/ruff-promise" target="_blank" rel="noopener">一个专门的库</a>来供我们使用。</p>
 <p>所以一个简单的确认到晚上的功能是这样的：</p>
@@ -397,37 +395,37 @@ end
 </span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">nightFlag</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-
-<span class="kd">var</span> <span class="nx">getIlluminancePromise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//建立Promise对象
-</span><span class="c1"></span>    <span class="nx">lightSensor</span><span class="p">.</span><span class="nx">getIlluminance</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
-    <span class="p">});</span>
-<span class="p">});</span>
-
-<span class="nx">getIlluminancePromise</span>
-    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">illuminance</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">illuminance</span> <span class="o">&lt;=</span> <span class="nx">nightLightValue</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="nx">nightFlag</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-                    <span class="nx">lightSensor</span><span class="p">.</span><span class="nx">getIlluminance</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
-                        <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;=</span> <span class="nx">nightLightValue</span><span class="p">)</span> <span class="p">{</span>
-                            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;night confirm after 3s.&#39;</span><span class="p">);</span> <span class="c1">//确认晚上
-</span><span class="c1"></span>                            <span class="nx">nightFlag</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-
-                            <span class="nx">soundSensor</span><span class="p">.</span><span class="nx">enable</span><span class="p">();</span> <span class="c1">//打开声音传感器
-</span><span class="c1"></span>                            <span class="nx">soundSensor</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span><span class="s1">&#39;sound&#39;</span><span class="p">,</span> <span class="nx">sleepLight</span><span class="p">.</span><span class="nx">ledTurnOn</span><span class="p">);</span>
-                        <span class="p">}</span>
-                    <span class="p">});</span>
-                <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="nx">nightFlag</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">})</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">nightFlag</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">getIlluminancePromise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">resolve</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//建立Promise对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">lightSensor</span><span class="p">.</span><span class="nx">getIlluminance</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">resolve</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">getIlluminancePromise</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">illuminance</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="nx">illuminance</span> <span class="o">&lt;=</span> <span class="nx">nightLightValue</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="nx">nightFlag</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">lightSensor</span><span class="p">.</span><span class="nx">getIlluminance</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span> <span class="p">(</span><span class="nx">value</span> <span class="o">&lt;=</span> <span class="nx">nightLightValue</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;night confirm after 3s.&#39;</span><span class="p">);</span> <span class="c1">//确认晚上
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                            <span class="nx">nightFlag</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                            <span class="nx">soundSensor</span><span class="p">.</span><span class="nx">enable</span><span class="p">();</span> <span class="c1">//打开声音传感器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                            <span class="nx">soundSensor</span><span class="p">.</span><span class="nx">once</span><span class="p">(</span><span class="s1">&#39;sound&#39;</span><span class="p">,</span> <span class="nx">sleepLight</span><span class="p">.</span><span class="nx">ledTurnOn</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">});</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">nightFlag</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>不过声音传感器的防抖因为设计原因，我暂时还没什么好想法。</p>
 <h2 id="33-监控模式"><a href="#33-监控模式" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:33-监控模式" class="headings">3.3 监控模式</a></h2>

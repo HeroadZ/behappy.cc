@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.121.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.edb88a9b91ba2cad065d6daeee096db2fd7740a61633ff602017686808c733d1.js"></script>
+        <script src="/js/meme.min.8963f88e53c667beac6b24803f8df81032735025c3f6cb9ad362c1d3e9eea9f9.js"></script>
 
     
 
@@ -267,20 +267,20 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">└── example
-    ├── html
-    │   └── index.html                   <span class="c1"># 主页</span>
-    ├── nginx
-    │   ├── default.conf                 <span class="c1"># 网站相关配置</span>
-    │   ├── nginx.conf                   <span class="c1"># nginx配置</span>
-    │   ├── Dockerfile                   <span class="c1"># 制作nginx容器的文件</span>
-    │   ├── letsencrypt                  <span class="c1"># let&#39;s encrypt相关的文件放在这</span>
-    │   └── logs            
-    │       ├── access.log               
-    │       ├── certbot.log              <span class="c1"># 证书更新的log</span>
-    │       └── error.log 
-    └── docker-compose.yml               <span class="c1"># 一键启动nginx的脚本</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">└── example
+</span></span><span class="line"><span class="cl">    ├── html
+</span></span><span class="line"><span class="cl">    │   └── index.html                   <span class="c1"># 主页</span>
+</span></span><span class="line"><span class="cl">    ├── nginx
+</span></span><span class="line"><span class="cl">    │   ├── default.conf                 <span class="c1"># 网站相关配置</span>
+</span></span><span class="line"><span class="cl">    │   ├── nginx.conf                   <span class="c1"># nginx配置</span>
+</span></span><span class="line"><span class="cl">    │   ├── Dockerfile                   <span class="c1"># 制作nginx容器的文件</span>
+</span></span><span class="line"><span class="cl">    │   ├── letsencrypt                  <span class="c1"># let&#39;s encrypt相关的文件放在这</span>
+</span></span><span class="line"><span class="cl">    │   └── logs            
+</span></span><span class="line"><span class="cl">    │       ├── access.log               
+</span></span><span class="line"><span class="cl">    │       ├── certbot.log              <span class="c1"># 证书更新的log</span>
+</span></span><span class="line"><span class="cl">    │       └── error.log 
+</span></span><span class="line"><span class="cl">    └── docker-compose.yml               <span class="c1"># 一键启动nginx的脚本</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>Dockerfile</code>中的内容为</p>
 <div class="highlight"><div class="chroma">
@@ -293,13 +293,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="k">FROM</span><span class="s"> nginx:latest                                             </span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> <span class="se">\ </span>           <span class="err">
-</span><span class="err"></span>    apt-get install -y certbot python-certbot-nginx <span class="o">&amp;&amp;</span> <span class="se">\ </span>  <span class="c1"># 安装certbot</span><span class="err">
-</span><span class="err"></span>    apt-get clean<span class="err">
-</span><span class="err"></span><span class="k">ADD</span> nginx.conf /etc/nginx/               <span class="c1"># 将我们定义好的配置加入nginx容器中</span><span class="err">
-</span><span class="err"></span><span class="k">ADD</span> default.conf /etc/nginx/conf.d/<span class="err">
-</span></code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> nginx:latest                                             </span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> <span class="se">\ </span>           <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    apt-get install -y certbot python-certbot-nginx <span class="o">&amp;&amp;</span> <span class="se">\ </span>  <span class="c1"># 安装certbot</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    apt-get clean<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ADD</span> nginx.conf /etc/nginx/               <span class="c1"># 将我们定义好的配置加入nginx容器中</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ADD</span> default.conf /etc/nginx/conf.d/<span class="err">
+</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>nginx.conf</code>中的内容为</p>
 <div class="highlight"><div class="chroma">
@@ -331,32 +331,32 @@
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="c1"># nginx.conf
-</span><span class="c1"></span><span class="k">user</span>  <span class="s">nginx</span><span class="p">;</span>
-<span class="k">worker_processes</span>  <span class="s">auto</span><span class="p">;</span>
-
-<span class="k">error_log</span>  <span class="s">/var/log/nginx/error.log</span> <span class="s">warn</span><span class="p">;</span>
-<span class="k">pid</span>        <span class="s">/var/run/nginx.pid</span><span class="p">;</span>
-
-<span class="k">events</span> <span class="p">{</span>
-    <span class="kn">worker_connections</span>  <span class="mi">1024</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">http</span> <span class="p">{</span>
-    <span class="kn">include</span>       <span class="s">/etc/nginx/mime.types</span><span class="p">;</span>
-    <span class="kn">default_type</span>  <span class="s">application/octet-stream</span><span class="p">;</span>
-
-    <span class="kn">log_format</span>  <span class="s">main</span>  <span class="s">&#39;</span><span class="nv">$remote_addr</span> <span class="s">-</span> <span class="nv">$remote_user</span> <span class="s">[</span><span class="nv">$time_local]</span> <span class="s">&#34;</span><span class="nv">$request&#34;</span> <span class="s">&#39;</span>
-                      <span class="s">&#39;</span><span class="nv">$status</span> <span class="nv">$body_bytes_sent</span> <span class="s">&#34;</span><span class="nv">$http_referer&#34;</span> <span class="s">&#39;</span>
-                      <span class="s">&#39;&#34;</span><span class="nv">$http_user_agent&#34;</span> <span class="s">&#34;</span><span class="nv">$http_x_forwarded_for&#34;&#39;</span><span class="p">;</span>
-
-    <span class="kn">access_log</span>  <span class="s">/var/log/nginx/access.log</span>  <span class="s">main</span><span class="p">;</span>
-    <span class="kn">sendfile</span>        <span class="no">on</span><span class="p">;</span>
-    <span class="kn">tcp_nopush</span>     <span class="no">on</span><span class="p">;</span>
-    <span class="kn">keepalive_timeout</span>  <span class="mi">65</span><span class="p">;</span>
-    <span class="kn">include</span> <span class="s">/etc/nginx/conf.d/*.conf</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="c1"># nginx.conf
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">user</span>  <span class="s">nginx</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">worker_processes</span>  <span class="s">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">error_log</span>  <span class="s">/var/log/nginx/error.log</span> <span class="s">warn</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">pid</span>        <span class="s">/var/run/nginx.pid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">events</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">worker_connections</span>  <span class="mi">1024</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">http</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">include</span>       <span class="s">/etc/nginx/mime.types</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">default_type</span>  <span class="s">application/octet-stream</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">log_format</span>  <span class="s">main</span>  <span class="s">&#39;</span><span class="nv">$remote_addr</span> <span class="s">-</span> <span class="nv">$remote_user</span> <span class="s">[</span><span class="nv">$time_local]</span> <span class="s">&#34;</span><span class="nv">$request&#34;</span> <span class="s">&#39;</span>
+</span></span><span class="line"><span class="cl">                      <span class="s">&#39;</span><span class="nv">$status</span> <span class="nv">$body_bytes_sent</span> <span class="s">&#34;</span><span class="nv">$http_referer&#34;</span> <span class="s">&#39;</span>
+</span></span><span class="line"><span class="cl">                      <span class="s">&#39;&#34;</span><span class="nv">$http_user_agent&#34;</span> <span class="s">&#34;</span><span class="nv">$http_x_forwarded_for&#34;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">access_log</span>  <span class="s">/var/log/nginx/access.log</span>  <span class="s">main</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">sendfile</span>        <span class="no">on</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">tcp_nopush</span>     <span class="no">on</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">keepalive_timeout</span>  <span class="mi">65</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">include</span> <span class="s">/etc/nginx/conf.d/*.conf</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>default.conf</code>中的内容为</p>
 <div class="highlight"><div class="chroma">
@@ -380,24 +380,24 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="c1"># default.conf
-</span><span class="c1"></span><span class="k">server</span> <span class="p">{</span>
-    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
-    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
-    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>           <span class="c1"># ipv6对应
-</span><span class="c1"></span>
-    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
-        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
-        <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
-    <span class="kn">location</span> <span class="p">=</span> <span class="s">/50x.html</span> <span class="p">{</span>
-        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
-    <span class="p">}</span>
-
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="c1"># default.conf
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>           <span class="c1"># ipv6对应
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="p">=</span> <span class="s">/50x.html</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p><code>docker-compose.yml</code>中的内容为</p>
 <div class="highlight"><div class="chroma">
@@ -421,24 +421,24 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">./nginx</span><span class="w">
-</span><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">proxy</span><span class="w">
-</span><span class="w">    </span><span class="nt">logging</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;json-file&#34;</span><span class="w">
-</span><span class="w">      </span><span class="nt">options</span><span class="p">:</span><span class="w">
-</span><span class="w">        </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;10m&#34;</span><span class="w">
-</span><span class="w">        </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
-</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">     </span><span class="c"># 映射80和443端口</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;80:80&#34;</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;443:443&#34;</span><span class="w">
-</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">      </span><span class="c"># 将本地的文件映射到容器中， 注意左边为相对路径</span><span class="w">
-</span><span class="w">      </span>- <span class="s1">&#39;./nginx/logs:/var/log/nginx&#39;</span><span class="w"> 
-</span><span class="w">      </span>- <span class="s1">&#39;./nginx/letsencrypt:/etc/letsencrypt&#39;</span><span class="w">
-</span><span class="w">      </span>- <span class="s1">&#39;./html:/usr/share/nginx/html&#39;</span><span class="w">
-</span></code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">proxy</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">./nginx</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">proxy</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">logging</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">driver</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;json-file&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">options</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">max-size</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;10m&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">max-file</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">     </span><span class="c"># 映射80和443端口</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;80:80&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;443:443&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">      </span><span class="c"># 将本地的文件映射到容器中， 注意左边为相对路径</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;./nginx/logs:/var/log/nginx&#39;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;./nginx/letsencrypt:/etc/letsencrypt&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s1">&#39;./html:/usr/share/nginx/html&#39;</span><span class="w">
+</span></span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>最后在<code>example</code>文件夹下运行<code>sudo docker-compose up -d</code>，nginx容器就搭起来了。浏览器访问<code>http://&lt;hostname&gt;</code>就能够看到<code>index.html</code>里面的内容了。也可以通过<code>docker ps</code>确认现在在运行的容器。</p>
 <div class="highlight"><div class="chroma">
@@ -448,10 +448,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ sudo docker ps
-CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS         PORTS                                                                      NAMES
-9bbc29f18441   cool_proxy   <span class="s2">&#34;/docker-entrypoint.…&#34;</span>   <span class="m">43</span> hours ago   Up <span class="m">8</span> minutes   0.0.0.0:80-&gt;80/tcp, :::80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp, :::443-&gt;443/tcp   proxy
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sudo docker ps
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS         PORTS                                                                      NAMES
+</span></span><span class="line"><span class="cl">9bbc29f18441   cool_proxy   <span class="s2">&#34;/docker-entrypoint.…&#34;</span>   <span class="m">43</span> hours ago   Up <span class="m">8</span> minutes   0.0.0.0:80-&gt;80/tcp, :::80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp, :::443-&gt;443/tcp   proxy
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h5 id="3-开启-https"><a href="#3-开启-https" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-开启-https" class="headings">3. 开启 HTTPS</a></h5>
 <p>通过上面的流程，我们的网站已经可以 HTTP 访问了。如果想要开启 HTTPS 访问，就必须要有私钥和证书。<a href="https://letsencrypt.org/zh-cn/" target="_blank" rel="noopener">Let's Encrypt</a> 提供免费的证书，但是有效期为 3 个月，需要定期更新。这个并不是太大的问题，只要通过 cron 加个定时任务就行。</p>
@@ -493,39 +493,39 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS      
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="k">server</span> <span class="p">{</span>
-    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
-    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
-    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
-    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span> 
-<span class="p">}</span>
-
-<span class="k">server</span> <span class="p">{</span>
-    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
-    <span class="kn">listen</span>       <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
-
-    <span class="kn">ssl_protocols</span>       <span class="s">TLSv1.2</span> <span class="s">TLSv1.3</span><span class="p">;</span>
-    <span class="kn">ssl_ciphers</span>         <span class="s">&#34;ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384&#34;</span><span class="p">;</span>
-    <span class="kn">ssl_prefer_server_ciphers</span>   <span class="no">on</span><span class="p">;</span>
-    <span class="kn">ssl_certificate</span>     <span class="s">/etc/letsencrypt/live/&lt;hostname&gt;/fullchain.pem</span><span class="p">;</span>
-    <span class="kn">ssl_certificate_key</span> <span class="s">/etc/letsencrypt/live/&lt;hostname&gt;/privkey.pem</span><span class="p">;</span>
-
-    <span class="c1"># Improve HTTPS performance with session resumption
-</span><span class="c1"></span>  	<span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:10m</span><span class="p">;</span>
-  	<span class="kn">ssl_session_timeout</span> <span class="mi">10m</span><span class="p">;</span>
-
-    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
-        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
-        <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
-    <span class="kn">location</span> <span class="p">=</span> <span class="s">/50x.html</span> <span class="p">{</span>
-        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
-    <span class="p">}</span>
-
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">server_name</span>  <span class="s">localhost</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">listen</span>       <span class="mi">443</span> <span class="s">ssl</span> <span class="s">http2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_protocols</span>       <span class="s">TLSv1.2</span> <span class="s">TLSv1.3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_ciphers</span>         <span class="s">&#34;ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_prefer_server_ciphers</span>   <span class="no">on</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_certificate</span>     <span class="s">/etc/letsencrypt/live/&lt;hostname&gt;/fullchain.pem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">ssl_certificate_key</span> <span class="s">/etc/letsencrypt/live/&lt;hostname&gt;/privkey.pem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Improve HTTPS performance with session resumption
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  	<span class="kn">ssl_session_cache</span> <span class="s">shared:SSL:10m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  	<span class="kn">ssl_session_timeout</span> <span class="mi">10m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="s">/</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">index</span>  <span class="s">index.html</span> <span class="s">index.htm</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kn">error_page</span>   <span class="mi">500</span> <span class="mi">502</span> <span class="mi">503</span> <span class="mi">504</span>  <span class="s">/50x.html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">location</span> <span class="p">=</span> <span class="s">/50x.html</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kn">root</span>   <span class="s">/usr/share/nginx/html</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>然后<code>example</code>文件夹下运行<code>docker-compose restart</code>将刚刚的更改重载，浏览器访问<code>https://&lt;hostname&gt;</code>，如果能打开就代表 HTTPS 已经开启。</p>
 <h5 id="4-自动更新证书"><a href="#4-自动更新证书" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:4-自动更新证书" class="headings">4. 自动更新证书</a></h5>
@@ -538,8 +538,8 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED        STATUS      
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">$ <span class="o">{</span> date<span class="p">;</span> sudo docker <span class="nb">exec</span> proxy certbot renew<span class="p">;</span> <span class="o">}</span> &gt;&gt; /home/&lt;user&gt;/example/nginx/logs/certbot.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ <span class="o">{</span> date<span class="p">;</span> sudo docker <span class="nb">exec</span> proxy certbot renew<span class="p">;</span> <span class="o">}</span> &gt;&gt; /home/&lt;user&gt;/example/nginx/logs/certbot.log 2&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>然后运行<code>cat ~/example/nginx/logs/certbot.log</code>查看 certbot 证书更新日志，有以下 log 代表可以运行。</p>
 <pre tabindex="0"><code>Thu 16 Sep 2021 05:48:59 PM UTC
@@ -557,8 +557,8 @@ The following certs are not due for renewal yet:
 No renewals were attempted.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 </code></pre><p>接下来可以将目前的文件备份到 github 上，以后只要安装完 Docker 环境，即使换服务器，也可以一键搞定。</p>
-<p><br />
-<br /></p>
+<br />
+<br />
 <p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
 <img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>
 

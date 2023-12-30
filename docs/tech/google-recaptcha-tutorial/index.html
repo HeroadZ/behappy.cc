@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.121.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.edb88a9b91ba2cad065d6daeee096db2fd7740a61633ff602017686808c733d1.js"></script>
+        <script src="/js/meme.min.8963f88e53c667beac6b24803f8df81032735025c3f6cb9ad362c1d3e9eea9f9.js"></script>
 
     
 
@@ -237,7 +237,7 @@
 <p>然而在搜索了Google reCAPTCHA相关的资料<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">[1]</a></sup><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">[2]</a></sup><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">[3]</a></sup>后，发现现有的教程并不是很完善，比如：</p>
 <ol>
 <li>没有很详尽的前后端分离验证代码（可能因为起服务器比较麻烦</li>
-<li>几乎所有的demo代码语言都是PHP（其实就是想拿Python写一个😁</li>
+<li>几乎所有的demo代码语言都是PHP（其实就是想拿Python写一个&#x1f601;</li>
 <li>最新的v3版本的资料很少</li>
 </ol>
 <p>所以我写了一个 <a href="https://github.com/HeroadZ/google_recaptcha_demo" target="_blank" rel="noopener">Python版本的demo</a>，直接在本地起服务器打开网页就可以看到所有版本的效果，并且代码简单易于调试，有兴趣的可以动手操作一下以加深对Google reCaptcha的理解。下面我会结合代码和效果来介绍各个版本的使用方法。</p>
@@ -261,9 +261,9 @@
 <tbody>
 <tr>
 <td style="text-align:left">是否显示验证框</td>
-<td style="text-align:left">⭕</td>
-<td style="text-align:left">❌</td>
-<td style="text-align:left">❌</td>
+<td style="text-align:left">&#x2b55;</td>
+<td style="text-align:left">&#x274c;</td>
+<td style="text-align:left">&#x274c;</td>
 </tr>
 <tr>
 <td style="text-align:left">何时验证</td>
@@ -298,13 +298,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>google recapatcha v2 checkbox demo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;form&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;POST&#34;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;g-recaptcha&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;capatcha-message&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;send&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>google recapatcha v2 checkbox demo<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">form</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;form&#34;</span> <span class="na">method</span><span class="o">=</span><span class="s">&#34;POST&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;g-recaptcha&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;capatcha-message&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;send&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span><span class="p">&gt;</span>submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>接下来根据 <a href="https://developers.google.com/recaptcha/docs/display" target="_blank" rel="noopener">reCAPTCHA文档</a> 我们需要引入js用来渲染验证复选框。js部分代码为:</p>
 <div class="highlight"><div class="chroma">
@@ -331,27 +331,27 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="kr">const</span> <span class="nx">public_key</span> <span class="o">=</span> <span class="s1">&#39;public key&#39;</span>
-    <span class="kd">var</span> <span class="nx">widgetId</span>
-    <span class="kd">var</span> <span class="nx">onloadCallback</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// 渲染验证复选框，第一个参数为DOM id，第二个参数为配置
-</span><span class="c1"></span>        <span class="nx">widgetId</span> <span class="o">=</span> <span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;g-recaptcha&#39;</span><span class="p">,</span> <span class="p">{</span>
-            <span class="s1">&#39;sitekey&#39;</span><span class="o">:</span> <span class="nx">public_key</span><span class="p">,</span>
-            <span class="s1">&#39;theme&#39;</span><span class="o">:</span> <span class="s1">&#39;light&#39;</span><span class="p">,</span>  <span class="c1">//主题颜色，有light与dark两个值可选
-</span><span class="c1"></span>            <span class="s1">&#39;size&#39;</span><span class="o">:</span> <span class="s1">&#39;normal&#39;</span><span class="p">,</span>  <span class="c1">//尺寸规则，有normal, compact和invisible三个值可选
-</span><span class="c1"></span>            <span class="s1">&#39;callback&#39;</span><span class="o">:</span> <span class="nx">verifyCallback</span><span class="p">,</span> <span class="c1">//验证成功回调
-</span><span class="c1"></span>            <span class="c1">//还有 expired-callback 和 error-callback 两个回调函数，一般不用管默认就好
-</span><span class="c1"></span>        <span class="p">})</span>
-    <span class="p">}</span>
-
-    <span class="c1">// 本地验证成功后的回调函数
-</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">verifyCallback</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">token</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;capatcha-message&#39;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;verification success locally&#34;</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit&#34;</span> <span class="na">async</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">public_key</span> <span class="o">=</span> <span class="s1">&#39;public key&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">widgetId</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">var</span> <span class="nx">onloadCallback</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 渲染验证复选框，第一个参数为DOM id，第二个参数为配置
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">widgetId</span> <span class="o">=</span> <span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">&#39;g-recaptcha&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;sitekey&#39;</span><span class="o">:</span> <span class="nx">public_key</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s1">&#39;theme&#39;</span><span class="o">:</span> <span class="s1">&#39;light&#39;</span><span class="p">,</span>  <span class="c1">//主题颜色，有light与dark两个值可选
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="s1">&#39;size&#39;</span><span class="o">:</span> <span class="s1">&#39;normal&#39;</span><span class="p">,</span>  <span class="c1">//尺寸规则，有normal, compact和invisible三个值可选
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="s1">&#39;callback&#39;</span><span class="o">:</span> <span class="nx">verifyCallback</span><span class="p">,</span> <span class="c1">//验证成功回调
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">//还有 expired-callback 和 error-callback 两个回调函数，一般不用管默认就好
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 本地验证成功后的回调函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">verifyCallback</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">token</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;capatcha-message&#39;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;verification success locally&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit&#34;</span> <span class="na">async</span> <span class="na">defer</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="url参数说明"><a href="#url参数说明" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:url参数说明" class="headings">url参数说明</a></h3>
 <p>除了渲染复选框可以指定参数外（代码里的注释部分），引用reCAPTCHA js的时候有3个可选参数。</p>
@@ -400,39 +400,39 @@
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;form&#34;</span><span class="p">).</span><span class="nx">onsubmit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// 阻止submit事件冒泡
-</span><span class="c1"></span>    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
-
-    <span class="c1">// 如果response(也就是token)不为空，代表用户本地验证成功
-</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">getResponse</span><span class="p">(</span><span class="nx">widgetId</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-
-        <span class="c1">// 将token发送给后端
-</span><span class="c1"></span>        <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-        <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;POST&#34;</span><span class="p">,</span> <span class="s2">&#34;http://127.0.0.1:8000&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-        <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">);</span>
-        <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
-            <span class="s2">&#34;token&#34;</span><span class="o">:</span> <span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">getResponse</span><span class="p">(</span><span class="nx">widgetId</span><span class="p">),</span>
-            <span class="s2">&#34;version&#34;</span><span class="o">:</span> <span class="s2">&#34;v2_checkbox&#34;</span><span class="p">,</span> <span class="c1">// 为了server端区分版本使用，不是必须
-</span><span class="c1"></span>        <span class="p">}))</span>
-
-        <span class="c1">// 接受后端返回的google服务器验证结果
-</span><span class="c1"></span>        <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">DONE</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
-                <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
-                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
-                <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;capatcha-message&#39;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`verify </span><span class="si">${</span><span class="nx">response</span><span class="p">[</span><span class="s1">&#39;success&#39;</span><span class="p">]</span> <span class="o">?</span> <span class="s1">&#39;success&#39;</span> <span class="o">:</span> <span class="s1">&#39;fail&#39;</span><span class="si">}</span><span class="sb"> from google`</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-
-        <span class="c1">// 因为token只能被验证一次，所以一旦送去google验证后就得reset
-</span><span class="c1"></span>        <span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="nx">widgetId</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="c1">// 用户没有通过本地验证，请求用户先验证
-</span><span class="c1"></span>        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;capatcha-message&#39;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;please verify capatcha&#34;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;form&#34;</span><span class="p">).</span><span class="nx">onsubmit</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 阻止submit事件冒泡
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 如果response(也就是token)不为空，代表用户本地验证成功
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">getResponse</span><span class="p">(</span><span class="nx">widgetId</span><span class="p">).</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 将token发送给后端
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kd">var</span> <span class="nx">xhr</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">xhr</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&#34;POST&#34;</span><span class="p">,</span> <span class="s2">&#34;http://127.0.0.1:8000&#34;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">xhr</span><span class="p">.</span><span class="nx">setRequestHeader</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;application/json&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">xhr</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;token&#34;</span><span class="o">:</span> <span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">getResponse</span><span class="p">(</span><span class="nx">widgetId</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;version&#34;</span><span class="o">:</span> <span class="s2">&#34;v2_checkbox&#34;</span><span class="p">,</span> <span class="c1">// 为了server端区分版本使用，不是必须
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="p">}))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 接受后端返回的google服务器验证结果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">xhr</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">==</span> <span class="nx">xhr</span><span class="p">.</span><span class="nx">DONE</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="kd">var</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">xhr</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;capatcha-message&#39;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="sb">`verify </span><span class="si">${</span><span class="nx">response</span><span class="p">[</span><span class="s1">&#39;success&#39;</span><span class="p">]</span> <span class="o">?</span> <span class="s1">&#39;success&#39;</span> <span class="o">:</span> <span class="s1">&#39;fail&#39;</span><span class="si">}</span><span class="sb"> from google`</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// 因为token只能被验证一次，所以一旦送去google验证后就得reset
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">grecaptcha</span><span class="p">.</span><span class="nx">reset</span><span class="p">(</span><span class="nx">widgetId</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 用户没有通过本地验证，请求用户先验证
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;capatcha-message&#39;</span><span class="p">).</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s2">&#34;please verify capatcha&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>服务端代码比较简单，python的话直接用<a href="https://docs.python-requests.org/en/latest/" target="_blank" rel="noopener">requests库</a>发post请求就行。</p>
 <div class="highlight"><div class="chroma">
@@ -443,11 +443,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://www.google.com/recaptcha/api/siteverify&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span>
-    <span class="s1">&#39;secret&#39;</span><span class="p">:</span> <span class="s1">&#39;secret key&#39;</span><span class="p">,</span> <span class="c1"># 填写你的secret key</span>
-    <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="s1">&#39;token&#39;</span> <span class="c1"># 填写前端发来的token</span>
-<span class="p">})</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s1">&#39;https://www.google.com/recaptcha/api/siteverify&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;secret&#39;</span><span class="p">:</span> <span class="s1">&#39;secret key&#39;</span><span class="p">,</span> <span class="c1"># 填写你的secret key</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;response&#39;</span><span class="p">:</span> <span class="s1">&#39;token&#39;</span> <span class="c1"># 填写前端发来的token</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="demo运行效果gif"><a href="#demo运行效果gif" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:demo运行效果gif" class="headings">demo运行效果gif</a></h3>
 <p>demo运行效果可以在下面的gif看到：
@@ -460,10 +460,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">post data: <span class="o">{</span><span class="s2">&#34;token&#34;</span>:<span class="s2">&#34;xxxxxx&#34;</span>,<span class="s2">&#34;version&#34;</span>:<span class="s2">&#34;v2_checkbox&#34;</span><span class="o">}</span>
-127.0.0.1 - - <span class="o">[</span>07/Mar/2022 00:40:40<span class="o">]</span> <span class="s2">&#34;POST / HTTP/1.1&#34;</span> <span class="m">200</span> -
-verfication result from google: <span class="o">{</span><span class="s1">&#39;success&#39;</span>: True, <span class="s1">&#39;challenge_ts&#39;</span>: <span class="s1">&#39;2022-03-06T15:40:11Z&#39;</span>, <span class="s1">&#39;hostname&#39;</span>: <span class="s1">&#39;127.0.0.1&#39;</span><span class="o">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">post data: <span class="o">{</span><span class="s2">&#34;token&#34;</span>:<span class="s2">&#34;xxxxxx&#34;</span>,<span class="s2">&#34;version&#34;</span>:<span class="s2">&#34;v2_checkbox&#34;</span><span class="o">}</span>
+</span></span><span class="line"><span class="cl">127.0.0.1 - - <span class="o">[</span>07/Mar/2022 00:40:40<span class="o">]</span> <span class="s2">&#34;POST / HTTP/1.1&#34;</span> <span class="m">200</span> -
+</span></span><span class="line"><span class="cl">verfication result from google: <span class="o">{</span><span class="s1">&#39;success&#39;</span>: True, <span class="s1">&#39;challenge_ts&#39;</span>: <span class="s1">&#39;2022-03-06T15:40:11Z&#39;</span>, <span class="s1">&#39;hostname&#39;</span>: <span class="s1">&#39;127.0.0.1&#39;</span><span class="o">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>所以显式v2的版本仅仅本地验证成功是不行的，因为如果有人用Postman做了一个假post请求，token随便设置成<code>&quot;123&quot;</code>的话就能绕过前端本地验证。</p>
 <h2 id="隐式v2版本"><a href="#隐式v2版本" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:隐式v2版本" class="headings">隐式v2版本</a></h2>
@@ -507,35 +507,35 @@ verfication result from google: <span class="o">{</span><span class="s1">&#39;su
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;success&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&#34;score&#34;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
-  <span class="nt">&#34;action&#34;</span><span class="p">:</span> <span class="s2">&#34;submit&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;challenge_ts&#34;</span><span class="p">:</span> <span class="s2">&#34;2022-03-07T04:13:09Z&#34;</span><span class="p">,</span>
-  <span class="nt">&#34;hostname&#34;</span><span class="p">:</span> <span class="s2">&#34;127.0.0.1&#34;</span><span class="p">,</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;success&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;score&#34;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;action&#34;</span><span class="p">:</span> <span class="s2">&#34;submit&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;challenge_ts&#34;</span><span class="p">:</span> <span class="s2">&#34;2022-03-07T04:13:09Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;hostname&#34;</span><span class="p">:</span> <span class="s2">&#34;127.0.0.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="总结"><a href="#总结" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:总结" class="headings">总结</a></h2>
 <p>Google reCAPTCHA从v1版的文字验证，到v2版的图片显式/隐式验证，再到v3版的score验证，的确是解决了之前存在的问题，变得越来越好用了。Google内部靠什么来进行风险分析不会公开出来，可能会用到你的IP请求数，浏览器指纹，谷歌账号cookies之类的。当然Google reCAPTCHA不是万能的，肯定有方法可以hack，但是肯定会比较复杂，能够提高攻击者的攻击难度和成本我觉得这就足够了。以上。</p>
-<p><br />
-<br /></p>
+<br />
+<br />
 <p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
 <img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p><a href="https://blog.csdn.net/tsyccnh/article/details/50978611" target="_blank" rel="noopener">如何使用reCaptcha（2.0版本）来做网站验证码</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p><a href="https://www.cnblogs.com/echolun/p/12436226.html" target="_blank" rel="noopener">google recaptcha 谷歌人机身份验证超详细使用教程，前端/后端集成说明</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p><a href="https://www.webdesignleaves.com/pr/plugins/google_recaptcha.php" target="_blank" rel="noopener">Google reCAPTCHA の使い方（v2/v3）</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
 </ol>
-</section>
+</div>
 
             </div>
 

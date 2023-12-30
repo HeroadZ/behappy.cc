@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.121.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.edb88a9b91ba2cad065d6daeee096db2fd7740a61633ff602017686808c733d1.js"></script>
+        <script src="/js/meme.min.8963f88e53c667beac6b24803f8df81032735025c3f6cb9ad362c1d3e9eea9f9.js"></script>
 
     
 
@@ -235,11 +235,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="err">给一个整数数组，在其中找到固定窗口</span><span class="n">k下最大和</span><span class="err">。</span>
-<span class="nl">Input</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span> 
-<span class="nl">Output</span><span class="p">:</span> <span class="mi">9</span>
-<span class="nl">Explanation</span><span class="p">:</span> <span class="n">Subarray</span> <span class="n">with</span> <span class="n">maximum</span> <span class="n">sum</span> <span class="n">is</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">给一个整数数组，在其中找到固定窗口</span><span class="n">k下最大和</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Input</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span> 
+</span></span><span class="line"><span class="cl"><span class="nl">Output</span><span class="p">:</span> <span class="mi">9</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Explanation</span><span class="p">:</span> <span class="n">Subarray</span> <span class="n">with</span> <span class="n">maximum</span> <span class="n">sum</span> <span class="n">is</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>暴力解法：也就是对每一个数都求固定窗口的和，找出最大值。</p>
 <div class="highlight"><div class="chroma">
@@ -251,12 +251,12 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="k">def</span> <span class="nf">max_sub_array_of_size_k</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
-    <span class="n">max_sum</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">-</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">max_sum</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_sum</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]))</span>
-    <span class="k">return</span> <span class="n">max_sum</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">max_sub_array_of_size_k</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">max_sum</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="o">-</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">max_sum</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_sum</span><span class="p">,</span> <span class="nb">sum</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">max_sum</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>这段代码的时间复杂度是O(N*K)，N是数组长度，K是窗口大小。数组内的一个元素会被计算好几次，明显有点浪费。这里用滑动窗口算法的话，就能把时间复杂度压到O(N)。每次移动窗口把右边的值加上，把左边的值减掉。</p>
 <div class="highlight"><div class="chroma">
@@ -277,21 +277,21 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="k">def</span> <span class="nf">max_sub_array_of_size_k</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
-    <span class="n">max_sum</span><span class="p">,</span> <span class="n">window_sum</span><span class="p">,</span> <span class="n">window_start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-
-    <span class="k">for</span> <span class="n">window_end</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-        <span class="c1"># 加右边</span>
-        <span class="n">window_sum</span> <span class="o">+=</span> <span class="n">arr</span><span class="p">[</span><span class="n">window_end</span><span class="p">]</span>
-        <span class="c1"># 如果窗口大了，左边往右移</span>
-        <span class="k">if</span> <span class="n">window_end</span><span class="o">-</span><span class="n">window_start</span><span class="o">+</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span>
-            <span class="n">window_sum</span> <span class="o">-=</span> <span class="n">arr</span><span class="p">[</span><span class="n">window_start</span><span class="p">]</span>
-            <span class="n">window_start</span> <span class="o">+=</span> <span class="mi">1</span>
-
-        <span class="n">max_sum</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_sum</span><span class="p">,</span> <span class="n">window_sum</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">max_sum</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">max_sub_array_of_size_k</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">max_sum</span><span class="p">,</span> <span class="n">window_sum</span><span class="p">,</span> <span class="n">window_start</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">window_end</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 加右边</span>
+</span></span><span class="line"><span class="cl">        <span class="n">window_sum</span> <span class="o">+=</span> <span class="n">arr</span><span class="p">[</span><span class="n">window_end</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># 如果窗口大了，左边往右移</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">window_end</span><span class="o">-</span><span class="n">window_start</span><span class="o">+</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">window_sum</span> <span class="o">-=</span> <span class="n">arr</span><span class="p">[</span><span class="n">window_start</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">window_start</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">max_sum</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_sum</span><span class="p">,</span> <span class="n">window_sum</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">max_sum</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="2-窗口大小变化题型"><a href="#2-窗口大小变化题型" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-窗口大小变化题型" class="headings">2. 窗口大小变化题型</a></h2>
 <div class="highlight"><div class="chroma">
@@ -302,11 +302,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="err">给一个整数数组和一个目标值，</span> <span class="err">找到和大于目标值的最小连续子数组。</span>
-<span class="nl">Input</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">S</span><span class="o">=</span><span class="mi">7</span> 
-<span class="nl">Output</span><span class="p">:</span> <span class="mi">2</span>
-<span class="nl">Explanation</span><span class="p">:</span> <span class="n">The</span> <span class="n">smallest</span> <span class="n">subarray</span> <span class="n">with</span> <span class="n">a</span> <span class="n">sum</span> <span class="n">greater</span> <span class="n">than</span> <span class="n">or</span> <span class="n">equal</span> <span class="n">to</span> <span class="sc">&#39;7&#39;</span> <span class="n">is</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">].</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">给一个整数数组和一个目标值，</span> <span class="err">找到和大于目标值的最小连续子数组。</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Input</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">S</span><span class="o">=</span><span class="mi">7</span> 
+</span></span><span class="line"><span class="cl"><span class="nl">Output</span><span class="p">:</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Explanation</span><span class="p">:</span> <span class="n">The</span> <span class="n">smallest</span> <span class="n">subarray</span> <span class="n">with</span> <span class="n">a</span> <span class="n">sum</span> <span class="n">greater</span> <span class="n">than</span> <span class="n">or</span> <span class="n">equal</span> <span class="n">to</span> <span class="sc">&#39;7&#39;</span> <span class="n">is</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">].</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>这题比较难的是需要找到最小子数组，思路就是当窗口的数组和大于目标值时，左边的窗口往右滑，看看减掉左边的值，能否继续大于目标值，一直尝试到当前窗口的数组和小于目标值为止。</p>
 <div class="highlight"><div class="chroma">
@@ -327,21 +327,21 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="k">def</span> <span class="nf">smallest_subarray_with_given_sum</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
-    <span class="n">min_len</span><span class="p">,</span> <span class="n">window_sum</span><span class="p">,</span> <span class="n">window_start</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
-
-    <span class="k">for</span> <span class="n">window_end</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-        <span class="n">window_sum</span> <span class="o">+=</span> <span class="n">n</span>
-
-        <span class="k">while</span> <span class="n">window_sum</span> <span class="o">&gt;=</span> <span class="n">s</span><span class="p">:</span>
-            <span class="n">min_len</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">min_len</span><span class="p">,</span> <span class="n">window_end</span><span class="o">-</span><span class="n">window_start</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-            <span class="n">window_sum</span> <span class="o">-=</span> <span class="n">arr</span><span class="p">[</span><span class="n">window_start</span><span class="p">]</span>
-            <span class="n">window_start</span> <span class="o">+=</span> <span class="mi">1</span>
-        
-    <span class="k">if</span> <span class="n">min_len</span> <span class="o">==</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">):</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">return</span> <span class="n">min_len</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">smallest_subarray_with_given_sum</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">arr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">min_len</span><span class="p">,</span> <span class="n">window_sum</span><span class="p">,</span> <span class="n">window_start</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">window_end</span><span class="p">,</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">window_sum</span> <span class="o">+=</span> <span class="n">n</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">while</span> <span class="n">window_sum</span> <span class="o">&gt;=</span> <span class="n">s</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">min_len</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">min_len</span><span class="p">,</span> <span class="n">window_end</span><span class="o">-</span><span class="n">window_start</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">window_sum</span> <span class="o">-=</span> <span class="n">arr</span><span class="p">[</span><span class="n">window_start</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">window_start</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">min_len</span> <span class="o">==</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">min_len</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="3-最长子字符串问题"><a href="#3-最长子字符串问题" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-最长子字符串问题" class="headings">3. 最长子字符串问题</a></h2>
 <div class="highlight"><div class="chroma">
@@ -352,11 +352,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="err">给一个字符串和一个</span><span class="n">K</span><span class="err">，</span> <span class="err">找到不同字符数不大于</span><span class="n">K的最长子字符串</span><span class="err">。</span>
-<span class="nl">Input</span><span class="p">:</span> <span class="n">String</span><span class="o">=</span><span class="s">&#34;araaci&#34;</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">2</span>
-<span class="nl">Output</span><span class="p">:</span> <span class="mi">4</span>
-<span class="nl">Explanation</span><span class="p">:</span> <span class="n">The</span> <span class="n">longest</span> <span class="n">substring</span> <span class="n">with</span> <span class="n">no</span> <span class="n">more</span> <span class="n">than</span> <span class="sc">&#39;2&#39;</span> <span class="n">distinct</span> <span class="n">characters</span> <span class="n">is</span> <span class="s">&#34;araa&#34;</span><span class="p">.</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="err">给一个字符串和一个</span><span class="n">K</span><span class="err">，</span> <span class="err">找到不同字符数不大于</span><span class="n">K的最长子字符串</span><span class="err">。</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Input</span><span class="p">:</span> <span class="n">String</span><span class="o">=</span><span class="s">&#34;araaci&#34;</span><span class="p">,</span> <span class="n">K</span><span class="o">=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Output</span><span class="p">:</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="nl">Explanation</span><span class="p">:</span> <span class="n">The</span> <span class="n">longest</span> <span class="n">substring</span> <span class="n">with</span> <span class="n">no</span> <span class="n">more</span> <span class="n">than</span> <span class="sc">&#39;2&#39;</span> <span class="n">distinct</span> <span class="n">characters</span> <span class="n">is</span> <span class="s">&#34;araa&#34;</span><span class="p">.</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>思路就是创建一个记录当前窗口字符的频次的dict，每当向右移的时候，判断当前窗口不同字符字符数是否大于K，大于K的话左移直到满足条件。</p>
 <div class="highlight"><div class="chroma">
@@ -380,30 +380,28 @@
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
-</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="k">def</span> <span class="nf">longest_substring_with_k_distinct</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
-  <span class="c1"># TODO: Write your code here</span>
-  <span class="n">max_len</span> <span class="o">=</span> <span class="n">window_start</span> <span class="o">=</span> <span class="mi">0</span>
-  <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
-  <span class="n">freq</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-
-  <span class="k">for</span> <span class="n">window_end</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">str1</span><span class="p">):</span>
-    <span class="n">freq</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-
-    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span>
-      <span class="n">start_c</span> <span class="o">=</span> <span class="n">str1</span><span class="p">[</span><span class="n">window_start</span><span class="p">]</span>
-      <span class="n">freq</span><span class="p">[</span><span class="n">start_c</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
-      <span class="k">if</span> <span class="n">freq</span><span class="p">[</span><span class="n">start_c</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">del</span> <span class="n">freq</span><span class="p">[</span><span class="n">start_c</span><span class="p">]</span>
-      <span class="n">window_start</span> <span class="o">+=</span> <span class="mi">1</span>
-
-    <span class="n">max_len</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_len</span><span class="p">,</span> <span class="n">window_end</span><span class="o">-</span><span class="n">window_start</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-  
-  <span class="k">return</span> <span class="n">max_len</span>
-
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">longest_substring_with_k_distinct</span><span class="p">(</span><span class="n">str1</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># TODO: Write your code here</span>
+</span></span><span class="line"><span class="cl">  <span class="n">max_len</span> <span class="o">=</span> <span class="n">window_start</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">  <span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+</span></span><span class="line"><span class="cl">  <span class="n">freq</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="n">window_end</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">str1</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">freq</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">freq</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">k</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">start_c</span> <span class="o">=</span> <span class="n">str1</span><span class="p">[</span><span class="n">window_start</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="n">freq</span><span class="p">[</span><span class="n">start_c</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">freq</span><span class="p">[</span><span class="n">start_c</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">del</span> <span class="n">freq</span><span class="p">[</span><span class="n">start_c</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">      <span class="n">window_start</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">max_len</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">max_len</span><span class="p">,</span> <span class="n">window_end</span><span class="o">-</span><span class="n">window_start</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="n">max_len</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="4-总结"><a href="#4-总结" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:4-总结" class="headings">4. 总结</a></h2>
 <p>滑动窗口算法的抽象思想为：</p>
@@ -419,18 +417,18 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="n">window_start</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">window_end</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
-    <span class="n">window</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
-
-    <span class="k">while</span> <span class="p">(</span><span class="n">condition</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">window</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">window_start</span><span class="p">])</span>
-        <span class="n">window_start</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="n">window_start</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">window_end</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">window</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">while</span> <span class="p">(</span><span class="n">condition</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">window</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">window_start</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">        <span class="n">window_start</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
-</div><p><br />
-<br /></p>
+</div><br />
+<br />
 <p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
 <img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>
             </div>

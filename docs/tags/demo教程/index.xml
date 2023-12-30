@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>demo教程 on 醉乐轩</title>
+    <link>https://behappy.cc/tags/demo%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in demo教程 on 醉乐轩</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>zchelllo@gmail.com (醉乐轩)</managingEditor>
+    <webMaster>zchelllo@gmail.com (醉乐轩)</webMaster>
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+    <lastBuildDate>Sun, 06 Mar 2022 17:15:55 +0900</lastBuildDate>
+    <atom:link href="https://behappy.cc/tags/demo%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google reCAPTCHA使用教程</title>
+      <link>https://behappy.cc/tech/google-recaptcha-tutorial/</link>
+      <pubDate>Sun, 06 Mar 2022 17:15:55 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
+      <guid>https://behappy.cc/tech/google-recaptcha-tutorial/</guid>
+      <description>生活在互联网时代，我们会经常要跟网页打交道。即便现在手机APP也在不断的发展，Web</description>
+    </item>
+  </channel>
+</rss>

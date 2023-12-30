@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on 醉乐轩</title>
+    <link>https://behappy.cc/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 醉乐轩</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>zchelllo@gmail.com (醉乐轩)</managingEditor>
+    <webMaster>zchelllo@gmail.com (醉乐轩)</webMaster>
+    <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+    <lastBuildDate>Mon, 18 Oct 2021 22:27:18 +0900</lastBuildDate>
+    <atom:link href="https://behappy.cc/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>滑动窗口算法</title>
+      <link>https://behappy.cc/tech/sliding-window-algorithm/</link>
+      <pubDate>Mon, 18 Oct 2021 22:27:18 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
+      <guid>https://behappy.cc/tech/sliding-window-algorithm/</guid>
+      <description>最近买了 educative.io 的会员，正在刷 Grokking the Coding Interview: Patterns for Coding Questions 这门课程，课程里总结了 16 种常见的算法题模式。</description>
+    </item>
+    <item>
+      <title>二叉树的前中后遍历Python代码</title>
+      <link>https://behappy.cc/tech/python-tree-traversal/</link>
+      <pubDate>Sat, 25 Sep 2021 21:13:45 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
+      <guid>https://behappy.cc/tech/python-tree-traversal/</guid>
+      <description>遍历二叉树有三种顺序，对于下面的二叉树： 1 / \ 2 3 / \ / \ 4 5 6 7 前序结果为 [1, 2, 4, 5,</description>
+    </item>
+  </channel>
+</rss>

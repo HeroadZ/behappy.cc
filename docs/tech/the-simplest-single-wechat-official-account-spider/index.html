@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.121.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.edb88a9b91ba2cad065d6daeee096db2fd7740a61633ff602017686808c733d1.js"></script>
+        <script src="/js/meme.min.8963f88e53c667beac6b24803f8df81032735025c3f6cb9ad362c1d3e9eea9f9.js"></script>
 
     
 
@@ -268,39 +268,39 @@
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="c1">// 设置一个定时器，每一秒滚动到底部，让其自动加载新内容
-</span><span class="c1"></span><span class="kd">with</span> <span class="p">({</span> <span class="nx">copy</span> <span class="p">})</span> <span class="p">{</span>
-	<span class="nx">t</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-		<span class="c1">// 滚动到底部
-</span><span class="c1"></span>		<span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollHeight</span><span class="p">);</span>
-
-		<span class="c1">// 当没有更多内容时，取消这个定时器
-</span><span class="c1"></span>		<span class="kd">let</span> <span class="nx">noMore</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.js_no_more_msg&#39;</span><span class="p">);</span>
-		<span class="k">if</span> <span class="p">(</span><span class="nx">noMore</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">!=</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span> <span class="p">{</span>
-			<span class="nx">clearInterval</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span>
-			<span class="c1">// 将抽取到的内容复制到剪切板，然后可以粘贴到任意的编辑器，我这里是复制到json文件里。
-</span><span class="c1"></span>			<span class="nx">copy</span><span class="p">(</span><span class="nx">getMyContent</span><span class="p">());</span>
-		<span class="p">}</span>
-	<span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
-<span class="p">}</span>
-
-<span class="c1">// 根据网页设置CSS Selector，爬取所有历史文章的url
-</span><span class="c1">// 最好是以array或者object的形式，便于保存
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">getMyContent</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-	<span class="c1">// 此处是我自己想要的内容，请更改。
-</span><span class="c1"></span>	<span class="kd">let</span> <span class="nx">titles</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;h4.weui_media_title&#39;</span><span class="p">));</span>
-	<span class="kd">let</span> <span class="nx">dates</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;p.weui_media_extra_info&#39;</span><span class="p">));</span>
-	<span class="kr">const</span> <span class="nx">zip</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr1</span><span class="p">,</span> <span class="nx">arr2</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">k</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">k</span><span class="p">,</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">]]);</span>
-	<span class="kd">let</span> <span class="nx">infos</span> <span class="o">=</span> <span class="nx">zip</span><span class="p">(</span><span class="nx">dates</span><span class="p">,</span> <span class="nx">titles</span><span class="p">)</span>
-	<span class="nx">infos</span> <span class="o">=</span> <span class="nx">infos</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">info</span> <span class="p">=&gt;</span> <span class="nx">info</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">innerText</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;汇总&#39;</span><span class="p">))</span>
-	<span class="nx">urls</span> <span class="o">=</span> <span class="p">{}</span>
-	<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">t</span> <span class="k">of</span> <span class="nx">infos</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// 获取所有历史文章的链接
-</span><span class="c1"></span>		<span class="nx">urls</span><span class="p">[</span><span class="nx">t</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">innerText</span><span class="p">]</span> <span class="o">=</span> <span class="nx">t</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;hrefs&#39;</span><span class="p">)</span>
-	<span class="p">}</span>
-	<span class="k">return</span> <span class="nx">urls</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 设置一个定时器，每一秒滚动到底部，让其自动加载新内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">with</span> <span class="p">({</span> <span class="nx">copy</span> <span class="p">})</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">t</span> <span class="o">=</span> <span class="nx">setInterval</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 滚动到底部
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nb">window</span><span class="p">.</span><span class="nx">scrollTo</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">scrollHeight</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="c1">// 当没有更多内容时，取消这个定时器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kd">let</span> <span class="nx">noMore</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.js_no_more_msg&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="nx">noMore</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">!=</span> <span class="s1">&#39;none&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">clearInterval</span><span class="p">(</span><span class="nx">t</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 将抽取到的内容复制到剪切板，然后可以粘贴到任意的编辑器，我这里是复制到json文件里。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nx">copy</span><span class="p">(</span><span class="nx">getMyContent</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">},</span> <span class="mi">1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 根据网页设置CSS Selector，爬取所有历史文章的url
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 最好是以array或者object的形式，便于保存
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span> <span class="nx">getMyContent</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 此处是我自己想要的内容，请更改。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kd">let</span> <span class="nx">titles</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;h4.weui_media_title&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">let</span> <span class="nx">dates</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s1">&#39;p.weui_media_extra_info&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">	<span class="kr">const</span> <span class="nx">zip</span> <span class="o">=</span> <span class="p">(</span><span class="nx">arr1</span><span class="p">,</span> <span class="nx">arr2</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">k</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">k</span><span class="p">,</span> <span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">]]);</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">let</span> <span class="nx">infos</span> <span class="o">=</span> <span class="nx">zip</span><span class="p">(</span><span class="nx">dates</span><span class="p">,</span> <span class="nx">titles</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">infos</span> <span class="o">=</span> <span class="nx">infos</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">info</span> <span class="p">=&gt;</span> <span class="nx">info</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">innerText</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s1">&#39;汇总&#39;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">urls</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">t</span> <span class="k">of</span> <span class="nx">infos</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 获取所有历史文章的链接
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">urls</span><span class="p">[</span><span class="nx">t</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">innerText</span><span class="p">]</span> <span class="o">=</span> <span class="nx">t</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">&#39;hrefs&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">urls</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>第五步，新建一个 json 文件，ctrl + v 保存所有历史文章的网址。比如我这里是将获取到的所有地址保存到 urls.json 里了。</p>
 <h2 id="2-puppeteer爬虫"><a href="#2-puppeteer爬虫" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-puppeteer爬虫" class="headings">2. Puppeteer爬虫</a></h2>
@@ -344,55 +344,55 @@
 </span><span class="lnt">34
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">puppeteer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;puppeteer&#39;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">urls</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./urls.json&#39;</span><span class="p">);</span> <span class="c1">//获取所有的url
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
-
-<span class="p">(</span><span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-	<span class="c1">// 打开一个新的窗口，此处我选择了可视化，让你知道发生了什么。
-</span><span class="c1"></span>	<span class="c1">// 可以删除掉{headless: false}使程序在后台运行。
-</span><span class="c1"></span>	<span class="kr">const</span> <span class="nx">browser</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">puppeteer</span><span class="p">.</span><span class="nx">launch</span><span class="p">({</span> <span class="nx">headless</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
-	<span class="kr">const</span> <span class="nx">page</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">newPage</span><span class="p">();</span>
-
-	<span class="kd">let</span> <span class="nx">articles</span> <span class="o">=</span> <span class="p">{};</span>
-
-	<span class="c1">// 遍历url
-</span><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">k</span> <span class="k">in</span> <span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
-		<span class="c1">// 访问地址，等待加载
-</span><span class="c1"></span>		<span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="nx">urls</span><span class="p">[</span><span class="nx">k</span><span class="p">],</span> <span class="p">{</span>
-			<span class="nx">waitUntil</span><span class="o">:</span> <span class="s1">&#39;domcontentloaded&#39;</span>
-		<span class="p">});</span>
-		<span class="c1">// 获取到自己想要的DOM
-</span><span class="c1"></span>		<span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">$eval</span><span class="p">(</span><span class="s1">&#39;#img-content&#39;</span><span class="p">,</span> <span class="nx">node</span> <span class="p">=&gt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">);</span>
-		<span class="c1">// 直接存储整个HTML结构，解析可以在后面做
-</span><span class="c1"></span>		<span class="nx">articles</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="o">=</span> <span class="nx">content</span><span class="p">;</span>
-		<span class="c1">// 一秒一次访问，防止过快被封
-</span><span class="c1"></span>		<span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">waitFor</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
-	<span class="p">}</span>
-
-	<span class="c1">// 写入json文件
-</span><span class="c1"></span>	<span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">&#39;articles.json&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">articles</span><span class="p">),</span> <span class="nx">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-		<span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
-	<span class="p">});</span>
-
-	<span class="c1">// 关闭浏览器
-</span><span class="c1"></span>	<span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
-<span class="p">})();</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">puppeteer</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;puppeteer&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">urls</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./urls.json&#39;</span><span class="p">);</span> <span class="c1">//获取所有的url
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 打开一个新的窗口，此处我选择了可视化，让你知道发生了什么。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 可以删除掉{headless: false}使程序在后台运行。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kr">const</span> <span class="nx">browser</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">puppeteer</span><span class="p">.</span><span class="nx">launch</span><span class="p">({</span> <span class="nx">headless</span><span class="o">:</span> <span class="kc">false</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl">	<span class="kr">const</span> <span class="nx">page</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">newPage</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kd">let</span> <span class="nx">articles</span> <span class="o">=</span> <span class="p">{};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 遍历url
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">k</span> <span class="k">in</span> <span class="nx">urls</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 访问地址，等待加载
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="nx">urls</span><span class="p">[</span><span class="nx">k</span><span class="p">],</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">waitUntil</span><span class="o">:</span> <span class="s1">&#39;domcontentloaded&#39;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">});</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 获取到自己想要的DOM
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">$eval</span><span class="p">(</span><span class="s1">&#39;#img-content&#39;</span><span class="p">,</span> <span class="nx">node</span> <span class="p">=&gt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 直接存储整个HTML结构，解析可以在后面做
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">articles</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span> <span class="o">=</span> <span class="nx">content</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 一秒一次访问，防止过快被封
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="kr">await</span> <span class="nx">page</span><span class="p">.</span><span class="nx">waitFor</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 写入json文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">fs</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">&#39;articles.json&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">articles</span><span class="p">),</span> <span class="nx">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">throw</span> <span class="nx">err</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">// 关闭浏览器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="kr">await</span> <span class="nx">browser</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">})();</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>当运行完成之后，会生成一个 articles.json 文件，里面就是我们想要获取的内容。至于分析就是后面的事了，下一篇博客会简单地统计分析一下词频做个词云。至此，一个最简单的单个微信公众号爬虫就完成了，简单易懂，并且比较难失效。</p>
-<p><br />
-<br /></p>
+<br />
+<br />
 <p style="text-align: center;">如果本文对您有帮助，欢迎打赏。</p>
 <img src="/images/qr-wechat.png" alt="赞赏码" width="300"/>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p><a href="http://www.bingshangroup.com/blog/2019/09/16/zhangyue/puppeteer/" target="_blank" rel="noopener">万物皆可爬-puppeteer</a> 和 <a href="http://www.bingshangroup.com/blog/2019/10/15/zhangyue/puppeteer2/" target="_blank" rel="noopener">万物皆可爬-puppeteer进阶</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="icon footnote-icon"><path d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"/></svg></a></p>
 </li>
 </ol>
-</section>
+</div>
 
             </div>
 

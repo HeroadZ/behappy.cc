@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#fff" />
+    <meta name="generator" content="Hugo 0.121.1"><meta name="theme-color" content="#fff" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -21,7 +21,7 @@
 
     
     
-        <script src="/js/meme.min.edb88a9b91ba2cad065d6daeee096db2fd7740a61633ff602017686808c733d1.js"></script>
+        <script src="/js/meme.min.8963f88e53c667beac6b24803f8df81032735025c3f6cb9ad362c1d3e9eea9f9.js"></script>
 
     
 
@@ -276,7 +276,7 @@
 <p>如果不想抓包分析，那可以直接使用selenium，但是selenium是万不得已才会用的，我第一次写的版本就是selenium版的，运行速度很慢。因为它的原理就是模拟人控制浏览器，要一个一个点开网页。</p>
 <h3 id="211-网页抓包"><a href="#211-网页抓包" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:211-网页抓包" class="headings">2.1.1 网页抓包</a></h3>
 <p>那么我们接下来开始抓包分析，pandaTV使用了ajax，我们使用开发者工具来抓包分析一下。放上<a href="https://developer.chrome.com/devtools" target="_blank" rel="noopener">chrome开发者工具教程</a></p>
-<p>我们打开F12，点到Network标签，把preserve log钩打上，下面的选择XHR，开始抓包分析。我们先输入网址 <a href="http://www.panda.tv" target="_blank" rel="noopener">www.panda.tv</a>，然后点全部，然后随便选个房间进去，此处以我的房间为例。</p>
+<p>我们打开F12，点到Network标签，把preserve log钩打上，下面的选择XHR，开始抓包分析。我们先输入网址 <a href="https://www.panda.tv" target="_blank" rel="noopener">www.panda.tv</a>，然后点全部，然后随便选个房间进去，此处以我的房间为例。</p>
 <p><img src="/images/panda-F12.jpg" alt="pandaTV抓包">
 这里我直接给出需要的地址，即第4步的地址，其他的地址暂时不需要。那么网址格式大概<code>&quot;http://www.panda.tv/api_room_v2?roomid=&quot; + 房间号</code>, 比如 <code>http://www.panda.tv/api_room_v2?roomid=473005</code>
 我们直接访问这个网址，得到json格式的数据，里面有我们需要的主播id和竹子数。</p>
@@ -303,16 +303,16 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="c1">#得到推荐前20的房间号</span>
-<span class="k">def</span> <span class="nf">getTop20List</span><span class="p">():</span>
-	<span class="n">top20List</span> <span class="o">=</span> <span class="p">[]</span>
-	<span class="n">url</span> <span class="o">=</span> <span class="s2">&#34;http://api.m.panda.tv/ajax_live_lists?pageno=1&amp;pagenum=20&amp;status=2&amp;order=person_num&#34;</span>
-	<span class="n">info</span>  <span class="o">=</span> <span class="p">((</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">json</span><span class="p">())[</span><span class="s2">&#34;data&#34;</span><span class="p">][</span><span class="s2">&#34;items&#34;</span><span class="p">]</span>
-	<span class="p">[</span><span class="n">top20List</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_id</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">])</span> <span class="k">for</span> <span class="n">data_id</span> <span class="ow">in</span> <span class="n">info</span><span class="p">]</span>
-	<span class="k">return</span> <span class="n">top20List</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#得到推荐前20的房间号</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">getTop20List</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">	<span class="n">top20List</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">url</span> <span class="o">=</span> <span class="s2">&#34;http://api.m.panda.tv/ajax_live_lists?pageno=1&amp;pagenum=20&amp;status=2&amp;order=person_num&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="n">info</span>  <span class="o">=</span> <span class="p">((</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">json</span><span class="p">())[</span><span class="s2">&#34;data&#34;</span><span class="p">][</span><span class="s2">&#34;items&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="p">[</span><span class="n">top20List</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data_id</span><span class="p">[</span><span class="s2">&#34;id&#34;</span><span class="p">])</span> <span class="k">for</span> <span class="n">data_id</span> <span class="ow">in</span> <span class="n">info</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">top20List</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>那么我们再分析一下，因为这是当前的热门直播前20，主播的作息时间是不固定的，所以我们涵盖不了所有的主播。那么我们要实现增量抓取，即每次爬取的房间号要保存下来，这样反复几次，可以涵盖几乎所有的热门主播。这里我们使用pickle，这是一个很方便的库，方便的保存读取房间号列表，然后实现增量。</p>
 <div class="highlight"><div class="chroma">
@@ -346,34 +346,34 @@
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pickle</span><span class="o">,</span> <span class="nn">os.path</span>
-
-<span class="c1">#记录爬取的房间号</span>
-<span class="k">def</span> <span class="nf">recordRoomList</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">):</span>
-	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;roomList.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-		<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-
-<span class="c1">#读取文件中的房间号</span>
-<span class="k">def</span> <span class="nf">readRoomList</span><span class="p">():</span>
-	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;roomList.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-  		<span class="n">roomNumberList</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-	<span class="k">return</span> <span class="n">roomNumberList</span>
-
-
-<span class="c1">#增量判断</span>
-<span class="k">def</span> <span class="nf">incrementRoom</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">):</span>
-	<span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&#34;roomList.pickle&#34;</span><span class="p">)):</span>
-		<span class="n">recordRoomList</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">)</span>
-		<span class="k">return</span> <span class="n">roomNumberList</span>
-	<span class="n">existRoomList</span> <span class="o">=</span> <span class="n">readRoomList</span><span class="p">()</span>
-	<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">roomNumberList</span><span class="p">:</span>
-		<span class="k">if</span><span class="p">(</span><span class="n">item</span> <span class="ow">in</span> <span class="n">existRoomList</span><span class="p">):</span>
-			<span class="k">continue</span>
-		<span class="k">else</span><span class="p">:</span>
-			<span class="n">existRoomList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
-	<span class="n">recordRoomList</span><span class="p">(</span><span class="n">existRoomList</span><span class="p">)</span>
-	<span class="k">return</span> <span class="n">existRoomList</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pickle</span><span class="o">,</span> <span class="nn">os.path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#记录爬取的房间号</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">recordRoomList</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;roomList.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#读取文件中的房间号</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">readRoomList</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;roomList.pickle&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  		<span class="n">roomNumberList</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">roomNumberList</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#增量判断</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">incrementRoom</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="s2">&#34;roomList.pickle&#34;</span><span class="p">)):</span>
+</span></span><span class="line"><span class="cl">		<span class="n">recordRoomList</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="n">roomNumberList</span>
+</span></span><span class="line"><span class="cl">	<span class="n">existRoomList</span> <span class="o">=</span> <span class="n">readRoomList</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">roomNumberList</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">item</span> <span class="ow">in</span> <span class="n">existRoomList</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="k">continue</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">existRoomList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">recordRoomList</span><span class="p">(</span><span class="n">existRoomList</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">existRoomList</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="222-获取主播id和竹子数"><a href="#222-获取主播id和竹子数" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:222-获取主播id和竹子数" class="headings">2.2.2 获取主播id和竹子数</a></h3>
 <p>现在我们得到了房间号列表，根据我们抓包分析得到的地址，一个一个地请求。</p>
@@ -400,26 +400,26 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="c1">#得到该房间的主播id和竹子</span>
-<span class="k">def</span> <span class="nf">getBambooAndName</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">):</span>
-	<span class="n">roomInfoList</span> <span class="o">=</span> <span class="p">[]</span>
-	<span class="n">prefix</span> <span class="o">=</span> <span class="s2">&#34;http://www.panda.tv/api_room_v2?roomid=&#34;</span>
-	<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">roomNumberList</span><span class="p">:</span>
-		<span class="n">singleRoom</span> <span class="o">=</span> <span class="p">[]</span>
-		<span class="n">singleRoom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-		<span class="n">info</span> <span class="o">=</span> <span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">u</span><span class="p">)))</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-		<span class="k">if</span><span class="p">(</span><span class="n">info</span><span class="p">):</span>
-			<span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;hostinfo&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
-			<span class="n">singleRoom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;hostinfo&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
-			<span class="n">singleRoom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;hostinfo&#39;</span><span class="p">][</span><span class="s1">&#39;bamboos&#39;</span><span class="p">])</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
-		<span class="k">else</span><span class="p">:</span>
-			<span class="n">singleRoom</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&#34;none&#34;</span><span class="p">,</span> <span class="s2">&#34;none&#34;</span><span class="p">])</span>
-			<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;not get&#34;</span><span class="p">)</span>
-		<span class="n">roomInfoList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">singleRoom</span><span class="p">)</span>				
-	<span class="k">return</span> <span class="n">roomInfoList</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#得到该房间的主播id和竹子</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">getBambooAndName</span><span class="p">(</span><span class="n">roomNumberList</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">roomInfoList</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">prefix</span> <span class="o">=</span> <span class="s2">&#34;http://www.panda.tv/api_room_v2?roomid=&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">roomNumberList</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">singleRoom</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">		<span class="n">singleRoom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">info</span> <span class="o">=</span> <span class="p">(</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">prefix</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">u</span><span class="p">)))</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span><span class="n">info</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">			<span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;hostinfo&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">			<span class="n">singleRoom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;hostinfo&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">			<span class="n">singleRoom</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="s1">&#39;hostinfo&#39;</span><span class="p">][</span><span class="s1">&#39;bamboos&#39;</span><span class="p">])</span><span class="o">/</span><span class="mf">1e6</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">			<span class="n">singleRoom</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="s2">&#34;none&#34;</span><span class="p">,</span> <span class="s2">&#34;none&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">			<span class="nb">print</span><span class="p">(</span><span class="s2">&#34;not get&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="n">roomInfoList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">singleRoom</span><span class="p">)</span>				
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">roomInfoList</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>请注意，此处我并没有简单地用两个list，而是使用了list in list的形式。why？这是因为为了后面的数据库而设计的。我这里的形式是[[room1],[room2],...]</p>
 <h2 id="23-存储到数据库mongodb"><a href="#23-存储到数据库mongodb" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:23-存储到数据库mongodb" class="headings">2.3 存储到数据库Mongodb</a></h2>
@@ -450,26 +450,26 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
-<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
-
-<span class="c1">#获取字典形式</span>
-<span class="k">def</span> <span class="nf">getDict</span><span class="p">(</span><span class="n">roomInfoList</span><span class="p">):</span>
-	<span class="n">roomInfoDict</span> <span class="o">=</span> <span class="p">{}</span>
-	<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">roomInfoList</span><span class="p">:</span>
-		<span class="n">singleRoom</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&#34;bamboos&#34;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&#34;date&#34;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()}</span>
-		<span class="n">roomInfoDict</span><span class="p">[</span><span class="s2">&#34;room&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span> <span class="o">=</span> <span class="n">singleRoom</span>
-	<span class="k">return</span> <span class="n">roomInfoDict</span>
-
-<span class="c1">#存储到mongodb</span>
-<span class="k">def</span> <span class="nf">saveToMongo</span><span class="p">(</span><span class="n">roomInfoDict</span><span class="p">):</span>
-	<span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">()</span>
-	<span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">pandaTV</span>
-	<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">roomInfoDict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-		<span class="n">collection</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
-		<span class="n">collection</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-	<span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#获取字典形式</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">getDict</span><span class="p">(</span><span class="n">roomInfoList</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">roomInfoDict</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">roomInfoList</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">singleRoom</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s2">&#34;bamboos&#34;</span><span class="p">:</span> <span class="n">item</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="s2">&#34;date&#34;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()}</span>
+</span></span><span class="line"><span class="cl">		<span class="n">roomInfoDict</span><span class="p">[</span><span class="s2">&#34;room&#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="mi">0</span><span class="p">])]</span> <span class="o">=</span> <span class="n">singleRoom</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="n">roomInfoDict</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#存储到mongodb</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">saveToMongo</span><span class="p">(</span><span class="n">roomInfoDict</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="n">db</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">pandaTV</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">roomInfoDict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">		<span class="n">collection</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">		<span class="n">collection</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>最终存储进mongodb的数据是这样的，我们给每个post都加了一个：</p>
 <div class="highlight"><div class="chroma">
@@ -487,24 +487,22 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">&gt; show collections
-room10003
-room10009
-room100130
-room10015
-...
-
-&gt; db.room7000.find<span class="o">()</span>
-<span class="o">{</span> <span class="s2">&#34;_id&#34;</span> : ObjectId<span class="o">(</span><span class="s2">&#34;57a2f91deccca320542a9e64&#34;</span><span class="o">)</span>, <span class="s2">&#34;bamboos&#34;</span> : 21.4, <span class="s2">&#34;date&#34;</span> : ISODate<span class="o">(</span><span class="s2">&#34;2016-08-04T08:13:16.973Z&#34;</span><span class="o">)</span>, <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;LPL熊猫TV官方直播&#34;</span> <span class="o">}</span>
-<span class="o">{</span> <span class="s2">&#34;_id&#34;</span> : ObjectId<span class="o">(</span><span class="s2">&#34;57a2ff93eccca31b38213ac1&#34;</span><span class="o">)</span>, <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;LPL熊猫TV官方直播&#34;</span>, <span class="s2">&#34;date&#34;</span> : ISODate<span class="o">(</span><span class="s2">&#34;2016-08-04T08:40:51.872Z&#34;</span><span class="o">)</span>, <span class="s2">&#34;bamboos&#34;</span> : 21.4 <span class="o">}</span>
-<span class="o">{</span> <span class="s2">&#34;_id&#34;</span> : ObjectId<span class="o">(</span><span class="s2">&#34;57a45105eccca305c45cb33a&#34;</span><span class="o">)</span>, <span class="s2">&#34;bamboos&#34;</span> : 21.64, <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;LPL熊猫TV官方直播&#34;</span>, <span class="s2">&#34;date&#34;</span> : ISODate<span class="o">(</span><span class="s2">&#34;2016-08-05T08:40:37.707Z&#34;</span><span class="o">)</span> <span class="o">}</span>
-<span class="o">{</span> <span class="s2">&#34;_id&#34;</span> : ObjectId<span class="o">(</span><span class="s2">&#34;57a5c283eccca30f6c94b0a0&#34;</span><span class="o">)</span>, <span class="s2">&#34;bamboos&#34;</span> : 22.04, <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;LPL熊猫TV官方直播&#34;</span>, <span class="s2">&#34;date&#34;</span> : ISODate<span class="o">(</span><span class="s2">&#34;2016-08-06T10:57:07.491Z&#34;</span><span class="o">)</span> <span class="o">}</span>
-...
-
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&gt; show collections
+</span></span><span class="line"><span class="cl">room10003
+</span></span><span class="line"><span class="cl">room10009
+</span></span><span class="line"><span class="cl">room100130
+</span></span><span class="line"><span class="cl">room10015
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; db.room7000.find<span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="o">{</span> <span class="s2">&#34;_id&#34;</span> : ObjectId<span class="o">(</span><span class="s2">&#34;57a2f91deccca320542a9e64&#34;</span><span class="o">)</span>, <span class="s2">&#34;bamboos&#34;</span> : 21.4, <span class="s2">&#34;date&#34;</span> : ISODate<span class="o">(</span><span class="s2">&#34;2016-08-04T08:13:16.973Z&#34;</span><span class="o">)</span>, <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;LPL熊猫TV官方直播&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{</span> <span class="s2">&#34;_id&#34;</span> : ObjectId<span class="o">(</span><span class="s2">&#34;57a2ff93eccca31b38213ac1&#34;</span><span class="o">)</span>, <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;LPL熊猫TV官方直播&#34;</span>, <span class="s2">&#34;date&#34;</span> : ISODate<span class="o">(</span><span class="s2">&#34;2016-08-04T08:40:51.872Z&#34;</span><span class="o">)</span>, <span class="s2">&#34;bamboos&#34;</span> : 21.4 <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{</span> <span class="s2">&#34;_id&#34;</span> : ObjectId<span class="o">(</span><span class="s2">&#34;57a45105eccca305c45cb33a&#34;</span><span class="o">)</span>, <span class="s2">&#34;bamboos&#34;</span> : 21.64, <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;LPL熊猫TV官方直播&#34;</span>, <span class="s2">&#34;date&#34;</span> : ISODate<span class="o">(</span><span class="s2">&#34;2016-08-05T08:40:37.707Z&#34;</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">{</span> <span class="s2">&#34;_id&#34;</span> : ObjectId<span class="o">(</span><span class="s2">&#34;57a5c283eccca30f6c94b0a0&#34;</span><span class="o">)</span>, <span class="s2">&#34;bamboos&#34;</span> : 22.04, <span class="s2">&#34;name&#34;</span> : <span class="s2">&#34;LPL熊猫TV官方直播&#34;</span>, <span class="s2">&#34;date&#34;</span> : ISODate<span class="o">(</span><span class="s2">&#34;2016-08-06T10:57:07.491Z&#34;</span><span class="o">)</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>这里要注意有个坑，需要先安装mongodb数据库，在运行爬虫之前，需要先开启数据库。</p>
 <div class="highlight"><div class="chroma">
@@ -512,8 +510,8 @@ room10015
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ mongod
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mongod
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h2 id="24-提取分析数据"><a href="#24-提取分析数据" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:24-提取分析数据" class="headings">2.4 提取分析数据</a></h2>
 <p>关于这部分比较简单，大致就是读取数据库，按照时间戳来排序，得到最新的数据，然后返回Top20的一个Dict。特别需要注意的是，因为python的dict类型是无序的，所以即使你是排好序逐一添加，最后的Dict也是无序的。那么又因为我的Dict结构要方便数据可视化工具echarts.js读取，所以我设计成这样：</p>
@@ -525,11 +523,11 @@ room10015
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">Dict</span> <span class="o">=</span> <span class="p">{</span>
-	<span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;xx&#39;</span><span class="p">,</span> <span class="s1">&#39;xx&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
-	<span class="s2">&#34;bamboos&#34;</span><span class="p">:</span> <span class="p">[</span><span class="n">xx</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
-<span class="p">}</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">Dict</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;xx&#39;</span><span class="p">,</span> <span class="s1">&#39;xx&#39;</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34;bamboos&#34;</span><span class="p">:</span> <span class="p">[</span><span class="n">xx</span><span class="p">,</span> <span class="n">xx</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>我直接把有序的列表作为values，这样就可以不关注Dict的坑了。还有就是要两个列表组合排序的问题，我使用了zip和sorted。</p>
 <div class="highlight"><div class="chroma">
@@ -556,27 +554,27 @@ room10015
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
-<span class="kn">import</span> <span class="nn">json</span>
-
-<span class="k">def</span> <span class="nf">writeJsonFile</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">filename</span><span class="p">):</span>
-	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="o">+</span><span class="s2">&#34;.json&#34;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-  		<span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">get20Rank</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
-	<span class="n">bamboosList</span> <span class="o">=</span> <span class="p">[]</span>
-	<span class="n">nameList</span> <span class="o">=</span> <span class="p">[]</span>
-	<span class="n">rankDict</span> <span class="o">=</span> <span class="p">{}</span>
-	<span class="n">mycollections</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">collection_names</span><span class="p">()</span>
-	<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">mycollections</span><span class="p">:</span>
-		<span class="n">latest</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-		<span class="n">bamboosList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">latest</span><span class="p">[</span><span class="s2">&#34;bamboos&#34;</span><span class="p">])</span>
-		<span class="n">nameList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">latest</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">])</span>
-	<span class="n">bamboosList</span><span class="p">,</span> <span class="n">nameList</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">bamboosList</span><span class="p">,</span> <span class="n">nameList</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-	<span class="n">rankDict</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nameList</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span>
-	<span class="n">rankDict</span><span class="p">[</span><span class="s2">&#34;bamboos&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bamboosList</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span>
-	<span class="n">writeJsonFile</span><span class="p">(</span><span class="n">rankDict</span><span class="p">,</span> <span class="s2">&#34;bamboos_rank&#34;</span><span class="p">)</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">pymongo</span> <span class="kn">import</span> <span class="n">MongoClient</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">writeJsonFile</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">filename</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="o">+</span><span class="s2">&#34;.json&#34;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">  		<span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get20Rank</span><span class="p">(</span><span class="n">db</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">	<span class="n">bamboosList</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">nameList</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">rankDict</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">	<span class="n">mycollections</span> <span class="o">=</span> <span class="n">db</span><span class="o">.</span><span class="n">collection_names</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">mycollections</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">		<span class="n">latest</span> <span class="o">=</span> <span class="n">db</span><span class="p">[</span><span class="n">item</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">()</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">		<span class="n">bamboosList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">latest</span><span class="p">[</span><span class="s2">&#34;bamboos&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">		<span class="n">nameList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">latest</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">	<span class="n">bamboosList</span><span class="p">,</span> <span class="n">nameList</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="nb">sorted</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">bamboosList</span><span class="p">,</span> <span class="n">nameList</span><span class="p">),</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="n">rankDict</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">nameList</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">rankDict</span><span class="p">[</span><span class="s2">&#34;bamboos&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="n">bamboosList</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">19</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">	<span class="n">writeJsonFile</span><span class="p">(</span><span class="n">rankDict</span><span class="p">,</span> <span class="s2">&#34;bamboos_rank&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>这样我们得到了包含数据的json文件。</p>
 <h2 id="25-数据可视化"><a href="#25-数据可视化" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:25-数据可视化" class="headings">2.5 数据可视化</a></h2>
@@ -595,13 +593,13 @@ room10015
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="nx">xAxis</span><span class="o">:</span> <span class="p">[</span>
-    <span class="nx">axisLabel</span><span class="o">:</span> <span class="p">{</span>
-   	    <span class="nx">interval</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-   	    <span class="nx">rotate</span><span class="o">:</span> <span class="mi">340</span>
-    <span class="p">},</span>	
-<span class="p">]</span>
-</code></pre></td></tr></table></div>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">xAxis</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">axisLabel</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   	    <span class="nx">interval</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   	    <span class="nx">rotate</span><span class="o">:</span> <span class="mi">340</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>	
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table></div>
 </div>
 </div><h3 id="252-移动端简单支持"><a href="#252-移动端简单支持" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:252-移动端简单支持" class="headings">2.5.2 移动端简单支持</a></h3>
 <p>我使用了viewport来稍微支持了下移动端，即判断innerWidth的大小（显示屏）来设置参数。当屏幕宽度大于500px时，横向排版；小于500px时，纵向排版。</p>
