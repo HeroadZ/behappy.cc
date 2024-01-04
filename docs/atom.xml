@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">醉乐轩</title>
     <subtitle type="html">以梦为马，醉乐其中。</subtitle>
-    <updated>2024-01-04T16:58:38&#43;09:00</updated>
+    <updated>2024-01-04T17:00:30&#43;09:00</updated>
     <id>https://behappy.cc/</id>
     <link rel="alternate" type="text/html" href="https://behappy.cc/" />
     <link rel="self" type="application/atom&#43;xml" href="https://behappy.cc/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">初窥门径的2023</title>
             <link rel="alternate" type="text/html" href="https://behappy.cc/life/2023-final/" />
             <id>https://behappy.cc/life/2023-final/</id>
-            <updated>2024-01-04T16:58:27&#43;09:00</updated>
+            <updated>2024-01-04T17:00:23&#43;09:00</updated>
             <published>2023-12-30T22:24:25&#43;09:00</published>
             <author>
                     <name>醉乐轩</name>
@@ -113,7 +113,8 @@
 &lt;p&gt;我让ChatGPT4利用DALL-E用一张图片总结了一下我的2023，效果还挺不错。&lt;/p&gt;
 &lt;img src=&#34;https://behappy.cc/images/2023-overview-dalle3.png&#34; alt=&#34;2023-overview-dalle3&#34;/&gt;
 &lt;h4 id=&#34;2024年目标&#34;&gt;2024年目标&lt;/h4&gt;
-&lt;p&gt;工作这两年多，其实重心一直没有在工作上，我始终认为工作只是为了赚钱，为了生活。与其在工作中去卷，不如多学几个自己感兴趣的爱好或者技能，毕竟人生短暂嘛。所以以后的人生我想一年学习一个新技能，不用达到精通的程度，能达到普通入门水平就行，主要目的是为了探索更广大的世界。网球我花了两年时间，达到了一个我个人比较满意的水平。明年想尝试一下声乐，唱歌对于五音不全的我一直是个难题，我想看看是否通过学习能够了解自身，改善问题。&lt;/p&gt;
+&lt;p&gt;工作这两年多，其实重心一直没有在工作上，我始终认为工作只是为了赚钱，为了生活。与其在工作中去卷，不如多学几个自己感兴趣的爱好或者技能，毕竟人生短暂嘛。所以以后的人生我想一年学习一个新技能，不用达到精通的程度，能达到普通入门水平就行，主要目的是为了探索更广大的世界。&lt;/p&gt;
+&lt;p&gt;网球我花了两年时间，达到了一个我个人比较满意的水平。明年想尝试一下声乐，唱歌对于五音不全的我一直是个难题，我想看看是否通过学习能够了解自身，改善问题。其实本来是想捡起吉他的，后来去试听了几次吉他课发现，相比于任何乐器，我对于人声这个乐器是最感兴趣，也是最需要改善的。&lt;/p&gt;
 &lt;p&gt;2024目标：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;掌握AIGC，MLOps相关知识，成为圈内人&lt;/li&gt;
