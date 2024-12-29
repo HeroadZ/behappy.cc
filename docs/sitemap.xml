@@ -2,115 +2,115 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://behappy.cc/life/2024-good-things/</loc>
+    <loc>http://localhost:1313/life/2024-good-things/</loc>
     <lastmod>2024-12-29T22:41:12+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/</loc>
+    <loc>http://localhost:1313/life/</loc>
     <lastmod>2024-12-29T22:41:12+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-29T22:41:12+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-01-04T17:00:23+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/2023-final/</loc>
+    <loc>http://localhost:1313/life/2023-final/</loc>
     <lastmod>2024-01-04T17:00:23+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
+    <loc>http://localhost:1313/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2024-01-04T17:00:23+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tags/ai/</loc>
+    <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2023-02-11T18:14:09+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tags/nlp/</loc>
+    <loc>http://localhost:1313/tags/nlp/</loc>
     <lastmod>2023-02-11T18:14:09+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/cooperate-with-chatgpt/</loc>
+    <loc>http://localhost:1313/life/cooperate-with-chatgpt/</loc>
     <lastmod>2023-02-11T18:14:09+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/2022-final/</loc>
+    <loc>http://localhost:1313/life/2022-final/</loc>
     <lastmod>2024-01-04T16:58:25+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tags/demo%E6%95%99%E7%A8%8B/</loc>
+    <loc>http://localhost:1313/tags/demo%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2022-03-07T19:09:24+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/google-recaptcha-tutorial/</loc>
+    <loc>http://localhost:1313/tech/google-recaptcha-tutorial/</loc>
     <lastmod>2022-03-07T19:09:24+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/</loc>
+    <loc>http://localhost:1313/tech/</loc>
     <lastmod>2022-03-07T19:09:24+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/2021-final/</loc>
+    <loc>http://localhost:1313/life/2021-final/</loc>
     <lastmod>2021-12-29T18:31:14+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/sliding-window-algorithm/</loc>
+    <loc>http://localhost:1313/tech/sliding-window-algorithm/</loc>
     <lastmod>2021-10-18T23:22:26+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://localhost:1313/tags/%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-10-18T23:22:26+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/python-tree-traversal/</loc>
+    <loc>http://localhost:1313/tech/python-tree-traversal/</loc>
     <lastmod>2021-09-25T21:48:13+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/catch-irreplaceability/</loc>
+    <loc>http://localhost:1313/life/catch-irreplaceability/</loc>
     <lastmod>2021-09-20T14:33:23+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/deploy-website-with-nginx-docker-letsencrypt/</loc>
+    <loc>http://localhost:1313/tech/deploy-website-with-nginx-docker-letsencrypt/</loc>
     <lastmod>2022-02-23T13:23:25+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/two-years-in-waseda/</loc>
+    <loc>http://localhost:1313/life/two-years-in-waseda/</loc>
     <lastmod>2022-12-31T19:58:13+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/trends-in-tokyos-chinese-students/</loc>
+    <loc>http://localhost:1313/tech/trends-in-tokyos-chinese-students/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/</loc>
+    <loc>http://localhost:1313/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/the-simplest-single-wechat-official-account-spider/</loc>
+    <loc>http://localhost:1313/tech/the-simplest-single-wechat-official-account-spider/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
     <lastmod>2021-09-11T16:52:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/2018-final/</loc>
+    <loc>http://localhost:1313/life/2018-final/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/how-to-study-in-japan/</loc>
+    <loc>http://localhost:1313/life/how-to-study-in-japan/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/half-year-in-japan/</loc>
+    <loc>http://localhost:1313/life/half-year-in-japan/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/toefl-90-experience/</loc>
+    <loc>http://localhost:1313/life/toefl-90-experience/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/ruff-graduation-project/</loc>
+    <loc>http://localhost:1313/tech/ruff-graduation-project/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/2016-final/</loc>
+    <loc>http://localhost:1313/life/2016-final/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/python-panda-rank/</loc>
+    <loc>http://localhost:1313/tech/python-panda-rank/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/migrate-hexo/</loc>
+    <loc>http://localhost:1313/tech/migrate-hexo/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/turing/</loc>
+    <loc>http://localhost:1313/life/turing/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tags/%E4%B9%A6%E7%97%9E%E4%B9%8B%E8%A8%80/</loc>
+    <loc>http://localhost:1313/tags/%E4%B9%A6%E7%97%9E%E4%B9%8B%E8%A8%80/</loc>
     <lastmod>2022-03-26T11:56:53+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/dark-time-review/</loc>
+    <loc>http://localhost:1313/life/dark-time-review/</loc>
     <lastmod>2022-03-26T11:56:53+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/life/2014-final/</loc>
+    <loc>http://localhost:1313/life/2014-final/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url><url>
-    <loc>https://behappy.cc/tech/python-login-extract/</loc>
+    <loc>http://localhost:1313/tech/python-login-extract/</loc>
     <lastmod>2021-09-11T16:20:05+09:00</lastmod>
   </url>
 </urlset>
