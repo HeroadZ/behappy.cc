@@ -2,21 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI on 醉乐轩</title>
-    <link>https://behappy.cc/tags/ai/</link>
+    <link>http://localhost:1313/tags/ai/</link>
     <description>Recent content in AI on 醉乐轩</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <managingEditor>zchelllo@gmail.com (醉乐轩)</managingEditor>
-    <webMaster>zchelllo@gmail.com (醉乐轩)</webMaster>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-    <lastBuildDate>Mon, 06 Feb 2023 20:44:04 +0900</lastBuildDate>
-    <atom:link href="https://behappy.cc/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Feb 2023 18:14:09 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>与ChatGPT合作解决问题</title>
-      <link>https://behappy.cc/life/cooperate-with-chatgpt/</link>
-      <pubDate>Mon, 06 Feb 2023 20:44:04 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/cooperate-with-chatgpt/</guid>
-      <description>ChatGPT是什么 ChatGPT 简单来说是一个聊天机器人。 最近它又成为了国内社交网络的爆点话题</description>
+      <link>http://localhost:1313/life/cooperate-with-chatgpt/</link>
+      <pubDate>Mon, 06 Feb 2023 20:44:04 +0900</pubDate>
+      <guid>http://localhost:1313/life/cooperate-with-chatgpt/</guid>
+      <description>&lt;h2 id=&#34;chatgpt是什么&#34;&gt;ChatGPT是什么&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://openai.com/blog/chatgpt/&#34;&gt;ChatGPT&lt;/a&gt; 简单来说是一个聊天机器人。&#xA;最近它又成为了国内社交网络的爆点话题，其实去年12月份openAI刚推出这个产品的时候就火过一波，只是国内的人无法注册使用所以只是在国外的论坛上比较火。最近随着国内一些聪明的商家开始在淘宝卖账号，以及有些人把ChatGPT接入到微信，ChatGPT又一次在社交平台上火了。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

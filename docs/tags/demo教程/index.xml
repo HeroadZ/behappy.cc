@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>demo教程 on 醉乐轩</title>
-    <link>https://behappy.cc/tags/demo%E6%95%99%E7%A8%8B/</link>
-    <description>Recent content in demo教程 on 醉乐轩</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Demo教程 on 醉乐轩</title>
+    <link>http://localhost:1313/tags/demo%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in Demo教程 on 醉乐轩</description>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <managingEditor>zchelllo@gmail.com (醉乐轩)</managingEditor>
-    <webMaster>zchelllo@gmail.com (醉乐轩)</webMaster>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-    <lastBuildDate>Sun, 06 Mar 2022 17:15:55 +0900</lastBuildDate>
-    <atom:link href="https://behappy.cc/tags/demo%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Mar 2022 19:09:24 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/demo%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google reCAPTCHA使用教程</title>
-      <link>https://behappy.cc/tech/google-recaptcha-tutorial/</link>
-      <pubDate>Sun, 06 Mar 2022 17:15:55 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/tech/google-recaptcha-tutorial/</guid>
-      <description>生活在互联网时代，我们会经常要跟网页打交道。即便现在手机APP也在不断的发展，Web</description>
+      <link>http://localhost:1313/tech/google-recaptcha-tutorial/</link>
+      <pubDate>Sun, 06 Mar 2022 17:15:55 +0900</pubDate>
+      <guid>http://localhost:1313/tech/google-recaptcha-tutorial/</guid>
+      <description>&lt;p&gt;生活在互联网时代，我们会经常要跟网页打交道。即便现在手机APP也在不断的发展，Web应用依旧是最古老最常见的。在与用户进行交互的过程中，验证码有时候扮演着重要的角色，比如在用户注册，登录，提交表单的场景中，为了防止机器人浪费服务器的资源，我们需要验证在操作的是真实的用户而不是机器人。作为开发者我们当然可以从零开发一个验证码组件，不过很可能会不够完善。 &lt;a href=&#34;https://developers.google.com/recaptcha&#34;&gt;Google reCAPTCHA&lt;/a&gt; 是一个不错的选择，一个月可以支持一百万次免费验证。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

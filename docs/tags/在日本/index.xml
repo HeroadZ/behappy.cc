@@ -2,35 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>在日本 on 醉乐轩</title>
-    <link>https://behappy.cc/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/</link>
+    <link>http://localhost:1313/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/</link>
     <description>Recent content in 在日本 on 醉乐轩</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <managingEditor>zchelllo@gmail.com (醉乐轩)</managingEditor>
-    <webMaster>zchelllo@gmail.com (醉乐轩)</webMaster>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-    <lastBuildDate>Wed, 01 Jul 2020 18:29:57 +0900</lastBuildDate>
-    <atom:link href="https://behappy.cc/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Sep 2021 16:20:05 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%9C%A8%E6%97%A5%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>东京留学生在关注什么？</title>
-      <link>https://behappy.cc/tech/trends-in-tokyos-chinese-students/</link>
-      <pubDate>Wed, 01 Jul 2020 18:29:57 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/tech/trends-in-tokyos-chinese-students/</guid>
-      <description>东京的留学生们一般会关注什么呢，或者有哪些需求呢？为了解答这个疑惑，我统计了一个微信</description>
+      <link>http://localhost:1313/tech/trends-in-tokyos-chinese-students/</link>
+      <pubDate>Wed, 01 Jul 2020 18:29:57 +0900</pubDate>
+      <guid>http://localhost:1313/tech/trends-in-tokyos-chinese-students/</guid>
+      <description>&lt;p&gt;东京的留学生们一般会关注什么呢，或者有哪些需求呢？为了解答这个疑惑，我统计了一个微信公众号「东京留学生活小助手」从 2019 年 6 月到 2020 年 6 月的数据，并根据不同的需求做了词云（..已获得授权..）。接下来我会列出不同需求的词云图片，并给出简单我觉得比较有趣的点。当然一些出现频率比较低的词大家可以自己去观察一下。&lt;/p&gt;</description>
     </item>
     <item>
       <title>日本求学之路</title>
-      <link>https://behappy.cc/life/how-to-study-in-japan/</link>
-      <pubDate>Sat, 01 Sep 2018 10:23:59 +0000</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/how-to-study-in-japan/</guid>
-      <description>这篇文章记录自己在日本的求学之路，顺便也写给有兴趣来日本读研的人。我会以我的切身经历</description>
+      <link>http://localhost:1313/life/how-to-study-in-japan/</link>
+      <pubDate>Sat, 01 Sep 2018 10:23:59 +0000</pubDate>
+      <guid>http://localhost:1313/life/how-to-study-in-japan/</guid>
+      <description>&lt;p&gt;这篇文章记录自己在日本的求学之路，顺便也写给有兴趣来日本读研的人。我会以我的切身经历来讲述日本的求学之路是怎样的，从两眼一抹黑到入学合格。&lt;/p&gt;</description>
     </item>
     <item>
       <title>在日半年</title>
-      <link>https://behappy.cc/life/half-year-in-japan/</link>
-      <pubDate>Sat, 31 Mar 2018 15:44:00 +0000</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/half-year-in-japan/</guid>
-      <description>不知不觉来日本已经半年了，时间过的也真是太快了。依然记得出发前为各种资料烦恼的样子，</description>
+      <link>http://localhost:1313/life/half-year-in-japan/</link>
+      <pubDate>Sat, 31 Mar 2018 15:44:00 +0000</pubDate>
+      <guid>http://localhost:1313/life/half-year-in-japan/</guid>
+      <description>&lt;p&gt;不知不觉来日本已经半年了，时间过的也真是太快了。依然记得出发前为各种资料烦恼的样子，还有和新同学在机场候机的场景。半年多也没有写博客了，本来想过年的时候总结一下，终究还是因为各种原因被搁置了。最近是日本的樱花季，几乎天天出去转悠，有点看腻了，今天就在宿舍好好休息，回忆一下这半年吧。看看照片，看看便签，想到哪写到哪。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

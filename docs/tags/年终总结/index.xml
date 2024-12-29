@@ -2,63 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>年终总结 on 醉乐轩</title>
-    <link>https://behappy.cc/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
+    <link>http://localhost:1313/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
     <description>Recent content in 年终总结 on 醉乐轩</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>zh-CN</language>
-    <managingEditor>zchelllo@gmail.com (醉乐轩)</managingEditor>
-    <webMaster>zchelllo@gmail.com (醉乐轩)</webMaster>
     <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
-    <lastBuildDate>Sat, 30 Dec 2023 22:24:25 +0900</lastBuildDate>
-    <atom:link href="https://behappy.cc/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Jan 2024 17:00:23 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>初窥门径的2023</title>
-      <link>https://behappy.cc/life/2023-final/</link>
-      <pubDate>Sat, 30 Dec 2023 22:24:25 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/2023-final/</guid>
-      <description>自工作以后，时间过的太快了，一转眼就到了要告别2023的时候。今年除了这篇年终总结，</description>
+      <link>http://localhost:1313/life/2023-final/</link>
+      <pubDate>Sat, 30 Dec 2023 22:24:25 +0900</pubDate>
+      <guid>http://localhost:1313/life/2023-final/</guid>
+      <description>&lt;p&gt;自工作以后，时间过的太快了，一转眼就到了要告别2023的时候。今年除了这篇年终总结，只写了一篇关于ChatGPT的文章，输出太少了。不过2022年只有一篇年终总结，相对来说今年是进步了ww。无论怎么样，年终总结我觉得还是很有必要要写的，除了回顾过去，也是支援未来的自己嘛。&lt;/p&gt;</description>
     </item>
     <item>
       <title>不务正业的2022</title>
-      <link>https://behappy.cc/life/2022-final/</link>
-      <pubDate>Fri, 30 Dec 2022 14:14:31 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/2022-final/</guid>
-      <description>关键词：不务正业 日本今年的年度汉字第一名是「..戦..」，中文里也就是..战斗..的</description>
+      <link>http://localhost:1313/life/2022-final/</link>
+      <pubDate>Fri, 30 Dec 2022 14:14:31 +0900</pubDate>
+      <guid>http://localhost:1313/life/2022-final/</guid>
+      <description>&lt;h4 id=&#34;关键词不务正业&#34;&gt;关键词：不务正业&lt;/h4&gt;&#xA;&lt;p&gt;日本今年的年度汉字第一名是「&lt;strong&gt;..戦..&lt;/strong&gt;」，中文里也就是..战斗..的意思。「戦」当选的原因呢，大概有3个：&lt;/p&gt;</description>
     </item>
     <item>
       <title>按部就班的2021</title>
-      <link>https://behappy.cc/life/2021-final/</link>
-      <pubDate>Wed, 29 Dec 2021 12:38:51 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/2021-final/</guid>
-      <description>如果说一定要选一个词来形容我的 2021，那么我觉得是“..按部就班..”。因为今年其</description>
+      <link>http://localhost:1313/life/2021-final/</link>
+      <pubDate>Wed, 29 Dec 2021 12:38:51 +0900</pubDate>
+      <guid>http://localhost:1313/life/2021-final/</guid>
+      <description>&lt;p&gt;如果说一定要选一个词来形容我的 2021，那么我觉得是“..按部就班..”。因为今年其实大体只做了两件事，毕业以及开始工作。公司在去年的 4 月份已经内定好了，所以整个过程没有波澜没有起伏，只是按部就班地毕业和入职。当然还是有一些有意思的小事，可以总结反思一下。&lt;/p&gt;</description>
     </item>
     <item>
       <title>在早稻田的这两年</title>
-      <link>https://behappy.cc/life/two-years-in-waseda/</link>
-      <pubDate>Thu, 31 Dec 2020 17:42:39 +0900</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/two-years-in-waseda/</guid>
-      <description>天色暗了下来，该准备去附近的 AEON 超市觅食了。想起日本的购物袋开始收费，只好带上优衣库的</description>
+      <link>http://localhost:1313/life/two-years-in-waseda/</link>
+      <pubDate>Thu, 31 Dec 2020 17:42:39 +0900</pubDate>
+      <guid>http://localhost:1313/life/two-years-in-waseda/</guid>
+      <description>&lt;p&gt;天色暗了下来，该准备去附近的 AEON 超市觅食了。想起日本的购物袋开始收费，只好带上优衣库的环保布袋。你看，要改变人的习惯就这么简单。走之前，对着 luna 警告一番“不要偷偷上桌干坏事！”，可她只是慵懒地甩了甩尾巴，丝毫没有把我的警告放在心上。也罢，人与猫的悲欢本并不相通。今天超市里很热闹，各种新年料理也让人口水直流，元旦是日本最盛大的日子，可以类比于中国的春节。美食，贺岁卡片，拜神社等等都是他们新年必不可少的环节，非常有仪式感。说到仪式感，突然又让我想起来这个博客，去年因为懒没有写年终总结，今年也是时候重启这个环节了。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2018，学会去拥抱！</title>
-      <link>https://behappy.cc/life/2018-final/</link>
-      <pubDate>Wed, 02 Jan 2019 19:43:59 +0000</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/2018-final/</guid>
-      <description>又到了年终小结的时候啦，彷佛又回到了高考考场上憋作文的时光，真是难熬呀！不过有一句话</description>
+      <link>http://localhost:1313/life/2018-final/</link>
+      <pubDate>Wed, 02 Jan 2019 19:43:59 +0000</pubDate>
+      <guid>http://localhost:1313/life/2018-final/</guid>
+      <description>&lt;p&gt;又到了年终小结的时候啦，彷佛又回到了高考考场上憋作文的时光，真是难熬呀！不过有一句话讲的挺好，未来的你一定是现在的你的忠实读者。为了不让未来的我没东西可读，还是努努力，向intel学习，挤点牙膏出来。&lt;/p&gt;</description>
     </item>
     <item>
       <title>2016总结与展望</title>
-      <link>https://behappy.cc/life/2016-final/</link>
-      <pubDate>Thu, 26 Jan 2017 21:49:37 +0000</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/2016-final/</guid>
-      <description>以后如果遇到比较重要的事，一定要记录在便签里，或者拍照，不然年度总结根本写不了啊！ 2</description>
+      <link>http://localhost:1313/life/2016-final/</link>
+      <pubDate>Thu, 26 Jan 2017 21:49:37 +0000</pubDate>
+      <guid>http://localhost:1313/life/2016-final/</guid>
+      <description>&lt;p&gt;以后如果遇到比较重要的事，一定要记录在便签里，或者拍照，不然年度总结根本写不了啊！&lt;/p&gt;&#xA;&lt;h1 id=&#34;2016大事记&#34;&gt;2016大事记&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;拔了两颗智齿&lt;/li&gt;&#xA;&lt;li&gt;拿到了驾照&lt;/li&gt;&#xA;&lt;li&gt;在熊猫tv上直播并写了自己第一个开源爬虫项目&lt;/li&gt;&#xA;&lt;li&gt;拿到了日语N2能力考等级证书&lt;/li&gt;&#xA;&lt;li&gt;完成了第一次实习，职位是前端开发工程师&lt;/li&gt;&#xA;&lt;li&gt;从学校搬出来住到了公司宿舍&lt;/li&gt;&#xA;&lt;li&gt;年度总收入突破5位数&lt;/li&gt;&#xA;&lt;li&gt;向公司提交辞职申请&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h1 id=&#34;技术&#34;&gt;技术&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;勉强合格的前端初级工程师&lt;/li&gt;&#xA;&lt;li&gt;熟悉了jQuery及其生态圈&lt;/li&gt;&#xA;&lt;li&gt;切页面熟练不少&lt;/li&gt;&#xA;&lt;li&gt;尝试了解了许多热门工具和框架，比如gulp,Angular,webpack,es6等等&lt;/li&gt;&#xA;&lt;li&gt;刷了几道leetcode的简单算法题&lt;/li&gt;&#xA;&lt;li&gt;整体来说提升没有质的变化&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h1 id=&#34;其他&#34;&gt;其他&lt;/h1&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;跑跑卡丁车技术有点提升&lt;/li&gt;&#xA;&lt;li&gt;第一次在steam上买游戏，并通关，home behind&lt;/li&gt;&#xA;&lt;li&gt;腹肌没了，体重略微增加&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title>不求有功，但求无过——2014终了</title>
-      <link>https://behappy.cc/life/2014-final/</link>
-      <pubDate>Tue, 30 Dec 2014 22:55:32 +0000</pubDate><author>zchelllo@gmail.com (醉乐轩)</author>
-      <guid>https://behappy.cc/life/2014-final/</guid>
-      <description>虽然想用短短几行涂鸦来概括这么精彩的一年是有点不自量力了，但是总结毕竟是一个良好的习</description>
+      <link>http://localhost:1313/life/2014-final/</link>
+      <pubDate>Tue, 30 Dec 2014 22:55:32 +0000</pubDate>
+      <guid>http://localhost:1313/life/2014-final/</guid>
+      <description>&lt;p&gt;虽然想用短短几行涂鸦来概括这么精彩的一年是有点不自量力了，但是总结毕竟是一个良好的习惯啊。（特么的万一以后出名要写自传呢！！！）那就闲聊些印象深刻的事吧。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
