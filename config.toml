@@ -875,13 +875,12 @@ uglyURLs = false
     displayTOCTitle = true
 
     # 是否显示数字（全局设置）
-    displayTOCNum = true
+    displayTOCNum = false
     # 说明：文章的 Front Matter 中的 `tocNum`
     #      的优先级高于此处
 
     # 是否链接文章的分节标题到目录
-    linkHeadingsToTOC = true
-
+    linkHeadingsToTOC = false
 
     ######################################
     # 分节标题锚点
