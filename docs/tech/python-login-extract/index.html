@@ -35,17 +35,15 @@
     <meta name="author" content="醉乐轩" /><meta name="description" content="今天，给大家推荐一门有趣的语言——python，相信大家一定不陌生。那么可以用来做什么呢，本文主要用于模拟登录并提取一些需要的内容，当然，再仔细研究的话，还可以写一些签到的小工具。 注：本文所用python版本为3.4.2。 所需工具：python3、requests库、Beautifulsoup库。 首先，先从模拟登录的原理开始，主要讲post。 当登录一个网站的时候，相当于你带着一堆数据去访问一个网址，就像带着一堆见面礼去拜访某人家里。这里的见面礼就是一些headers，data和一些必要的数据，有些主人呢，不需要带什么见面礼就会给你开门招待你，就是无需登录的网站。有些主人呢，需要看中你的见面礼才会给你提供饭菜啊什么的，就是需要输入一些身份验证的数据才行，如登录。 当我们用浏览器登录时，我们只需要输入网址，输入账号密码就行了，浏览器会自动帮我们提交的，当然我们可以用python这门语言来实现伪装成浏览器提交数据。 大致过程如下：发送数据给网站，网站接收到，成功匹配，回应数据给请求者，提取内容。 那么我们到底要发送哪些数据给服务器呢？答案是按实际情况来找。就像上面所提的，或许你什么都不用带就可以访问，或许你要带一大堆东西才能访问。后面，我们会找个简单的示例，现在先来简单介绍一下requests库和beautifulsoup库。
 " />
 
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="醉乐轩" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="醉乐轩" />
-    <meta name="msapplication-starturl" content="../../" />
-    <meta name="msapplication-TileColor" content="#fff" />
-    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
     <link rel="manifest" href="/manifest.json" />
 
     
